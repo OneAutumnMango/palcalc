@@ -104,6 +104,10 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        LC_COMMON_ACTIVE_SKILLS,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         LC_COMMON_ATTACK_SKILLS,
         /// <summary>
         ///   Looks up a localized string similar to .
@@ -964,6 +968,14 @@ namespace PalCalc.UI.Localization {
         ///   Looks up a localized string similar to .
         /// </summary>
         LC_SETTINGS_MASSIVE_EGG_INCUBATION_DESC,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC,
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>

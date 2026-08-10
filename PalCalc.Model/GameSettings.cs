@@ -25,6 +25,10 @@ namespace PalCalc.Model
 
         public bool MultipleBreedingFarms { get; set; } = false;
 
+        // Assume all pals are level 70+ for active skill inheritance purposes
+        // When true, all inheritable active skills are available regardless of level requirement
+        public bool AssumeAllPalsLevel70 { get; set; } = true;
+
         // base time for incubating a massive egg without any e.g. temperature buffs
         public TimeSpan MassiveEggIncubationTime { get; set; } = TimeSpan.FromHours(2);
 

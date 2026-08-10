@@ -15,7 +15,8 @@ namespace PalCalc.Solver.PalReference
             Pal pal,
             IEnumerable<PassiveSkill> guaranteedPassives,
             int numRandomPassives,
-            BreedingMechanics mechanics
+            BreedingMechanics mechanics,
+            PalDB db
         )
         {
             ArgumentNullException.ThrowIfNull(mechanics);
@@ -33,6 +34,14 @@ namespace PalCalc.Solver.PalReference
 
             EffectivePassivesHash = EffectivePassives.Select(p => p.InternalName).SetHash();
             IVs = new IV_Set() { HP = IV_Value.Random, Attack =  IV_Value.Random, Defense = IV_Value.Random };
+
+            // Initialize inherited active skills based on what this pal species can learn
+            InheritedActiveSkills = db.BreedingSkills.Values
+                .SelectMany(skills => skills)
+                .Where(ls => ls.PalName == pal.Name)
+                .Select(ls => ls.Skill)
+                .Distinct()
+                .ToList();
         }
 
         private WildPalReference(Pal pal)
@@ -43,6 +52,8 @@ namespace PalCalc.Solver.PalReference
         public Pal Pal { get; private set; }
 
         public List<PassiveSkill> EffectivePassives { get; private set; }
+
+        public List<ActiveSkill> InheritedActiveSkills { get; private set; }
 
         public IV_Set IVs { get; private set; }
 
@@ -83,6 +94,7 @@ namespace PalCalc.Solver.PalReference
                 Gender = gender,
                 EffectivePassives = EffectivePassives,
                 EffectivePassivesHash = this.EffectivePassivesHash,
+                InheritedActiveSkills = InheritedActiveSkills,
                 IVs = IVs,
                 CapturesRequiredForGender = useReverser ? 1 : gender switch
                 {

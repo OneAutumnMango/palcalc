@@ -1,0 +1,328 @@
+{
+  "Poison Fog": [
+    {
+      "pal_name": "Caprity Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 1
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 15
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 1
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 1
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 1
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 1
+    }
+  ],
+  "Dark Ball": [
+    {
+      "pal_name": "Mau",
+      "level": 7
+    },
+    {
+      "pal_name": "Loupmoon",
+      "level": 1
+    },
+    {
+      "pal_name": "Cawgnito",
+      "level": 7
+    },
+    {
+      "pal_name": "Depresso",
+      "level": 15
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 7
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 7
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 7
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 7
+    },
+    {
+      "pal_name": "Shadowbeak",
+      "level": 7
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 7
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 15
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 1
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Katress",
+      "level": 7
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 15
+    },
+    {
+      "pal_name": "Nox",
+      "level": 7
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 7
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 7
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 7
+    },
+    {
+      "pal_name": "Splatterina",
+      "level": 1
+    },
+    {
+      "pal_name": "Omascul",
+      "level": 1
+    },
+    {
+      "pal_name": "Starryon",
+      "level": 7
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 1
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 7
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 1
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 1
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 1
+    },
+    {
+      "pal_name": "Gildra",
+      "level": 1
+    },
+    {
+      "pal_name": "Loomen",
+      "level": 1
+    }
+  ],
+  "Comet Barrage": [
+    {
+      "pal_name": "Wistella",
+      "level": 30
+    },
+    {
+      "pal_name": "Eidrolon",
+      "level": 22
+    }
+  ],
+  "Meteorain": [
+    {
+      "pal_name": "Jetragon",
+      "level": 60
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 70
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 70
+    },
+    {
+      "pal_name": "Xenolord",
+      "level": 70
+    },
+    {
+      "pal_name": "Shaolong",
+      "level": 70
+    },
+    {
+      "pal_name": "Eidrolon",
+      "level": 70
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 70
+    }
+  ],
+  "Thunder Rail": [
+    {
+      "pal_name": "Jolthog",
+      "level": 70
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 70
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 70
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 40
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 70
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 70
+    },
+    {
+      "pal_name": "Snock",
+      "level": 70
+    }
+  ],
+  "Lethal Laser": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 70
+    },
+    {
+      "pal_name": "Prixter Lux",
+      "level": 70
+    }
+  ],
+  "Double Blizzard Spike": [
+    {
+      "pal_name": "Frostallion",
+      "level": 60
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 55
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 70
+    }
+  ],
+  "Wind Edge": [
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 30
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 22
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 22
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 22
+    },
+    {
+      "pal_name": "Leafan",
+      "level": 15
+    }
+  ],
+  "Raid Cutter": [
+    {
+      "pal_name": "Leafan",
+      "level": 30
+    }
+  ],
+  "Radiant Barrage": [
+    {
+      "pal_name": "Paladius",
+      "level": 70
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 70
+    },
+    {
+      "pal_name": "Hartalis",
+      "level": 22
+    }
+  ],
+  "Megaton Implode": [
+    {
+      "pal_name": "Tocotoco",
+      "level": 22
+    }
+  ]
+}

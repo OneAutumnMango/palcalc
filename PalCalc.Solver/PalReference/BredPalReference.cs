@@ -53,6 +53,15 @@ namespace PalCalc.Solver.PalReference
             EffectivePassives = passives;
             EffectivePassivesHash = passives.SetHash(p => p.InternalName);
 
+            // Collect inheritable active skills from both parents
+            InheritedActiveSkills = new List<ActiveSkill>();
+            if (gameSettings.AssumeAllPalsLevel70)
+            {
+                InheritedActiveSkills.AddRange(parent1.InheritedActiveSkills);
+                InheritedActiveSkills.AddRange(parent2.InheritedActiveSkills);
+                InheritedActiveSkills = InheritedActiveSkills.Distinct().ToList();
+            }
+
             parentBreedingEffort = gameSettings.MultipleBreedingFarms && Parent1 is BredPalReference && Parent2 is BredPalReference
                 ? Parent1.BreedingEffort > Parent2.BreedingEffort
                     ? Parent1.BreedingEffort
@@ -176,6 +185,8 @@ namespace PalCalc.Solver.PalReference
         public List<PassiveSkill> EffectivePassives { get; }
 
         public int EffectivePassivesHash { get; }
+
+        public List<ActiveSkill> InheritedActiveSkills { get; }
 
         public List<PassiveSkill> ActualPassives => EffectivePassives;
 

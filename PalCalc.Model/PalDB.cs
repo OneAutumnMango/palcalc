@@ -39,6 +39,12 @@ namespace PalCalc.Model
         public List<PalElement> Elements { get; set; }
         public List<ActiveSkill> ActiveSkills { get; set; }
 
+        /// <summary>
+        /// Dictionary mapping active skill names to lists of pals that can pass them through breeding,
+        /// along with the minimum level requirements.
+        /// </summary>
+        public Dictionary<string, List<LearnableActiveSkill>> BreedingSkills { get; set; }
+
         public IEnumerable<Pal> Pals => PalsById.Values;
 
         private Dictionary<string, PassiveSkill> standardPassiveSkillsByName;
@@ -84,14 +90,65 @@ namespace PalCalc.Model
             logger.Information("Loading embedded pal DB");
             var info = Assembly.GetExecutingAssembly().GetName();
             var name = info.Name;
-            using var stream = Assembly
-                .GetExecutingAssembly()
-                .GetManifestResourceStream($"{name}.db.json")!;
-
+            
             var sw = Stopwatch.StartNew();
             PalDB result;
+            
+            // Load main db.json
+            using (var stream = Assembly
+                .GetExecutingAssembly()
+                .GetManifestResourceStream($"{name}.db.json")!)
             using (var streamReader = new StreamReader(stream, Encoding.UTF8))
+            {
                 result = FromJson(streamReader.ReadToEnd());
+            }
+
+            // Load breeding_skills.json
+            try
+            {
+                using (var stream = Assembly
+                    .GetExecutingAssembly()
+                    .GetManifestResourceStream($"{name}.breeding_skills.json"))
+                {
+                    if (stream != null)
+                    {
+                        using (var streamReader = new StreamReader(stream, Encoding.UTF8))
+                        {
+                            var breedingSkillsJson = streamReader.ReadToEnd();
+                            var rawData = JsonConvert.DeserializeObject<Dictionary<string, List<LearnableActiveSkill>>>(breedingSkillsJson);
+                            
+                            result.BreedingSkills = new Dictionary<string, List<LearnableActiveSkill>>();
+                            
+                            // Populate skill names and resolve ActiveSkill references
+                            foreach (var kvp in rawData)
+                            {
+                                var skillName = kvp.Key;
+                                var learnableSkills = kvp.Value;
+                                
+                                foreach (var ls in learnableSkills)
+                                {
+                                    ls.SkillName = skillName;
+                                    ls.Skill = result.ActiveSkills.FirstOrDefault(s => s.Name == skillName);
+                                }
+                                
+                                result.BreedingSkills[skillName] = learnableSkills;
+                            }
+                            
+                            logger.Information("Loaded {count} inheritable active skills", result.BreedingSkills.Count);
+                        }
+                    }
+                    else
+                    {
+                        logger.Warning("breeding_skills.json not found in embedded resources");
+                        result.BreedingSkills = new Dictionary<string, List<LearnableActiveSkill>>();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Error loading breeding_skills.json");
+                result.BreedingSkills = new Dictionary<string, List<LearnableActiveSkill>>();
+            }
 
             logger.Information("Successfully loaded embedded pal DB in {ms}ms", sw.ElapsedMilliseconds);
             return result;

@@ -138,7 +138,8 @@ internal sealed class InitialPalBuilder(
                                 p,
                                 guaranteedPassives,
                                 numRandomPassives,
-                                mechanics
+                                mechanics,
+                                settings.DB
                             )
                         );
                 })

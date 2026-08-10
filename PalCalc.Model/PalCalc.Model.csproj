@@ -13,11 +13,13 @@
 
   <ItemGroup>
     <None Remove="breeding.json" />
+    <None Remove="breeding_skills.json" />
     <None Remove="db.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="breeding.json" />
+    <EmbeddedResource Include="breeding_skills.json" />
     <EmbeddedResource Include="db.json">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>

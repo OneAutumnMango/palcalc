@@ -93,7 +93,8 @@ public class ResultPostProcessorTests
                 target.Pal,
                 guaranteedPassives: [],
                 numRandomPassives: 0,
-                mechanics: SolverTestScenario.DB.BreedingMechanics
+                mechanics: SolverTestScenario.DB.BreedingMechanics,
+                db: SolverTestScenario.DB
             ),
         ]);
         var processor = new ResultPostProcessor(

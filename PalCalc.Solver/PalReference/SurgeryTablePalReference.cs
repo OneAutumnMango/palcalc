@@ -200,6 +200,9 @@ namespace PalCalc.Solver.PalReference
             EffectivePassivesHash = EffectivePassives.Select(p => p.InternalName).SetHash();
 
             TimeFactor = EffectivePassives.ToTimeFactor();
+
+            // Inherited active skills remain the same as input (surgery doesn't affect active skills)
+            InheritedActiveSkills = input.InheritedActiveSkills;
         }
 
         // ---------------------------------------------------------------------------------
@@ -207,6 +210,7 @@ namespace PalCalc.Solver.PalReference
         // ---------------------------------------------------------------------------------
         public Pal Pal => Input.Pal;
         public int EffectivePassivesHash { get; }
+        public List<ActiveSkill> InheritedActiveSkills { get; }
         public IV_Set IVs => Input.IVs;
 
         public int NumTotalBreedingSteps => Input.NumTotalBreedingSteps;

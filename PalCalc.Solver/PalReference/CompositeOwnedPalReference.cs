@@ -56,6 +56,9 @@ namespace PalCalc.Solver.PalReference
                 Attack = PropagateIVs(male.IVs.Attack, female.IVs.Attack),
                 Defense = PropagateIVs(male.IVs.Defense, female.IVs.Defense)
             };
+
+            // Inherited active skills based on intersection (skills both can pass)
+            InheritedActiveSkills = male.InheritedActiveSkills.Intersect(female.InheritedActiveSkills).ToList();
         }
 
         public OwnedPalReference Male { get; }
@@ -66,6 +69,8 @@ namespace PalCalc.Solver.PalReference
         public List<PassiveSkill> EffectivePassives { get; private set; }
 
         public int EffectivePassivesHash { get; private set; }
+
+        public List<ActiveSkill> InheritedActiveSkills { get; private set; }
 
         public List<PassiveSkill> ActualPassives { get; }
 

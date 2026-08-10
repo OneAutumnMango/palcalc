@@ -178,6 +178,9 @@ This value is doubled internally to account for pal inactivity at night.</value>
   <data name="LC_COMMON_GENDER_WILDCARD" xml:space="preserve">
     <value>Any Gender</value>
   </data>
+  <data name="LC_COMMON_ACTIVE_SKILLS" xml:space="preserve">
+    <value>Active Skills (Inheritable)</value>
+  </data>
   <data name="LC_COMMON_IVS" xml:space="preserve">
     <value>IVs</value>
   </data>
@@ -716,6 +719,14 @@ This will not delete the save files from your computer.</value>
   </data>
   <data name="LC_SETTINGS_MASSIVE_EGG_INCUBATION_DESC" xml:space="preserve">
     <value>How long it takes to incubate a massive egg without any bonuses (temperature modifiers).</value>
+  </data>
+  <data name="LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70" xml:space="preserve">
+    <value>Assume All Pals Level 70+ (Active Skills)</value>
+  </data>
+  <data name="LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC" xml:space="preserve">
+    <value>When enabled, the solver will assume all pals are level 70 or higher for active skill inheritance. This allows any pal that can learn an inheritable active skill to pass it on, ignoring the minimum level requirement.
+
+When disabled, active skill inheritance is not considered in breeding calculations.</value>
   </data>
   <data name="LC_SETTINGS_PALBOX_TAB_SIZE" xml:space="preserve">
     <value>Palbox Tab Size</value>

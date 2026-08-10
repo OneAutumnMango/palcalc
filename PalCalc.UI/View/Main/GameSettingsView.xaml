@@ -32,6 +32,8 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="8" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="8" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Label Grid.Row="0" Content="{itl:LocalizedText LC_BREEDING_TIME}" HorizontalAlignment="Left" VerticalAlignment="Center" />
@@ -71,8 +73,21 @@
                 VerticalAlignment="Center"
             />
 
-            <Label Grid.Row="6" Grid.Column="0" Content="{itl:LocalizedText Code=LC_SETTINGS_PALBOX_TAB_SIZE}" HorizontalAlignment="Left" VerticalAlignment="Center" />
-            <StackPanel Grid.Row="6" Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top">
+            <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock TextWrapping="Wrap" Text="{itl:LocalizedText Code=LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70}" />
+            </Label>
+            <CheckBox
+                Grid.Row="6"
+                Grid.Column="2"
+                ToolTipService.ToolTip="{itl:LocalizedText Code=LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC}"
+                ToolTipService.ShowOnDisabled="True"
+                IsChecked="{Binding AssumeAllPalsLevel70}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+            />
+
+            <Label Grid.Row="8" Grid.Column="0" Content="{itl:LocalizedText Code=LC_SETTINGS_PALBOX_TAB_SIZE}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <StackPanel Grid.Row="8" Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Top">
                 <vu:IntegerTextBox
                     VerticalAlignment="Top"
                     MinWidth="26"

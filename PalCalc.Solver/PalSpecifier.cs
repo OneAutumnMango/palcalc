@@ -16,6 +16,9 @@ namespace PalCalc.Solver
 
         public List<PassiveSkill> OptionalPassives { get; set; } = new List<PassiveSkill>();
 
+        // Target active skills that must be inherited through breeding (up to 6)
+        public List<ActiveSkill> TargetActiveSkills { get; set; } = new List<ActiveSkill>();
+
         public IEnumerable<PassiveSkill> DesiredPassives => RequiredPassives.Concat(OptionalPassives);
 
         public int IV_HP { get; set; }
@@ -36,6 +39,7 @@ namespace PalCalc.Solver
         {
             RequiredPassives = RequiredPassives.Distinct().ToList();
             OptionalPassives = OptionalPassives.Except(RequiredPassives).Distinct().ToList();
+            TargetActiveSkills = TargetActiveSkills.Distinct().Take(6).ToList();
         }
 
         internal PalSpecifier NormalizedCopy()
@@ -51,6 +55,7 @@ namespace PalCalc.Solver
                     .Except(requiredPassives)
                     .Distinct()
                     .ToList(),
+                TargetActiveSkills = TargetActiveSkills.Distinct().Take(6).ToList(),
                 IV_HP = IV_HP,
                 IV_Attack = IV_Attack,
                 IV_Defense = IV_Defense,

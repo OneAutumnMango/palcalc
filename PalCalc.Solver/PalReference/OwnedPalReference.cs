@@ -28,6 +28,15 @@ namespace PalCalc.Solver.PalReference
             IVs = effectiveIVs;
 
             Gender = instance.Gender;
+
+            // Initialize inherited active skills based on what this pal species can learn
+            var db = PalDB.LoadEmbedded();
+            InheritedActiveSkills = db.BreedingSkills.Values
+                .SelectMany(skills => skills)
+                .Where(ls => ls.PalName == instance.Pal.Name)
+                .Select(ls => ls.Skill)
+                .Distinct()
+                .ToList();
         }
 
         public PalInstance UnderlyingInstance => instance;
@@ -37,6 +46,8 @@ namespace PalCalc.Solver.PalReference
         public List<PassiveSkill> EffectivePassives { get; private set; }
 
         public int EffectivePassivesHash { get; }
+
+        public List<ActiveSkill> InheritedActiveSkills { get; private set; }
 
         public List<PassiveSkill> ActualPassives { get; }
 
@@ -68,6 +79,7 @@ namespace PalCalc.Solver.PalReference
         {
             var res = new OwnedPalReference(instance, EffectivePassives, IVs);
             res.Gender = gender;
+            res.InheritedActiveSkills = InheritedActiveSkills;
             return res;
         }
 

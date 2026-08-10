@@ -25,6 +25,12 @@ namespace PalCalc.Solver.PalReference
         // since that would prevent random-passive pals from being grouped together during pruning.)
         int EffectivePassivesHash { get; } // optimizations
 
+        /// <summary>
+        /// The list of active skills that this pal can pass on to offspring through breeding.
+        /// Only populated when AssumeAllPalsLevel70 is enabled.
+        /// </summary>
+        List<ActiveSkill> InheritedActiveSkills { get; }
+
         IV_Set IVs { get; }
 
         List<PassiveSkill> ActualPassives { get; }

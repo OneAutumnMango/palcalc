@@ -1,0 +1,942 @@
+[
+  {
+    "skill_name": "Slime Press (Dark)",
+    "pal_owner": "Purple Slime",
+    "url": "https://paldb.cc/en/Slime_Press_%28Dark%29"
+  },
+  {
+    "skill_name": "Ocular Rush",
+    "pal_owner": "Demon Eye",
+    "url": "https://paldb.cc/en/Ocular_Rush"
+  },
+  {
+    "skill_name": "Phantom Peck",
+    "pal_owner": "Cawgnito",
+    "url": "https://paldb.cc/en/Phantom_Peck"
+  },
+  {
+    "skill_name": "Jumping Claw",
+    "pal_owner": "Loupmoon",
+    "url": "https://paldb.cc/en/Jumping_Claw"
+  },
+  {
+    "skill_name": "Daring Shadowstorm",
+    "pal_owner": "Kitsun Noct",
+    "url": "https://paldb.cc/en/Daring_Shadowstorm"
+  },
+  {
+    "skill_name": "Webstrike Impact",
+    "pal_owner": "Tarantriss",
+    "url": "https://paldb.cc/en/Webstrike_Impact"
+  },
+  {
+    "skill_name": "Dark Charge",
+    "pal_owner": "Pyrin Noct",
+    "url": "https://paldb.cc/en/Dark_Charge"
+  },
+  {
+    "skill_name": "Spirit Dash",
+    "pal_owner": "Maraith",
+    "url": "https://paldb.cc/en/Spirit_Dash"
+  },
+  {
+    "skill_name": "Lock-On Lunge",
+    "pal_owner": "Eye of Cthulhu",
+    "url": "https://paldb.cc/en/Lock-On_Lunge"
+  },
+  {
+    "skill_name": "Servant Call",
+    "pal_owner": "Eye of Cthulhu",
+    "url": "https://paldb.cc/en/Servant_Call"
+  },
+  {
+    "skill_name": "Evil Slash",
+    "pal_owner": "Xenovader",
+    "url": "https://paldb.cc/en/Evil_Slash"
+  },
+  {
+    "skill_name": "Upper Smash",
+    "pal_owner": "Prixter",
+    "url": "https://paldb.cc/en/Upper_Smash"
+  },
+  {
+    "skill_name": "Soul Drain",
+    "pal_owner": "Omascul",
+    "url": "https://paldb.cc/en/Soul_Drain"
+  },
+  {
+    "skill_name": "Nightmare Claw",
+    "pal_owner": "Incineram Noct",
+    "url": "https://paldb.cc/en/Nightmare_Claw"
+  },
+  {
+    "skill_name": "Flame Waltz",
+    "pal_owner": "Bellanoir Libero",
+    "url": "https://paldb.cc/en/Flame_Waltz"
+  },
+  {
+    "skill_name": "Spectral Steed",
+    "pal_owner": "Starryon",
+    "url": "https://paldb.cc/en/Spectral_Steed"
+  },
+  {
+    "skill_name": "Astral Ray",
+    "pal_owner": "Xenolord",
+    "url": "https://paldb.cc/en/Astral_Ray"
+  },
+  {
+    "skill_name": "Grudge Barrage",
+    "pal_owner": "Splatterina",
+    "url": "https://paldb.cc/en/Grudge_Barrage"
+  },
+  {
+    "skill_name": "Black Quilled Ballet",
+    "pal_owner": "Solenne",
+    "url": "https://paldb.cc/en/Black_Quilled_Ballet"
+  },
+  {
+    "skill_name": "Mummy Rush",
+    "pal_owner": "Gildra",
+    "url": "https://paldb.cc/en/Mummy_Rush"
+  },
+  {
+    "skill_name": "Lethal Step",
+    "pal_owner": "Starryon",
+    "url": "https://paldb.cc/en/Lethal_Step"
+  },
+  {
+    "skill_name": "Nightmare Bloom",
+    "pal_owner": "Bellanoir Libero",
+    "url": "https://paldb.cc/en/Nightmare_Bloom"
+  },
+  {
+    "skill_name": "Nightmare Ray",
+    "pal_owner": "Bellanoir",
+    "url": "https://paldb.cc/en/Nightmare_Ray"
+  },
+  {
+    "skill_name": "Divine Disaster II",
+    "pal_owner": "Shadowbeak",
+    "url": "https://paldb.cc/en/Divine_Disaster_II"
+  },
+  {
+    "skill_name": "Poison Scatter",
+    "pal_owner": "Venusa",
+    "url": "https://paldb.cc/en/Poison_Scatter"
+  },
+  {
+    "skill_name": "Lantern Flame",
+    "pal_owner": "Loomen",
+    "url": "https://paldb.cc/en/Lantern_Flame"
+  },
+  {
+    "skill_name": "Twin Spears",
+    "pal_owner": "Necromus",
+    "url": "https://paldb.cc/en/Twin_Spears"
+  },
+  {
+    "skill_name": "Dark Wing",
+    "pal_owner": "Frostallion Noct",
+    "url": "https://paldb.cc/en/Dark_Wing"
+  },
+  {
+    "skill_name": "Dark Root",
+    "pal_owner": "Dualith Noct",
+    "url": "https://paldb.cc/en/Dark_Root"
+  },
+  {
+    "skill_name": "Dark Nova",
+    "pal_owner": "Celesdir Noct",
+    "url": "https://paldb.cc/en/Dark_Nova"
+  },
+  {
+    "skill_name": "Poison Promenade",
+    "pal_owner": "Dandilord",
+    "url": "https://paldb.cc/en/Poison_Promenade"
+  },
+  {
+    "skill_name": "Toxic Dance",
+    "pal_owner": "Dandilord",
+    "url": "https://paldb.cc/en/Toxic_Dance"
+  },
+  {
+    "skill_name": "Rocket Slam",
+    "pal_owner": "Chillet",
+    "url": "https://paldb.cc/en/Rocket_Slam"
+  },
+  {
+    "skill_name": "Mystic Whirlwind",
+    "pal_owner": "Elphidran",
+    "url": "https://paldb.cc/en/Mystic_Whirlwind"
+  },
+  {
+    "skill_name": "Satellite Bit",
+    "pal_owner": "Xenolord",
+    "url": "https://paldb.cc/en/Satellite_Bit"
+  },
+  {
+    "skill_name": "Firefist Breathstorm",
+    "pal_owner": "Astegon",
+    "url": "https://paldb.cc/en/Firefist_Breathstorm"
+  },
+  {
+    "skill_name": "Beam Slash",
+    "pal_owner": "Xenolord",
+    "url": "https://paldb.cc/en/Beam_Slash"
+  },
+  {
+    "skill_name": "Tail Slash",
+    "pal_owner": "Eidrolon",
+    "url": "https://paldb.cc/en/Tail_Slash"
+  },
+  {
+    "skill_name": "Cosmic Meteor",
+    "pal_owner": "Xenolord",
+    "url": "https://paldb.cc/en/Cosmic_Meteor"
+  },
+  {
+    "skill_name": "Aegis Charge",
+    "pal_owner": "Silvegis",
+    "url": "https://paldb.cc/en/Aegis_Charge"
+  },
+  {
+    "skill_name": "Azure Dracoflare",
+    "pal_owner": "Shaolong",
+    "url": "https://paldb.cc/en/Azure_Dracoflare"
+  },
+  {
+    "skill_name": "Beam Comet",
+    "pal_owner": "Jetragon",
+    "url": "https://paldb.cc/en/Beam_Comet"
+  },
+  {
+    "skill_name": "Magna Crush",
+    "pal_owner": "Blazamut Ryu",
+    "url": "https://paldb.cc/en/Magna_Crush"
+  },
+  {
+    "skill_name": "Omega Laser",
+    "pal_owner": "Xenolord",
+    "url": "https://paldb.cc/en/Omega_Laser"
+  },
+  {
+    "skill_name": "Blazing Beam",
+    "pal_owner": "Eidrolon",
+    "url": "https://paldb.cc/en/Blazing_Beam"
+  },
+  {
+    "skill_name": "Reckless Charge",
+    "pal_owner": "Rushoar",
+    "url": "https://paldb.cc/en/Reckless_Charge"
+  },
+  {
+    "skill_name": "Fuddler Tunneler",
+    "pal_owner": "Fuddler",
+    "url": "https://paldb.cc/en/Fuddler_Tunneler"
+  },
+  {
+    "skill_name": "Persistent Slash",
+    "pal_owner": "Pupperai",
+    "url": "https://paldb.cc/en/Persistent_Slash"
+  },
+  {
+    "skill_name": "Shell Spin",
+    "pal_owner": "Digtoise",
+    "url": "https://paldb.cc/en/Shell_Spin"
+  },
+  {
+    "skill_name": "Mud Horn",
+    "pal_owner": "Eikthyrdeer Terra",
+    "url": "https://paldb.cc/en/Mud_Horn"
+  },
+  {
+    "skill_name": "Giga Horn",
+    "pal_owner": "Warsect",
+    "url": "https://paldb.cc/en/Giga_Horn"
+  },
+  {
+    "skill_name": "Earth Dash",
+    "pal_owner": "Dazemu",
+    "url": "https://paldb.cc/en/Earth_Dash"
+  },
+  {
+    "skill_name": "Spinning Roundhouse",
+    "pal_owner": "Anubis",
+    "url": "https://paldb.cc/en/Spinning_Roundhouse"
+  },
+  {
+    "skill_name": "Earth Impact",
+    "pal_owner": "Mammorest",
+    "url": "https://paldb.cc/en/Earth_Impact"
+  },
+  {
+    "skill_name": "Stone Claw",
+    "pal_owner": "Cryolinx Terra",
+    "url": "https://paldb.cc/en/Stone_Claw"
+  },
+  {
+    "skill_name": "Rumble Combo",
+    "pal_owner": "Gorirat Terra",
+    "url": "https://paldb.cc/en/Rumble_Combo"
+  },
+  {
+    "skill_name": "Somersault Scratch",
+    "pal_owner": "Sekhmet",
+    "url": "https://paldb.cc/en/Somersault_Scratch"
+  },
+  {
+    "skill_name": "Jumping Stinger",
+    "pal_owner": "Menasting",
+    "url": "https://paldb.cc/en/Jumping_Stinger"
+  },
+  {
+    "skill_name": "Forceful Charge",
+    "pal_owner": "Anubis",
+    "url": "https://paldb.cc/en/Forceful_Charge"
+  },
+  {
+    "skill_name": "Rolling Scratch",
+    "pal_owner": "Sekhmet",
+    "url": "https://paldb.cc/en/Rolling_Scratch"
+  },
+  {
+    "skill_name": "Ground Cutter",
+    "pal_owner": "Knocklem",
+    "url": "https://paldb.cc/en/Ground_Cutter"
+  },
+  {
+    "skill_name": "Ground Smash",
+    "pal_owner": "Anubis",
+    "url": "https://paldb.cc/en/Ground_Smash"
+  },
+  {
+    "skill_name": "Crash Dash",
+    "pal_owner": "Gildane",
+    "url": "https://paldb.cc/en/Crash_Dash"
+  },
+  {
+    "skill_name": "Sumo Stomp",
+    "pal_owner": "Bulldosu",
+    "url": "https://paldb.cc/en/Sumo_Stomp"
+  },
+  {
+    "skill_name": "Rocket Arm",
+    "pal_owner": "Dualith",
+    "url": "https://paldb.cc/en/Rocket_Arm"
+  },
+  {
+    "skill_name": "Cube Press",
+    "pal_owner": "Tetroise",
+    "url": "https://paldb.cc/en/Cube_Press"
+  },
+  {
+    "skill_name": "Horn Burst",
+    "pal_owner": "Pierdon",
+    "url": "https://paldb.cc/en/Horn_Burst"
+  },
+  {
+    "skill_name": "Missile Burst",
+    "pal_owner": "Aegidron",
+    "url": "https://paldb.cc/en/Missile_Burst"
+  },
+  {
+    "skill_name": "Beckon Lightning",
+    "pal_owner": "Rayhound",
+    "url": "https://paldb.cc/en/Beckon_Lightning"
+  },
+  {
+    "skill_name": "Lightning Gale",
+    "pal_owner": "Univolt",
+    "url": "https://paldb.cc/en/Lightning_Gale"
+  },
+  {
+    "skill_name": "Lightning Claw",
+    "pal_owner": "Grizzbolt",
+    "url": "https://paldb.cc/en/Lightning_Claw"
+  },
+  {
+    "skill_name": "Blast Punch",
+    "pal_owner": "Mossanda Lux",
+    "url": "https://paldb.cc/en/Blast_Punch"
+  },
+  {
+    "skill_name": "Lightning Dive",
+    "pal_owner": "Beakon",
+    "url": "https://paldb.cc/en/Lightning_Dive"
+  },
+  {
+    "skill_name": "Kerauno",
+    "pal_owner": "Orserk",
+    "url": "https://paldb.cc/en/Kerauno"
+  },
+  {
+    "skill_name": "Lightning Smash",
+    "pal_owner": "Dinossom Lux",
+    "url": "https://paldb.cc/en/Lightning_Smash"
+  },
+  {
+    "skill_name": "Thunderslide",
+    "pal_owner": "Penking Lux",
+    "url": "https://paldb.cc/en/Thunderslide"
+  },
+  {
+    "skill_name": "Flash Charge",
+    "pal_owner": "Azurmane",
+    "url": "https://paldb.cc/en/Flash_Charge"
+  },
+  {
+    "skill_name": "Shell Charge",
+    "pal_owner": "Snock",
+    "url": "https://paldb.cc/en/Shell_Charge"
+  },
+  {
+    "skill_name": "Heavy Thunder Tank",
+    "pal_owner": "Grizzbolt",
+    "url": "https://paldb.cc/en/Heavy_Thunder_Tank"
+  },
+  {
+    "skill_name": "Polykeraunos",
+    "pal_owner": "Orserk",
+    "url": "https://paldb.cc/en/Polykeraunos"
+  },
+  {
+    "skill_name": "Bolt Blink",
+    "pal_owner": "Azurmane",
+    "url": "https://paldb.cc/en/Bolt_Blink"
+  },
+  {
+    "skill_name": "Thunder Uppercut",
+    "pal_owner": "ScorpionMan_Erectric",
+    "url": "https://paldb.cc/en/Thunder_Uppercut"
+  },
+  {
+    "skill_name": "Slime Press (Fire)",
+    "pal_owner": "Red Slime",
+    "url": "https://paldb.cc/en/Slime_Press_%28Fire%29"
+  },
+  {
+    "skill_name": "Blazing Horn",
+    "pal_owner": "Arsox",
+    "url": "https://paldb.cc/en/Blazing_Horn"
+  },
+  {
+    "skill_name": "Iaigiri",
+    "pal_owner": "Bushi",
+    "url": "https://paldb.cc/en/Iaigiri"
+  },
+  {
+    "skill_name": "Hellfire Claw",
+    "pal_owner": "Incineram",
+    "url": "https://paldb.cc/en/Hellfire_Claw"
+  },
+  {
+    "skill_name": "Daring Flames",
+    "pal_owner": "Kitsun",
+    "url": "https://paldb.cc/en/Daring_Flames"
+  },
+  {
+    "skill_name": "Rush Beak",
+    "pal_owner": "Ragnahawk",
+    "url": "https://paldb.cc/en/Rush_Beak"
+  },
+  {
+    "skill_name": "Flame Breath",
+    "pal_owner": "Vanwyrm",
+    "url": "https://paldb.cc/en/Flame_Breath"
+  },
+  {
+    "skill_name": "Ignis Charge",
+    "pal_owner": "Pyrin",
+    "url": "https://paldb.cc/en/Ignis_Charge"
+  },
+  {
+    "skill_name": "Volcanic Burst",
+    "pal_owner": "Reptyro",
+    "url": "https://paldb.cc/en/Volcanic_Burst"
+  },
+  {
+    "skill_name": "Phoenix Flare",
+    "pal_owner": "Faleris",
+    "url": "https://paldb.cc/en/Phoenix_Flare"
+  },
+  {
+    "skill_name": "Volcanic Fang",
+    "pal_owner": "Blazehowl",
+    "url": "https://paldb.cc/en/Volcanic_Fang"
+  },
+  {
+    "skill_name": "Magma Serpent",
+    "pal_owner": "Jormuntide Ignis",
+    "url": "https://paldb.cc/en/Magma_Serpent"
+  },
+  {
+    "skill_name": "Scorching Lantern Sweep",
+    "pal_owner": "Ghangler Ignis",
+    "url": "https://paldb.cc/en/Scorching_Lantern_Sweep"
+  },
+  {
+    "skill_name": "Brawn Impact",
+    "pal_owner": "Blazamut",
+    "url": "https://paldb.cc/en/Brawn_Impact"
+  },
+  {
+    "skill_name": "Magma Spit",
+    "pal_owner": "Moldron",
+    "url": "https://paldb.cc/en/Magma_Spit"
+  },
+  {
+    "skill_name": "Magma Laser",
+    "pal_owner": "Moldron",
+    "url": "https://paldb.cc/en/Magma_Laser"
+  },
+  {
+    "skill_name": "Trickster Show",
+    "pal_owner": "Dupin",
+    "url": "https://paldb.cc/en/Trickster_Show"
+  },
+  {
+    "skill_name": "Flame Cutter",
+    "pal_owner": "Knocklem Ignis",
+    "url": "https://paldb.cc/en/Flame_Cutter"
+  },
+  {
+    "skill_name": "Freezing Charge",
+    "pal_owner": "Reindrix",
+    "url": "https://paldb.cc/en/Freezing_Charge"
+  },
+  {
+    "skill_name": "Emperor Slide",
+    "pal_owner": "Penking",
+    "url": "https://paldb.cc/en/Emperor_Slide"
+  },
+  {
+    "skill_name": "Snow Claw",
+    "pal_owner": "Loupmoon Cryst",
+    "url": "https://paldb.cc/en/Snow_Claw"
+  },
+  {
+    "skill_name": "Chaotic Spray",
+    "pal_owner": "Munchill",
+    "url": "https://paldb.cc/en/Chaotic_Spray"
+  },
+  {
+    "skill_name": "Tempest Blizzard",
+    "pal_owner": "Vanwyrm Cryst",
+    "url": "https://paldb.cc/en/Tempest_Blizzard"
+  },
+  {
+    "skill_name": "Snow Rush",
+    "pal_owner": "Elgrove Cryst",
+    "url": "https://paldb.cc/en/Snow_Rush"
+  },
+  {
+    "skill_name": "Blizzard Claw",
+    "pal_owner": "Cryolinx",
+    "url": "https://paldb.cc/en/Blizzard_Claw"
+  },
+  {
+    "skill_name": "Frost Talon",
+    "pal_owner": "Bastigor",
+    "url": "https://paldb.cc/en/Frost_Talon"
+  },
+  {
+    "skill_name": "Frostcall",
+    "pal_owner": "Rayhound Cryst",
+    "url": "https://paldb.cc/en/Frostcall"
+  },
+  {
+    "skill_name": "Frost Burst",
+    "pal_owner": "Reptyro Cryst",
+    "url": "https://paldb.cc/en/Frost_Burst"
+  },
+  {
+    "skill_name": "Snow Bowling",
+    "pal_owner": "Wumpo",
+    "url": "https://paldb.cc/en/Snow_Bowling"
+  },
+  {
+    "skill_name": "Frozen Press",
+    "pal_owner": "Kingpaca Cryst",
+    "url": "https://paldb.cc/en/Frozen_Press"
+  },
+  {
+    "skill_name": "High Breach",
+    "pal_owner": "Whalaska",
+    "url": "https://paldb.cc/en/High_Breach"
+  },
+  {
+    "skill_name": "Ice Gale Strike",
+    "pal_owner": "Univolt Cryst",
+    "url": "https://paldb.cc/en/Ice_Gale_Strike"
+  },
+  {
+    "skill_name": "Ice Burst",
+    "pal_owner": "Pierdon Cryst",
+    "url": "https://paldb.cc/en/Ice_Burst"
+  },
+  {
+    "skill_name": "Ice Spit",
+    "pal_owner": "Moldron Cryst",
+    "url": "https://paldb.cc/en/Ice_Spit"
+  },
+  {
+    "skill_name": "Glacial Plunge",
+    "pal_owner": "Beakon Cryst",
+    "url": "https://paldb.cc/en/Glacial_Plunge"
+  },
+  {
+    "skill_name": "Glacial Impact",
+    "pal_owner": "Bastigor",
+    "url": "https://paldb.cc/en/Glacial_Impact"
+  },
+  {
+    "skill_name": "Raging Snow Rush",
+    "pal_owner": "Elgrove Cryst",
+    "url": "https://paldb.cc/en/Raging_Snow_Rush"
+  },
+  {
+    "skill_name": "Crystal Wing",
+    "pal_owner": "Frostallion",
+    "url": "https://paldb.cc/en/Crystal_Wing"
+  },
+  {
+    "skill_name": "Ice Laser",
+    "pal_owner": "Moldron Cryst",
+    "url": "https://paldb.cc/en/Ice_Laser"
+  },
+  {
+    "skill_name": "Bountiful Protection",
+    "pal_owner": "Lyleen",
+    "url": "https://paldb.cc/en/Bountiful_Protection"
+  },
+  {
+    "skill_name": "Slime Press (Grass)",
+    "pal_owner": "Green Slime",
+    "url": "https://paldb.cc/en/Slime_Press_%28Grass%29"
+  },
+  {
+    "skill_name": "Botanical Smash",
+    "pal_owner": "Dinossom",
+    "url": "https://paldb.cc/en/Botanical_Smash"
+  },
+  {
+    "skill_name": "Muscle Slam",
+    "pal_owner": "Broncherry",
+    "url": "https://paldb.cc/en/Muscle_Slam"
+  },
+  {
+    "skill_name": "Focus Shot",
+    "pal_owner": "Robinquill",
+    "url": "https://paldb.cc/en/Focus_Shot"
+  },
+  {
+    "skill_name": "Crushing Punch",
+    "pal_owner": "Mossanda",
+    "url": "https://paldb.cc/en/Crushing_Punch"
+  },
+  {
+    "skill_name": "Needle Spear",
+    "pal_owner": "Beegarde",
+    "url": "https://paldb.cc/en/Needle_Spear"
+  },
+  {
+    "skill_name": "Spinning Staff",
+    "pal_owner": "Elizabee",
+    "url": "https://paldb.cc/en/Spinning_Staff"
+  },
+  {
+    "skill_name": "Leaping Roundhouse",
+    "pal_owner": "Verdash",
+    "url": "https://paldb.cc/en/Leaping_Roundhouse"
+  },
+  {
+    "skill_name": "Konoha Flip",
+    "pal_owner": "Herbil",
+    "url": "https://paldb.cc/en/Konoha_Flip"
+  },
+  {
+    "skill_name": "Bull Rush",
+    "pal_owner": "Elgrove",
+    "url": "https://paldb.cc/en/Bull_Rush"
+  },
+  {
+    "skill_name": "Rapid Kick",
+    "pal_owner": "Leafan",
+    "url": "https://paldb.cc/en/Rapid_Kick"
+  },
+  {
+    "skill_name": "Dash Kick",
+    "pal_owner": "Palumba",
+    "url": "https://paldb.cc/en/Dash_Kick"
+  },
+  {
+    "skill_name": "Deep Breath",
+    "pal_owner": "Braloha",
+    "url": "https://paldb.cc/en/Deep_Breath"
+  },
+  {
+    "skill_name": "Flower Stomp",
+    "pal_owner": "Tropicaw",
+    "url": "https://paldb.cc/en/Flower_Stomp"
+  },
+  {
+    "skill_name": "Raging Bull Rush",
+    "pal_owner": "Elgrove",
+    "url": "https://paldb.cc/en/Raging_Bull_Rush"
+  },
+  {
+    "skill_name": "Root Cannon",
+    "pal_owner": "Dualith",
+    "url": "https://paldb.cc/en/Root_Cannon"
+  },
+  {
+    "skill_name": "Giant Spore",
+    "pal_owner": "Silvance",
+    "url": "https://paldb.cc/en/Giant_Spore"
+  },
+  {
+    "skill_name": "Lotus Bloom",
+    "pal_owner": "Ophydia",
+    "url": "https://paldb.cc/en/Lotus_Bloom"
+  },
+  {
+    "skill_name": "Spore Burst",
+    "pal_owner": "Silvance",
+    "url": "https://paldb.cc/en/Spore_Burst"
+  },
+  {
+    "skill_name": "Chicken Rush",
+    "pal_owner": "Chikipi",
+    "url": "https://paldb.cc/en/Chicken_Rush"
+  },
+  {
+    "skill_name": "Roly Poly",
+    "pal_owner": "Lamball",
+    "url": "https://paldb.cc/en/Roly_Poly"
+  },
+  {
+    "skill_name": "Punch Flurry",
+    "pal_owner": "Cattiva",
+    "url": "https://paldb.cc/en/Punch_Flurry"
+  },
+  {
+    "skill_name": "Fluffy Tackle",
+    "pal_owner": "Melpaca",
+    "url": "https://paldb.cc/en/Fluffy_Tackle"
+  },
+  {
+    "skill_name": "Slime Press (Neutral)",
+    "pal_owner": "Illuminant Slime",
+    "url": "https://paldb.cc/en/Slime_Press_%28Neutral%29"
+  },
+  {
+    "skill_name": "Winged Assault",
+    "pal_owner": "Cave Bat",
+    "url": "https://paldb.cc/en/Winged_Assault"
+  },
+  {
+    "skill_name": "Gale Claw",
+    "pal_owner": "Galeclaw",
+    "url": "https://paldb.cc/en/Gale_Claw"
+  },
+  {
+    "skill_name": "Tornado Attack",
+    "pal_owner": "Nitewing",
+    "url": "https://paldb.cc/en/Tornado_Attack"
+  },
+  {
+    "skill_name": "Sword Charge",
+    "pal_owner": "Enchanted Sword",
+    "url": "https://paldb.cc/en/Sword_Charge"
+  },
+  {
+    "skill_name": "Antler Uppercut",
+    "pal_owner": "Eikthyrdeer",
+    "url": "https://paldb.cc/en/Antler_Uppercut"
+  },
+  {
+    "skill_name": "Slime Press (Rainbow)",
+    "pal_owner": "Rainbow Slime",
+    "url": "https://paldb.cc/en/Slime_Press_%28Rainbow%29"
+  },
+  {
+    "skill_name": "Cat Press",
+    "pal_owner": "Grintale",
+    "url": "https://paldb.cc/en/Cat_Press"
+  },
+  {
+    "skill_name": "Ground Pound",
+    "pal_owner": "Gorirat",
+    "url": "https://paldb.cc/en/Ground_Pound"
+  },
+  {
+    "skill_name": "Cloud Tempest",
+    "pal_owner": "Fenglope",
+    "url": "https://paldb.cc/en/Cloud_Tempest"
+  },
+  {
+    "skill_name": "Kingly Slam",
+    "pal_owner": "Kingpaca",
+    "url": "https://paldb.cc/en/Kingly_Slam"
+  },
+  {
+    "skill_name": "Purifying Light",
+    "pal_owner": "Hartalis",
+    "url": "https://paldb.cc/en/Purifying_Light"
+  },
+  {
+    "skill_name": "Seigetsu Blade",
+    "pal_owner": "Selyne",
+    "url": "https://paldb.cc/en/Seigetsu_Blade"
+  },
+  {
+    "skill_name": "Wholehearted Stance",
+    "pal_owner": "Dogen",
+    "url": "https://paldb.cc/en/Wholehearted_Stance"
+  },
+  {
+    "skill_name": "Moonlight Beam",
+    "pal_owner": "Selyne",
+    "url": "https://paldb.cc/en/Moonlight_Beam"
+  },
+  {
+    "skill_name": "Spear Thrust",
+    "pal_owner": "Paladius",
+    "url": "https://paldb.cc/en/Spear_Thrust"
+  },
+  {
+    "skill_name": "Seigetsu Flash",
+    "pal_owner": "Selyne",
+    "url": "https://paldb.cc/en/Seigetsu_Flash"
+  },
+  {
+    "skill_name": "Holy Nova",
+    "pal_owner": "Celesdir",
+    "url": "https://paldb.cc/en/Holy_Nova"
+  },
+  {
+    "skill_name": "Divine Wing",
+    "pal_owner": "Hartalis",
+    "url": "https://paldb.cc/en/Divine_Wing"
+  },
+  {
+    "skill_name": "Silver Steed",
+    "pal_owner": "Starryon Primo",
+    "url": "https://paldb.cc/en/Silver_Steed"
+  },
+  {
+    "skill_name": "Holy Press",
+    "pal_owner": "Tetroise Primo",
+    "url": "https://paldb.cc/en/Holy_Press"
+  },
+  {
+    "skill_name": "Sacred Rain",
+    "pal_owner": "Hartalis",
+    "url": "https://paldb.cc/en/Sacred_Rain"
+  },
+  {
+    "skill_name": "Royal Step",
+    "pal_owner": "Starryon Primo",
+    "url": "https://paldb.cc/en/Royal_Step"
+  },
+  {
+    "skill_name": "Slime Press (Water)",
+    "pal_owner": "Blue Slime",
+    "url": "https://paldb.cc/en/Slime_Press_%28Water%29"
+  },
+  {
+    "skill_name": "Smoke Jet",
+    "pal_owner": "Gloopie",
+    "url": "https://paldb.cc/en/Smoke_Jet"
+  },
+  {
+    "skill_name": "Hydro Spin",
+    "pal_owner": "Turtacle",
+    "url": "https://paldb.cc/en/Hydro_Spin"
+  },
+  {
+    "skill_name": "Bubble Rain",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Bubble_Rain"
+  },
+  {
+    "skill_name": "Creeping Bubbles",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Creeping_Bubbles"
+  },
+  {
+    "skill_name": "Splash Tackle",
+    "pal_owner": "Broncherry Aqua",
+    "url": "https://paldb.cc/en/Splash_Tackle"
+  },
+  {
+    "skill_name": "Trigger Happy",
+    "pal_owner": "Finsider",
+    "url": "https://paldb.cc/en/Trigger_Happy"
+  },
+  {
+    "skill_name": "Aqua Blade",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Aqua_Blade"
+  },
+  {
+    "skill_name": "Phoenix Tide",
+    "pal_owner": "Faleris Aqua",
+    "url": "https://paldb.cc/en/Phoenix_Tide"
+  },
+  {
+    "skill_name": "Slither Slam",
+    "pal_owner": "Jormuntide",
+    "url": "https://paldb.cc/en/Slither_Slam"
+  },
+  {
+    "skill_name": "Tidal Charge",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Tidal_Charge"
+  },
+  {
+    "skill_name": "Lantern Sweep",
+    "pal_owner": "Ghangler",
+    "url": "https://paldb.cc/en/Lantern_Sweep"
+  },
+  {
+    "skill_name": "Maelstrom",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Maelstrom"
+  },
+  {
+    "skill_name": "Hydra Charge",
+    "pal_owner": "Shaolong",
+    "url": "https://paldb.cc/en/Hydra_Charge"
+  },
+  {
+    "skill_name": "Thalassonic Laser",
+    "pal_owner": "Neptilius",
+    "url": "https://paldb.cc/en/Thalassonic_Laser"
+  },
+  {
+    "skill_name": "Grand Breach",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Grand_Breach"
+  },
+  {
+    "skill_name": "Celestial Vortex",
+    "pal_owner": "Shaolong",
+    "url": "https://paldb.cc/en/Celestial_Vortex"
+  },
+  {
+    "skill_name": "Aqua Tornado",
+    "pal_owner": "Panthalus",
+    "url": "https://paldb.cc/en/Aqua_Tornado"
+  },
+  {
+    "skill_name": "Frenzied Charge",
+    "pal_owner": "Eye of Cthulhu",
+    "url": "https://paldb.cc/en/Frenzied_Charge"
+  },
+  {
+    "skill_name": "Iaigiri",
+    "pal_owner": "Bushi",
+    "url": "https://paldb.cc/en/Iaigiri"
+  }
+]

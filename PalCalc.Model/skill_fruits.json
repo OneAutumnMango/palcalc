@@ -1,0 +1,467 @@
+[
+  {
+    "fruit_name": "Skill Fruit: Power Shot",
+    "skill_name": "Power Shot",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Power_Shot"
+  },
+  {
+    "fruit_name": "Skill Fruit: Power Bomb",
+    "skill_name": "Power Bomb",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Power_Bomb"
+  },
+  {
+    "fruit_name": "Skill Fruit: Pal Blast",
+    "skill_name": "Pal Blast",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Pal_Blast"
+  },
+  {
+    "fruit_name": "Skill Fruit: Air Cannon",
+    "skill_name": "Air Cannon",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Air_Cannon"
+  },
+  {
+    "fruit_name": "Skill Fruit: Implode",
+    "skill_name": "Implode",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Implode"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Wind Cutter",
+    "skill_name": "Wind Cutter",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Wind_Cutter"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Grass Tornado",
+    "skill_name": "Grass Tornado",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Grass_Tornado"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Solar Blast",
+    "skill_name": "Solar Blast",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Solar_Blast"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Seed Machine Gun",
+    "skill_name": "Seed Machine Gun",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Seed_Machine_Gun"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Spine Vine",
+    "skill_name": "Spine Vine",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Spine_Vine"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Seed Mine",
+    "skill_name": "Seed Mine",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Seed_Mine"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Aqua Gun",
+    "skill_name": "Aqua Gun",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Aqua_Gun"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Aqua Burst",
+    "skill_name": "Aqua Burst",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Aqua_Burst"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Hydro Laser",
+    "skill_name": "Hydro Laser",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Hydro_Laser"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Hydro Jet",
+    "skill_name": "Hydro Jet",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Hydro_Jet"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Bubble Blast",
+    "skill_name": "Bubble Blast",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Bubble_Blast"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Acid Rain",
+    "skill_name": "Acid Rain",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Acid_Rain"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Ignis Blast",
+    "skill_name": "Ignis Blast",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Ignis_Blast"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Ignis Breath",
+    "skill_name": "Ignis Breath",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Ignis_Breath"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Fire Ball",
+    "skill_name": "Fire Ball",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Fire_Ball"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Flare Arrow",
+    "skill_name": "Flare Arrow",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Flare_Arrow"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Spirit Fire",
+    "skill_name": "Spirit Fire",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Spirit_Fire"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Ignis Rage",
+    "skill_name": "Ignis Rage",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Ignis_Rage"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Flare Storm",
+    "skill_name": "Flare Storm",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Flare_Storm"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Shockwave",
+    "skill_name": "Shockwave",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Shockwave"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Lightning Bolt",
+    "skill_name": "Lightning Bolt",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Lightning_Bolt"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Lightning Streak",
+    "skill_name": "Lightning Streak",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Lightning_Streak"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Plasma Funnel",
+    "skill_name": "Plasma Funnel",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Plasma_Funnel"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Spark Blast",
+    "skill_name": "Spark Blast",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Spark_Blast"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Lock-on Laser",
+    "skill_name": "Lock-on Laser",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Lock-on_Laser"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Electric Ball",
+    "skill_name": "Electric Ball",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Electric_Ball"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Tri-Lightning",
+    "skill_name": "Tri-Lightning",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Tri-Lightning"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Lightning Strike",
+    "skill_name": "Lightning Strike",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Lightning_Strike"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Stone Cannon",
+    "skill_name": "Stone Cannon",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Stone_Cannon"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Sand Tornado",
+    "skill_name": "Sand Tornado",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Sand_Tornado"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Rock Lance",
+    "skill_name": "Rock Lance",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Rock_Lance"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Bog Blast",
+    "skill_name": "Bog Blast",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Bog_Blast"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Stone Blast",
+    "skill_name": "Stone Blast",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Stone_Blast"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Ice Missile",
+    "skill_name": "Ice Missile",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Ice_Missile"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Iceberg",
+    "skill_name": "Iceberg",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Iceberg"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Blizzard Spike",
+    "skill_name": "Blizzard Spike",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Blizzard_Spike"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Icicle Cutter",
+    "skill_name": "Icicle Cutter",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Icicle_Cutter"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Crystal Breath",
+    "skill_name": "Crystal Breath",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Crystal_Breath"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Shadow Burst",
+    "skill_name": "Shadow Burst",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Shadow_Burst"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Nightmare Ball",
+    "skill_name": "Nightmare Ball",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Nightmare_Ball"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Poison Blast",
+    "skill_name": "Poison Blast",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Poison_Blast"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Spirit Flame",
+    "skill_name": "Spirit Flame",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Spirit_Flame"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Dark Laser",
+    "skill_name": "Dark Laser",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Dark_Laser"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Dragon Breath",
+    "skill_name": "Dragon Breath",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Dragon_Breath"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Dragon Cannon",
+    "skill_name": "Dragon Cannon",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Dragon_Cannon"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Dragon Burst",
+    "skill_name": "Dragon Burst",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Dragon_Burst"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Dragon Meteor",
+    "skill_name": "Dragon Meteor",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Dragon_Meteor"
+  },
+  {
+    "fruit_name": "Skill Fruit: Air Blade",
+    "skill_name": "Air Blade",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Air_Blade"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Circle Vine",
+    "skill_name": "Circle Vine",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Circle_Vine"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Multicutter",
+    "skill_name": "Multicutter",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Multicutter"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Splash",
+    "skill_name": "Splash",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Splash"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Curtain Splash",
+    "skill_name": "Curtain Splash",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Curtain_Splash"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Flame Wall",
+    "skill_name": "Flame Wall",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Flame_Wall"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Volcanic Rain",
+    "skill_name": "Volcanic Rain",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Volcanic_Rain"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: TriSpark",
+    "skill_name": "TriSpark",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_TriSpark"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Thunder Rain",
+    "skill_name": "Thunder Rain",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Thunder_Rain"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Thunderstorm",
+    "skill_name": "Thunderstorm",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Thunderstorm"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Rockburst",
+    "skill_name": "Rockburst",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Rockburst"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Sand Twister",
+    "skill_name": "Sand Twister",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Sand_Twister"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Icicle Line",
+    "skill_name": "Icicle Line",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Icicle_Line"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Diamond Rain",
+    "skill_name": "Diamond Rain",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Diamond_Rain"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Dark Cannon",
+    "skill_name": "Dark Cannon",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Dark_Cannon"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Dark Arrow",
+    "skill_name": "Dark Arrow",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Dark_Arrow"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Umbral Surge",
+    "skill_name": "Umbral Surge",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Umbral_Surge"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Apocalypse",
+    "skill_name": "Apocalypse",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Apocalypse"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Beam Slicer",
+    "skill_name": "Beam Slicer",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Beam_Slicer"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Comet",
+    "skill_name": "Comet Strike",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Comet"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Blast Cannon",
+    "skill_name": "Blast Cannon",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Blast_Cannon"
+  },
+  {
+    "fruit_name": "Skill Fruit: Holy Burst",
+    "skill_name": "Holy Burst",
+    "url": "https://paldb.cc/en/Skill_Fruit%3A_Holy_Burst"
+  },
+  {
+    "fruit_name": "Fire Skill Fruit: Flame Funnel",
+    "skill_name": "Flame Funnel",
+    "url": "https://paldb.cc/en/Fire_Skill_Fruit%3A_Flame_Funnel"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Freeze Wall",
+    "skill_name": "Freeze Wall",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Freeze_Wall"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Reflect Leaf",
+    "skill_name": "Reflect Leaf",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Reflect_Leaf"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Torrential Blast",
+    "skill_name": "Torrential Blast",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Torrential_Blast"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Hydro Slicer",
+    "skill_name": "Hydro Slicer",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Hydro_Slicer"
+  },
+  {
+    "fruit_name": "Ground Skill Fruit: Rocky Impact",
+    "skill_name": "Rocky Impact",
+    "url": "https://paldb.cc/en/Ground_Skill_Fruit%3A_Rocky_Impact"
+  },
+  {
+    "fruit_name": "Electric Skill Fruit: Thunder Spear",
+    "skill_name": "Thunder Spear",
+    "url": "https://paldb.cc/en/Electric_Skill_Fruit%3A_Thunder_Spear"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Dark Shot",
+    "skill_name": "Dark Shot",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Dark_Shot"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Dark Whisp",
+    "skill_name": "Dark Whisp",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Dark_Whisp"
+  },
+  {
+    "fruit_name": "Dragon Skill Fruit: Charge Cannon",
+    "skill_name": "Charge Cannon",
+    "url": "https://paldb.cc/en/Dragon_Skill_Fruit%3A_Charge_Cannon"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Icicle Bullet",
+    "skill_name": "Icicle Bullet",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Icicle_Bullet"
+  },
+  {
+    "fruit_name": "Thunder Skill Fruit: All Range Thunder",
+    "skill_name": "All Range Thunder",
+    "url": "https://paldb.cc/en/Thunder_Skill_Fruit%3A_All_Range_Thunder"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Aqua Surge",
+    "skill_name": "Aqua Surge",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Aqua_Surge"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Crosswind",
+    "skill_name": "Crosswind",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Crosswind"
+  },
+  {
+    "fruit_name": "Ice Skill Fruit: Absolute Frost",
+    "skill_name": "Absolute Frost",
+    "url": "https://paldb.cc/en/Ice_Skill_Fruit%3A_Absolute_Frost"
+  },
+  {
+    "fruit_name": "Grass Skill Fruit: Wind Blast",
+    "skill_name": "Wind Burst",
+    "url": "https://paldb.cc/en/Grass_Skill_Fruit%3A_Wind_Blast"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Poison Shower",
+    "skill_name": "Poison Shower",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Poison_Shower"
+  },
+  {
+    "fruit_name": "Water Skill Fruit: Geyser Gush",
+    "skill_name": "Geyser Gush",
+    "url": "https://paldb.cc/en/Water_Skill_Fruit%3A_Geyser_Gush"
+  },
+  {
+    "fruit_name": "Dark Skill Fruit: Psycho Gravity",
+    "skill_name": "Psycho Gravity",
+    "url": "https://paldb.cc/en/Dark_Skill_Fruit%3A_Psycho_Gravity"
+  }
+]

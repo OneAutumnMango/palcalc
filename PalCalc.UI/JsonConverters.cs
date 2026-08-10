@@ -404,7 +404,8 @@ namespace PalCalc.UI
                 pal,
                 guaranteedPassives,
                 numPassives,
-                db.BreedingMechanics
+                db.BreedingMechanics,
+                db
             ).WithGuaranteedGender(
                 db,
                 gender,

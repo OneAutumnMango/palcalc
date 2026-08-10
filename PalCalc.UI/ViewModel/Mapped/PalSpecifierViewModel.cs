@@ -29,6 +29,7 @@ namespace PalCalc.UI.ViewModel.Mapped
                 TargetPal = null;
                 RequiredPassives = new();
                 OptionalPassives = new();
+                TargetActiveSkills = new();
 
                 RequiredGender = PalGenderViewModel.Wildcard;
             }
@@ -38,6 +39,7 @@ namespace PalCalc.UI.ViewModel.Mapped
 
                 RequiredPassives = new(underlyingSpec.RequiredPassives);
                 OptionalPassives = new(underlyingSpec.OptionalPassives);
+                TargetActiveSkills = new(underlyingSpec.TargetActiveSkills);
 
                 var optionalVms = underlyingSpec.OptionalPassives
                     .Select(PassiveSkillViewModel.Make)
@@ -61,6 +63,7 @@ namespace PalCalc.UI.ViewModel.Mapped
                 TargetPal = null;
                 RequiredPassives = new();
                 OptionalPassives = new();
+                TargetActiveSkills = new();
             }
         }
 
@@ -77,6 +80,7 @@ namespace PalCalc.UI.ViewModel.Mapped
                 Pal = TargetPal.ModelObject,
                 RequiredPassives = RequiredPassives.AsModelEnumerable().ToList(),
                 OptionalPassives = OptionalPassives.AsModelEnumerable().ToList(),
+                TargetActiveSkills = TargetActiveSkills.AsModelEnumerable().ToList(),
                 RequiredGender = RequiredGender.Value,
                 IV_HP = MinIv_HP,
                 IV_Attack = MinIv_Attack,
@@ -91,6 +95,7 @@ namespace PalCalc.UI.ViewModel.Mapped
 
         public PalSpecifierPassiveSkillCollectionViewModel RequiredPassives { get; private set; }
         public PalSpecifierPassiveSkillCollectionViewModel OptionalPassives { get; private set; }
+        public PalSpecifierActiveSkillCollectionViewModel TargetActiveSkills { get; private set; }
 
         /* "Min IVs" are settings for the pal */
 
@@ -196,6 +201,7 @@ namespace PalCalc.UI.ViewModel.Mapped
                 Pal = TargetPal.ModelObject,
                 RequiredPassives = RequiredPassives.AsModelEnumerable().ToList(),
                 OptionalPassives = OptionalPassives.AsModelEnumerable().ToList(),
+                TargetActiveSkills = TargetActiveSkills.AsModelEnumerable().ToList(),
                 RequiredGender = RequiredGender.Value,
                 IV_HP = MinIv_HP,
                 IV_Attack = MinIv_Attack,
