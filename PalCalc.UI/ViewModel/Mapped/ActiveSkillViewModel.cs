@@ -58,6 +58,8 @@ namespace PalCalc.UI.ViewModel.Mapped
 
         public ImageSource SkillElementImage => SkillElementIcon.Images.GetValueOrElse(ModelObject.Element.InternalName, SkillElementIcon.DefaultImage);
 
+        public Brush SkillElementBrush => SkillElementColor.Brushes.GetValueOrElse(ModelObject.Element.InternalName, SkillElementColor.DefaultBrush);
+
         public ILocalizedText Name { get; }
     }
 }

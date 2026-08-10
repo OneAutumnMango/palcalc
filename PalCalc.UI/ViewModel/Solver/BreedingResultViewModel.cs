@@ -46,7 +46,9 @@ namespace PalCalc.UI.ViewModel.Solver
                     maxThreads: 0,
                     maxSurgeryCost: 0,
                     allowedSurgeryPassives: [],
-                    useGenderReversers: false
+                    useGenderReversers: false,
+                    useSkillFruits: false,
+                    allowedSkillFruitSkills: []
             );
             var solver = new BreedingSolver();
 
@@ -77,9 +79,10 @@ namespace PalCalc.UI.ViewModel.Solver
         }
 
         private CachedSaveGame source;
-        public BreedingResultViewModel(CachedSaveGame source, GameSettings settings, IPalReference displayedResult)
+        public BreedingResultViewModel(CachedSaveGame source, GameSettings settings, IPalReference displayedResult, IEnumerable<ActiveSkill> targetActiveSkills = null)
         {
             this.source = source;
+            TargetActiveSkills = targetActiveSkills?.ToList() ?? [];
 
             if (displayedResult == null)
             {
@@ -90,7 +93,7 @@ namespace PalCalc.UI.ViewModel.Solver
             else
             {
                 DisplayedResult = displayedResult;
-                Graph = BreedingGraph.FromPalReference(source, settings, displayedResult);
+                Graph = BreedingGraph.FromPalReference(source, settings, displayedResult, TargetActiveSkills);
                 EffectivePassives = new PassiveSkillCollectionViewModel(DisplayedResult.EffectivePassives.Select(PassiveSkillViewModel.Make));
 
                 IVs = IVSetViewModel.FromIVs(displayedResult.IVs);
@@ -191,6 +194,8 @@ namespace PalCalc.UI.ViewModel.Solver
             Graph.Nodes.Where(n => n.IsChecked);
 
         public IPalReference DisplayedResult { get; }
+
+        public List<ActiveSkill> TargetActiveSkills { get; } = [];
 
         public PassiveSkillCollectionViewModel EffectivePassives { get; }
 

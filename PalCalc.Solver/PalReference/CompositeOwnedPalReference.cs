@@ -59,6 +59,7 @@ namespace PalCalc.Solver.PalReference
 
             // Inherited active skills based on intersection (skills both can pass)
             InheritedActiveSkills = male.InheritedActiveSkills.Intersect(female.InheritedActiveSkills).ToList();
+            ActualActiveSkills = male.ActualActiveSkills.Intersect(female.ActualActiveSkills).ToList();
         }
 
         public OwnedPalReference Male { get; }
@@ -71,6 +72,8 @@ namespace PalCalc.Solver.PalReference
         public int EffectivePassivesHash { get; private set; }
 
         public List<ActiveSkill> InheritedActiveSkills { get; private set; }
+
+        public List<ActiveSkill> ActualActiveSkills { get; private set; }
 
         public List<PassiveSkill> ActualPassives { get; }
 

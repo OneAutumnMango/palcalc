@@ -26,11 +26,12 @@ namespace PalCalc.UI.ViewModel.GraphSharp
         /// </summary>
         void SetConsumer(IBreedingTreeNodeViewModel consumer);
 
-        public static IBreedingTreeNodeViewModel FromModel(CachedSaveGame source, GameSettings settings, IBreedingTreeNode node) =>
+        public static IBreedingTreeNodeViewModel FromModel(CachedSaveGame source, GameSettings settings, IBreedingTreeNode node, IEnumerable<ActiveSkill> targetActiveSkills) =>
             node switch
             {
                 SurgeryOperationNode spn => new SurgeryBreedingTreeNodeViewModel(spn),
-                _ => new StandardBreedingTreeNodeViewModel(source, settings, node)
+                SkillFruitOperationNode sfn => new SkillFruitBreedingTreeNodeViewModel(sfn),
+                _ => new StandardBreedingTreeNodeViewModel(source, settings, node, targetActiveSkills)
             };
     }
 

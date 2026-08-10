@@ -669,6 +669,22 @@ namespace PalCalc.UI.Localization {
         /// </summary>
         LC_PASSIVES_CHECKLIST_SURGERY_TITLE,
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SKILL_FRUITS_CHECKLIST_FRUIT,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SKILL_FRUITS_CHECKLIST_SKILL,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SKILL_FRUITS_CHECKLIST_TITLE,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_GRAPH_ACTIVE_SKILL_LEVEL,
+        /// <summary>
         ///   Looks up a localized string similar to PlayerName.
         /// </summary>
         LC_PLAYER_LABEL,
@@ -1071,6 +1087,18 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        LC_SOLVER_SETTINGS_ALLOWED_SKILL_FRUITS,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SOLVER_SETTINGS_USE_SKILL_FRUITS,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SOLVER_SETTINGS_USE_SKILL_FRUITS_DESCRIPTION,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         LC_SOLVER_SETTINGS_USE_GENDER_REVERSERS,
         /// <summary>
         ///   Looks up a localized string similar to .
@@ -1128,6 +1156,7 @@ namespace PalCalc.UI.Localization {
         ///   Looks up a localized string similar to .
         /// </summary>
         LC_SURGERY_STEP_TITLE,
+        LC_SKILL_FRUIT_STEP_TITLE,
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>

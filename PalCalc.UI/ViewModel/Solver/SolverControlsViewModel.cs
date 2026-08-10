@@ -103,6 +103,21 @@ namespace PalCalc.UI.ViewModel.Solver
                 window.ShowDialog();
             });
 
+            ChangeSkillFruits = new RelayCommand(() =>
+            {
+                var window = new SkillFruitsCheckListWindow();
+                window.DataContext = new SkillFruitsCheckListViewModel(
+                    onCancel: null,
+                    onSave: (fruitSelections) => BannedSkillFruits = fruitSelections.Where(kvp => !kvp.Value).Select(kvp => kvp.Key.Skill).ToList(),
+                    initialState: PalDB.LoadEmbedded().SkillFruits.ToDictionary(f => f, f => !BannedSkillFruits.Contains(f.Skill))
+                )
+                {
+                    Title = LocalizationCodes.LC_SKILL_FRUITS_CHECKLIST_TITLE.Bind()
+                };
+                window.Owner = App.Current.MainWindow;
+                window.ShowDialog();
+            });
+
             RunSolverCommand = runSolverCommand;
             CancelSolverCommand = cancelSolverCommand;
             PauseSolverCommand = pauseSolverCommand;
@@ -173,6 +188,13 @@ namespace PalCalc.UI.ViewModel.Solver
         {
             get => useGenderReversers;
             set => SetProperty(ref useGenderReversers, value);
+        }
+
+        private bool useSkillFruits;
+        public bool UseSkillFruits
+        {
+            get => useSkillFruits;
+            set => SetProperty(ref useSkillFruits, value);
         }
 
         private void OnStatePropertiesChanged()
@@ -260,6 +282,7 @@ namespace PalCalc.UI.ViewModel.Solver
         public IRelayCommand ChangeBredPals { get; }
         public IRelayCommand ChangeWildPals { get; }
         public IRelayCommand ChangeSurgeryPassives { get; }
+        public IRelayCommand ChangeSkillFruits { get; }
 
         [ObservableProperty]
         private List<Pal> bannedBredPals = new List<Pal>();
@@ -269,6 +292,9 @@ namespace PalCalc.UI.ViewModel.Solver
 
         [ObservableProperty]
         private List<PassiveSkill> bannedSurgeryPassives = new List<PassiveSkill>();
+
+        [ObservableProperty]
+        private List<ActiveSkill> bannedSkillFruits = new List<ActiveSkill>();
 
         public BreedingSolverSettings ConfiguredSolverSettings(GameSettings gameSettings, List<PalInstance> pals) =>
             new BreedingSolverSettings(
@@ -289,7 +315,9 @@ namespace PalCalc.UI.ViewModel.Solver
 
                 maxSurgeryCost: MaxGoldCost,
                 allowedSurgeryPassives: PalDB.LoadEmbedded().SurgeryPassiveSkills.Except(BannedSurgeryPassives).ToList(),
-                useGenderReversers: UseGenderReversers
+                useGenderReversers: UseGenderReversers,
+                useSkillFruits: UseSkillFruits,
+                allowedSkillFruitSkills: PalDB.LoadEmbedded().SkillFruitSkills.Except(BannedSkillFruits).ToList()
             );
 
         public SerializableSolverSettings AsModel => new SerializableSolverSettings()
@@ -303,8 +331,10 @@ namespace PalCalc.UI.ViewModel.Solver
             BannedBredPalInternalNames = BannedBredPals.Select(p => p.InternalName).ToList(),
             BannedWildPalInternalNames = BannedWildPals.Select(p => p.InternalName).ToList(),
             BannedSurgeryPassiveInternalNames = BannedSurgeryPassives.Select(p => p.InternalName).ToList(),
+            BannedSkillFruitInternalNames = BannedSkillFruits.Select(s => s.InternalName).ToList(),
             MaxGoldCost = MaxGoldCost,
             UseGenderReversers = UseGenderReversers,
+            UseSkillFruits = UseSkillFruits,
         };
 
         public void CopyFrom(SerializableSolverSettings model)
@@ -317,10 +347,12 @@ namespace PalCalc.UI.ViewModel.Solver
             MaxThreads = model.MaxThreads;
             MaxGoldCost = model.MaxGoldCost;
             UseGenderReversers = model.UseGenderReversers;
+            UseSkillFruits = model.UseSkillFruits;
 
             BannedBredPals = model.BannedBredPals(PalDB.LoadEmbedded());
             BannedWildPals = model.BannedWildPals(PalDB.LoadEmbedded());
             BannedSurgeryPassives = model.BannedSurgeryPassives(PalDB.LoadEmbedded());
+            BannedSkillFruits = model.BannedSkillFruits(PalDB.LoadEmbedded());
         }
     }
 }

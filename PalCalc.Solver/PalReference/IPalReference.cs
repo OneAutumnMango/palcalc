@@ -27,9 +27,14 @@ namespace PalCalc.Solver.PalReference
 
         /// <summary>
         /// The list of active skills that this pal can pass on to offspring through breeding.
-        /// Only populated when AssumeAllPalsLevel70 is enabled.
         /// </summary>
         List<ActiveSkill> InheritedActiveSkills { get; }
+
+        /// <summary>
+        /// The list of active skills this pal is expected to actually have. Owned pals use the skills
+        /// they've already learned, other pals are assumed to have anything they could learn.
+        /// </summary>
+        List<ActiveSkill> ActualActiveSkills => InheritedActiveSkills;
 
         IV_Set IVs { get; }
 

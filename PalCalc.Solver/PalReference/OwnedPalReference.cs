@@ -37,6 +37,8 @@ namespace PalCalc.Solver.PalReference
                 .Select(ls => ls.Skill)
                 .Distinct()
                 .ToList();
+
+            ActualActiveSkills = instance.ActiveSkills ?? [];
         }
 
         public PalInstance UnderlyingInstance => instance;
@@ -48,6 +50,8 @@ namespace PalCalc.Solver.PalReference
         public int EffectivePassivesHash { get; }
 
         public List<ActiveSkill> InheritedActiveSkills { get; private set; }
+
+        public List<ActiveSkill> ActualActiveSkills { get; }
 
         public List<PassiveSkill> ActualPassives { get; }
 

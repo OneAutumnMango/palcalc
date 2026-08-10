@@ -38,7 +38,8 @@ internal sealed class SolverRunContext
         BreedingMechanics mechanics,
         PalBreedingDB breedingDB,
         SolverStateController controller,
-        ICandidateSelectionPolicy selectionPolicy
+        ICandidateSelectionPolicy selectionPolicy,
+        IReadOnlyList<ActiveSkill> fruitTaughtSkills
     )
     {
         Target = target;
@@ -47,6 +48,7 @@ internal sealed class SolverRunContext
         BreedingDB = breedingDB;
         Controller = controller;
         SelectionPolicy = selectionPolicy;
+        FruitTaughtSkills = fruitTaughtSkills;
     }
 
     public PalSpecifier Target { get; }
@@ -55,6 +57,11 @@ internal sealed class SolverRunContext
     public PalBreedingDB BreedingDB { get; }
     public SolverStateController Controller { get; }
     public ICandidateSelectionPolicy SelectionPolicy { get; }
+
+    /// <summary>
+    /// Target active skills which are taught with skill fruits instead of being bred for.
+    /// </summary>
+    public IReadOnlyList<ActiveSkill> FruitTaughtSkills { get; }
 
     public static SolverRunContext Create(
         BreedingSolverRequest request,
@@ -71,14 +78,37 @@ internal sealed class SolverRunContext
         );
 
         return new(
-            target: request.CapturedTarget,
+            target: EffectiveTargetOf(request),
             settings: request.Settings,
             // Mechanics is immutable. Capturing the current PalDB-owned value
             // makes replacing it affect later runs without changing this run.
             mechanics: request.Settings.DB.BreedingMechanics,
             breedingDB: request.Settings.BreedingDB,
             controller: controller,
-            selectionPolicy: selectionPolicy
+            selectionPolicy: selectionPolicy,
+            fruitTaughtSkills: FruitTaughtSkillsOf(request)
         );
+    }
+
+    private static IReadOnlyList<ActiveSkill> FruitTaughtSkillsOf(BreedingSolverRequest request) =>
+        request.Settings.UseSkillFruits
+            ? request.CapturedTarget.TargetActiveSkills.Intersect(request.Settings.SkillFruitSkills).ToList()
+            : [];
+
+    // Skills obtainable from an allowed skill fruit can be taught to any pal, so they don't
+    // constrain the breeding path.
+    private static PalSpecifier EffectiveTargetOf(BreedingSolverRequest request)
+    {
+        var target = request.CapturedTarget;
+
+        if (!request.Settings.UseSkillFruits || target.TargetActiveSkills.Count == 0)
+            return target;
+
+        var effective = target.NormalizedCopy();
+        effective.TargetActiveSkills = effective.TargetActiveSkills
+            .Except(request.Settings.SkillFruitSkills)
+            .ToList();
+
+        return effective;
     }
 }

@@ -37,6 +37,7 @@ namespace PalCalc.UI.Model
         public int MaxThreads { get; set; } = 0;
         public int MaxGoldCost { get; set; } = 0;
         public bool UseGenderReversers { get; set; } = false;
+        public bool UseSkillFruits { get; set; } = false;
 
         public List<string> BannedBredPalInternalNames { get; set; } = [];
         public List<string> BannedWildPalInternalNames { get; set; } = [
@@ -45,10 +46,14 @@ namespace PalCalc.UI.Model
 
         public List<string> BannedSurgeryPassiveInternalNames { get; set; } = [];
 
+        public List<string> BannedSkillFruitInternalNames { get; set; } = [];
+
         public List<Pal> BannedBredPals(PalDB db) => BannedBredPalInternalNames.Select(n => n.InternalToPal(db)).ToList();
         public List<Pal> BannedWildPals(PalDB db) => BannedWildPalInternalNames.Select(n => n.InternalToPal(db)).ToList();
 
         public List<PassiveSkill> BannedSurgeryPassives(PalDB db) => BannedSurgeryPassiveInternalNames.Select(n => n.InternalToStandardPassive(db)).ToList();
+
+        public List<ActiveSkill> BannedSkillFruits(PalDB db) => BannedSkillFruitInternalNames.Select(n => n.ToActive(db)).ToList();
     }
 
     public class BreedingResultListColumnSettings

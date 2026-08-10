@@ -21,12 +21,14 @@ namespace PalCalc.UI.ViewModel.GraphSharp
 {
     public partial class StandardBreedingTreeNodeViewModel : ObservableObject, IBreedingTreeNodeViewModel, IRefreshableNode
     {
-        public StandardBreedingTreeNodeViewModel(CachedSaveGame source, GameSettings settings, IBreedingTreeNode node)
+        public StandardBreedingTreeNodeViewModel(CachedSaveGame source, GameSettings settings, IBreedingTreeNode node, IEnumerable<ActiveSkill> targetActiveSkills)
         {
             Value = node;
             Pal = PalViewModel.Make(node.PalRef.Pal);
             PassiveSkills = node.PalRef.ActualPassives.Select(PassiveSkillViewModel.Make).ToList();
             PassiveSkillsCollection = new PassiveSkillCollectionViewModel(PassiveSkills);
+
+            ActiveSkills = InheritedActiveSkillViewModel.MakeAll(node.PalRef.Pal, targetActiveSkills ?? []);
 
             switch (node.PalRef.Location)
             {
@@ -48,7 +50,7 @@ namespace PalCalc.UI.ViewModel.GraphSharp
 
             IVs = IVSetViewModel.FromIVs(node.PalRef.IVs);
 
-            IsCheckable = node.PalRef is BredPalReference or WildPalReference or SurgeryTablePalReference;
+            IsCheckable = node.PalRef is BredPalReference or WildPalReference or SurgeryTablePalReference or SkillFruitPalReference;
             ToggleCheckedCommand = new RelayCommand(() => IsChecked = !IsChecked);
         }
 
@@ -86,6 +88,10 @@ namespace PalCalc.UI.ViewModel.GraphSharp
         public PassiveSkillCollectionViewModel PassiveSkillsCollection { get; }
 
         public Visibility PassiveSkillsVisibility => PassiveSkills.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
+
+        public List<InheritedActiveSkillViewModel> ActiveSkills { get; }
+
+        public Visibility ActiveSkillsVisibility => ActiveSkills.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
 
         public Visibility EffortVisibility => Value.PalRef.BreedingEffort > TimeSpan.Zero ? Visibility.Visible : Visibility.Collapsed;
         public string Effort

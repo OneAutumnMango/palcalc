@@ -292,6 +292,7 @@ public class SearchFrontierCharacterizationTests
         public string Name { get; } = name;
         public Pal Pal { get; } = pal;
         public List<PassiveSkill> EffectivePassives { get; } = [];
+        public List<ActiveSkill> InheritedActiveSkills { get; } = [];
         public int EffectivePassivesHash { get; } = Array.Empty<PassiveSkill>().SetHash();
         public IV_Set IVs { get; } = new();
         public List<PassiveSkill> ActualPassives { get; } = [];

@@ -211,6 +211,7 @@ namespace PalCalc.Solver.PalReference
         public Pal Pal => Input.Pal;
         public int EffectivePassivesHash { get; }
         public List<ActiveSkill> InheritedActiveSkills { get; }
+        public List<ActiveSkill> ActualActiveSkills => Input.ActualActiveSkills;
         public IV_Set IVs => Input.IVs;
 
         public int NumTotalBreedingSteps => Input.NumTotalBreedingSteps;

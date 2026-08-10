@@ -37,6 +37,13 @@ namespace PalCalc.Solver.PalReference.Properties
         public static IPalRefLocation Instance { get; } = new SurgeryRefLocation();
     };
 
+    public class SkillFruitRefLocation : IPalRefLocation
+    {
+        public override string ToString() => "(Skill Fruit Result)";
+
+        public static IPalRefLocation Instance { get; } = new SkillFruitRefLocation();
+    };
+
     public class CompositeRefLocation : IPalRefLocation
     {
         public CompositeRefLocation(IPalRefLocation maleLoc, IPalRefLocation femaleLoc)

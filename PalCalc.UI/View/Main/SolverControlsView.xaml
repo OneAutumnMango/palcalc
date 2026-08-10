@@ -40,6 +40,35 @@
                 <RowDefinition />
                 <RowDefinition Height="{StaticResource SepHeight}" />
                 <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="{StaticResource SepWidth}" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="{itl:LocalizedText Code=LC_SOLVER_SETTINGS_USE_SKILL_FRUITS}" />
+            <CheckBox
+                Grid.Row="0" Grid.Column="2"
+                IsChecked="{Binding UseSkillFruits, Mode=TwoWay}"
+                IsEnabled="{Binding CanEditSettings}"
+                ToolTipService.ToolTip="{itl:LocalizedText Code=LC_SOLVER_SETTINGS_USE_SKILL_FRUITS_DESCRIPTION}"
+                ToolTipService.ShowOnDisabled="True"
+                />
+
+            <Button Grid.Row="2"
+                    Grid.ColumnSpan="99"
+                    Command="{Binding ChangeSkillFruits}"
+                    IsEnabled="{Binding CanEditSettings}"
+                    Content="{itl:LocalizedText Code=LC_SOLVER_SETTINGS_ALLOWED_SKILL_FRUITS}"
+            />
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="{StaticResource SepHeight}" />
+                <RowDefinition />
                 <RowDefinition Height="{StaticResource SepHeight}" />
                 <RowDefinition />
             </Grid.RowDefinitions>

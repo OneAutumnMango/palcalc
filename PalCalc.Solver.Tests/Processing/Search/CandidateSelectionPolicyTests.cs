@@ -460,6 +460,7 @@ public class CandidateSelectionPolicyTests
         public string Name { get; } = name;
         public Pal Pal { get; } = pal;
         public List<PassiveSkill> EffectivePassives { get; } = [];
+        public List<ActiveSkill> InheritedActiveSkills { get; } = [];
         public int EffectivePassivesHash => 0;
         public IV_Set IVs { get; } = new();
         public List<PassiveSkill> ActualPassives { get; } = [];

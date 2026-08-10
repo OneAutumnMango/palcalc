@@ -54,13 +54,10 @@ namespace PalCalc.Solver.PalReference
             EffectivePassivesHash = passives.SetHash(p => p.InternalName);
 
             // Collect inheritable active skills from both parents
-            InheritedActiveSkills = new List<ActiveSkill>();
-            if (gameSettings.AssumeAllPalsLevel70)
-            {
-                InheritedActiveSkills.AddRange(parent1.InheritedActiveSkills);
-                InheritedActiveSkills.AddRange(parent2.InheritedActiveSkills);
-                InheritedActiveSkills = InheritedActiveSkills.Distinct().ToList();
-            }
+            InheritedActiveSkills = parent1.InheritedActiveSkills
+                .Concat(parent2.InheritedActiveSkills)
+                .Distinct()
+                .ToList();
 
             parentBreedingEffort = gameSettings.MultipleBreedingFarms && Parent1 is BredPalReference && Parent2 is BredPalReference
                 ? Parent1.BreedingEffort > Parent2.BreedingEffort

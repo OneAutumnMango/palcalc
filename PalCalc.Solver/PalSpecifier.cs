@@ -30,6 +30,7 @@ namespace PalCalc.Solver
         public bool IsSatisfiedBy(IPalReference palRef) =>
             Pal == palRef.Pal &&
             !RequiredPassives.Except(palRef.EffectivePassives).Any() &&
+            !TargetActiveSkills.Except(palRef.ActualActiveSkills).Any() &&
             (RequiredGender == PalGender.WILDCARD || palRef.Gender == PalGender.WILDCARD || palRef.Gender == RequiredGender) &&
             (IV_HP == 0 || palRef.IVs.HP.Satisfies(IV_HP)) &&
             (IV_Attack == 0 || palRef.IVs.Attack.Satisfies(IV_Attack)) &&

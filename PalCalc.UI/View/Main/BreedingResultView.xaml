@@ -9,6 +9,7 @@
              xmlns:vm="clr-namespace:PalCalc.UI.ViewModel"
              xmlns:vms="clr-namespace:PalCalc.UI.ViewModel.Solver"
              xmlns:mvm="clr-namespace:PalCalc.UI.ViewModel.Mapped"
+             xmlns:pdvm="clr-namespace:PalCalc.UI.ViewModel.PalDerived"
              xmlns:gsvm="clr-namespace:PalCalc.UI.ViewModel.GraphSharp"
              xmlns:sm="clr-namespace:PalCalc.Solver;assembly=PalCalc.Solver"
              xmlns:itl="clr-namespace:PalCalc.UI.Localization"
@@ -73,6 +74,36 @@
                                     <Setter Property="FontSize" Value="10" />
                                 </Style>
                             </ItemsControl.Resources>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type gsvm:SkillFruitBreedingTreeNodeViewModel}">
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <Border Width="50" Height="50" CornerRadius="25" BorderThickness="1" BorderBrush="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" Margin="0,0,5,0">
+                        <materialIcons:MaterialIcon Kind="FoodApple" Width="26" Height="26" Foreground="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" />
+                    </Border>
+
+                    <StackPanel>
+                        <Label Content="{itl:LocalizedText Code=LC_SKILL_FRUIT_STEP_TITLE}" />
+                        <ItemsControl ItemsSource="{Binding Operations}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type gsvm:SkillFruitOperationViewModel}">
+                                    <Grid Height="16" Margin="0,1,0,1" HorizontalAlignment="Left">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="4" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Rectangle Grid.Column="0" VerticalAlignment="Stretch" Fill="{Binding Skill.SkillElementBrush}" />
+                                        <Border Grid.Column="1" BorderThickness="0,1,1,1" BorderBrush="{Binding Skill.SkillElementBrush}" Opacity="0.5" />
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="5,0,5,0">
+                                            <TextBlock Text="{Binding Skill.Name.Value}" FontSize="10" VerticalAlignment="Center" Foreground="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" />
+                                            <TextBlock Text="{Binding FruitName}" FontSize="10" Opacity="0.7" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </StackPanel>
                 </StackPanel>
@@ -207,6 +238,24 @@
                     <Grid Visibility="{Binding PassiveSkillsVisibility}">
                         <vp:PassiveSkillCollectionView Margin="0,5,0,0" DataContext="{Binding PassiveSkillsCollection}" Width="Auto" />
                     </Grid>
+                    <ItemsControl ItemsSource="{Binding ActiveSkills}" Margin="0,5,0,0" Visibility="{Binding ActiveSkillsVisibility}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type pdvm:InheritedActiveSkillViewModel}">
+                                <Grid Height="16" Margin="0,1,0,1" HorizontalAlignment="Left">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Rectangle Grid.Column="0" VerticalAlignment="Stretch" Fill="{Binding Skill.SkillElementBrush}" />
+                                    <Border Grid.Column="1" BorderThickness="0,1,1,1" BorderBrush="{Binding Skill.SkillElementBrush}" Opacity="0.5" />
+                                    <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="5,0,5,0">
+                                        <TextBlock Text="{Binding Skill.Name.Value}" FontSize="10" VerticalAlignment="Center" Foreground="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" />
+                                        <TextBlock Text="{Binding LevelDescription.Value}" Visibility="{Binding LevelVisibility}" FontSize="10" Opacity="0.7" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource {x:Static adonisUi:Brushes.ForegroundBrush}}" />
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </StackPanel>
             </DataTemplate>
 

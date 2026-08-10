@@ -931,6 +931,9 @@ Higher values linearly affect time required, depending on how many types of pals
   <data name="LC_SURGERY_STEP_TITLE" xml:space="preserve">
     <value>Surgery</value>
   </data>
+  <data name="LC_SKILL_FRUIT_STEP_TITLE" xml:space="preserve">
+    <value>Skill Fruits</value>
+  </data>
   <data name="LC_SOLVER_SETTINGS_USE_GENDER_REVERSERS" xml:space="preserve">
     <value>Use Gender Reversers</value>
   </data>
@@ -941,6 +944,29 @@ Gender Reversers are not shown in the breeding graph. If enabled, Owned Pals in 
   </data>
   <data name="LC_SOLVER_SETTINGS_SURGERY_ALLOWED_PASSIVES" xml:space="preserve">
     <value>Allowed Surgery Passives</value>
+  </data>
+  <data name="LC_SOLVER_SETTINGS_USE_SKILL_FRUITS" xml:space="preserve">
+    <value>Use Skill Fruits</value>
+  </data>
+  <data name="LC_SOLVER_SETTINGS_USE_SKILL_FRUITS_DESCRIPTION" xml:space="preserve">
+    <value>Whether target active skills may be taught directly with Skill Fruits instead of being inherited through breeding.
+
+When enabled, any target active skill covered by an allowed Skill Fruit is ignored when searching for breeding paths.</value>
+  </data>
+  <data name="LC_SOLVER_SETTINGS_ALLOWED_SKILL_FRUITS" xml:space="preserve">
+    <value>Allowed Skill Fruits</value>
+  </data>
+  <data name="LC_SKILL_FRUITS_CHECKLIST_TITLE" xml:space="preserve">
+    <value>Available Skill Fruits</value>
+  </data>
+  <data name="LC_GRAPH_ACTIVE_SKILL_LEVEL" xml:space="preserve">
+    <value>Lv {Level}</value>
+  </data>
+  <data name="LC_SKILL_FRUITS_CHECKLIST_SKILL" xml:space="preserve">
+    <value>Active Skill</value>
+  </data>
+  <data name="LC_SKILL_FRUITS_CHECKLIST_FRUIT" xml:space="preserve">
+    <value>Skill Fruit</value>
   </data>
   <data name="LC_SOLVER_SETTINGS_MAX_GOLD_COST" xml:space="preserve">
     <value>Max Gold Cost</value>

@@ -132,7 +132,20 @@ namespace PalCalc.Solver.Processing
 
             var resultPostProcessor = new ResultPostProcessor(spec, settings, controller);
             resultPostProcessor.ApplySurgery(frontier);
-            return resultPostProcessor.Finalize(frontier.TerminalResults);
+            return ApplySkillFruits(resultPostProcessor.Finalize(frontier.TerminalResults));
+        }
+
+        private List<IPalReference> ApplySkillFruits(List<IPalReference> results)
+        {
+            if (context.FruitTaughtSkills.Count == 0) return results;
+
+            return results
+                .Select(r =>
+                {
+                    var missing = context.FruitTaughtSkills.Except(r.ActualActiveSkills).ToList();
+                    return missing.Count == 0 ? r : new SkillFruitPalReference(r, missing);
+                })
+                .ToList();
         }
     }
 }

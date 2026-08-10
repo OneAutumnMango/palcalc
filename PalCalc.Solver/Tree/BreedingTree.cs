@@ -27,6 +27,9 @@ namespace PalCalc.Solver.Tree
                 case SurgeryTablePalReference stpr:
                     return new SurgeryResultNode(stpr, BuildNode(stpr.Input));
 
+                case SkillFruitPalReference sfpr:
+                    return new SkillFruitResultNode(sfpr, BuildNode(sfpr.Input));
+
                 default: throw new NotImplementedException();
             }
         }

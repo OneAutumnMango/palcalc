@@ -29,6 +29,152 @@
       "level": 1
     }
   ],
+  "Poison Blast": [
+    {
+      "pal_name": "Depresso",
+      "level": 1
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 1
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 1
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 1
+    },
+    {
+      "pal_name": "Caprity Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 7
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 7
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 7
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 15
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 22
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 7
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 15
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 7
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 7
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 2
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 7
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 1
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 1
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 7
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 15
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 7
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 1
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 7
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 7
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 1
+    }
+  ],
+  "Dark Shot": [
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Majex",
+      "level": 1
+    },
+    {
+      "pal_name": "Solenne",
+      "level": 1
+    }
+  ],
+  "Double Fang (Dark)": [
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 1
+    }
+  ],
   "Dark Ball": [
     {
       "pal_name": "Mau",
@@ -151,7 +297,1921 @@
       "level": 1
     }
   ],
+  "Slime Press (Dark)": [
+    {
+      "pal_name": "Purple Slime",
+      "level": 1
+    }
+  ],
+  "Fierce Fang (Dark)": [
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 2
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 2
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 2
+    }
+  ],
+  "Umbral Surge": [
+    {
+      "pal_name": "Bellanoir",
+      "level": 7
+    },
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 7
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 2
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 1
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 15
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 15
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 15
+    },
+    {
+      "pal_name": "Splatterina",
+      "level": 7
+    },
+    {
+      "pal_name": "Omascul",
+      "level": 7
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 7
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 7
+    },
+    {
+      "pal_name": "Xenolord",
+      "level": 7
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 7
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 1
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 1
+    }
+  ],
+  "Ocular Rush": [
+    {
+      "pal_name": "Demon Eye",
+      "level": 1
+    }
+  ],
+  "Phantom Peck": [
+    {
+      "pal_name": "Cawgnito",
+      "level": 15
+    }
+  ],
+  "Dark Cannon": [
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 3
+    },
+    {
+      "pal_name": "Bellanoir",
+      "level": 1
+    },
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 1
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 5
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 4
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 4
+    },
+    {
+      "pal_name": "Selyne",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 3
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 3
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 7
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 7
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Splatterina",
+      "level": 15
+    },
+    {
+      "pal_name": "Omascul",
+      "level": 15
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 15
+    },
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 15
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 7
+    },
+    {
+      "pal_name": "Wistella",
+      "level": 1
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 7
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Solenne",
+      "level": 7
+    },
+    {
+      "pal_name": "Dandilord",
+      "level": 1
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 3
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 3
+    }
+  ],
+  "Shadow Burst": [
+    {
+      "pal_name": "Incineram",
+      "level": 30
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Mau",
+      "level": 15
+    },
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Loupmoon",
+      "level": 15
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Cawgnito",
+      "level": 22
+    },
+    {
+      "pal_name": "Depresso",
+      "level": 30
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 22
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 15
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 15
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 15
+    },
+    {
+      "pal_name": "Shadowbeak",
+      "level": 15
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 15
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 15
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 22
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 15
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Katress",
+      "level": 22
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 22
+    },
+    {
+      "pal_name": "Nox",
+      "level": 15
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 15
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 15
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 1
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 15
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Splatterina",
+      "level": 22
+    },
+    {
+      "pal_name": "Omascul",
+      "level": 22
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 22
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 22
+    },
+    {
+      "pal_name": "Gloopie",
+      "level": 7
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 15
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 15
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 7
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 7
+    }
+  ],
+  "Jumping Claw": [
+    {
+      "pal_name": "Loupmoon",
+      "level": 7
+    }
+  ],
+  "Dark Arrow": [
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Bellanoir",
+      "level": 15
+    },
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 15
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 6
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 6
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 6
+    },
+    {
+      "pal_name": "Selyne",
+      "level": 7
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 22
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 22
+    },
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 22
+    },
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 22
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 15
+    },
+    {
+      "pal_name": "Wistella",
+      "level": 7
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 15
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Majex",
+      "level": 15
+    }
+  ],
+  "Poison Shower": [
+    {
+      "pal_name": "Caprity Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 35
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 40
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 30
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 30
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 30
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 30
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 30
+    }
+  ],
+  "Spirit Flame": [
+    {
+      "pal_name": "Mau",
+      "level": 30
+    },
+    {
+      "pal_name": "Foxparks",
+      "level": 40
+    },
+    {
+      "pal_name": "Loupmoon",
+      "level": 30
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Cawgnito",
+      "level": 30
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 30
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 15
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 22
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 22
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 7
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 22
+    },
+    {
+      "pal_name": "Shadowbeak",
+      "level": 22
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 30
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 22
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 30
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 30
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Katress",
+      "level": 30
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 30
+    },
+    {
+      "pal_name": "Nox",
+      "level": 30
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 30
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 30
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 15
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 22
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 22
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 22
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 22
+    },
+    {
+      "pal_name": "Bellanoir",
+      "level": 22
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 1
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 22
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 15
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Starryon",
+      "level": 15
+    },
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 30
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 22
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 22
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 22
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 22
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 15
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 15
+    },
+    {
+      "pal_name": "Gildra",
+      "level": 7
+    },
+    {
+      "pal_name": "Loomen",
+      "level": 15
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 15
+    }
+  ],
+  "Daring Shadowstorm": [
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 22
+    }
+  ],
+  "Webstrike Impact": [
+    {
+      "pal_name": "Tarantriss",
+      "level": 30
+    }
+  ],
+  "Dark Charge": [
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 30
+    }
+  ],
+  "Spirit Dash": [
+    {
+      "pal_name": "Maraith",
+      "level": 35
+    }
+  ],
+  "Lock-On Lunge": [
+    {
+      "pal_name": "Eye of Cthulhu",
+      "level": 1
+    }
+  ],
+  "Servant Call": [
+    {
+      "pal_name": "Eye of Cthulhu",
+      "level": 2
+    }
+  ],
+  "Evil Slash": [
+    {
+      "pal_name": "Xenovader",
+      "level": 40
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 40
+    }
+  ],
+  "Upper Smash": [
+    {
+      "pal_name": "Prixter",
+      "level": 30
+    }
+  ],
+  "Divine Disaster": [
+    {
+      "pal_name": "Shadowbeak",
+      "level": 40
+    }
+  ],
+  "Apocalypse": [
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 55
+    },
+    {
+      "pal_name": "Bellanoir",
+      "level": 40
+    },
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 30
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 7
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 7
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 7
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 50
+    },
+    {
+      "pal_name": "Starryon",
+      "level": 40
+    },
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 40
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 40
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 40
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 30
+    }
+  ],
+  "Soul Drain": [
+    {
+      "pal_name": "Omascul",
+      "level": 40
+    }
+  ],
+  "Nightmare Claw": [
+    {
+      "pal_name": "Incineram Noct",
+      "level": 35
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 35
+    }
+  ],
+  "Dark Laser": [
+    {
+      "pal_name": "Mau",
+      "level": 50
+    },
+    {
+      "pal_name": "Loupmoon",
+      "level": 50
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Cawgnito",
+      "level": 50
+    },
+    {
+      "pal_name": "Depresso",
+      "level": 50
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 50
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 50
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 50
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 40
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 50
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 50
+    },
+    {
+      "pal_name": "Caprity Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Shadowbeak",
+      "level": 50
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 55
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 50
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 50
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 50
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Katress",
+      "level": 50
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 50
+    },
+    {
+      "pal_name": "Nox",
+      "level": 50
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 50
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 50
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 50
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 50
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 4
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 3
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 3
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 50
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 50
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 50
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Omascul",
+      "level": 50
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 50
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 50
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 40
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 50
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 40
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 40
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 50
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 50
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 40
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Majex",
+      "level": 40
+    },
+    {
+      "pal_name": "Solenne",
+      "level": 30
+    },
+    {
+      "pal_name": "Dandilord",
+      "level": 22
+    }
+  ],
+  "Flame Waltz": [
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 40
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 8
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 8
+    }
+  ],
+  "Spectral Steed": [
+    {
+      "pal_name": "Starryon",
+      "level": 45
+    }
+  ],
+  "Astral Ray": [
+    {
+      "pal_name": "Xenolord",
+      "level": 30
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 2
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 2
+    }
+  ],
+  "Grudge Barrage": [
+    {
+      "pal_name": "Splatterina",
+      "level": 40
+    }
+  ],
+  "Black Quilled Ballet": [
+    {
+      "pal_name": "Solenne",
+      "level": 40
+    }
+  ],
+  "Mummy Rush": [
+    {
+      "pal_name": "Gildra",
+      "level": 40
+    }
+  ],
+  "Lethal Step": [
+    {
+      "pal_name": "Starryon",
+      "level": 50
+    }
+  ],
+  "Dark Whisp": [
+    {
+      "pal_name": "Incineram",
+      "level": 70
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Mau",
+      "level": 70
+    },
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Loupmoon",
+      "level": 70
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Cawgnito",
+      "level": 70
+    },
+    {
+      "pal_name": "Depresso",
+      "level": 70
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 70
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 70
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 70
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 70
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 70
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 60
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 70
+    },
+    {
+      "pal_name": "Caprity Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Shadowbeak",
+      "level": 70
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 70
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 70
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 70
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 70
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Katress",
+      "level": 70
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 70
+    },
+    {
+      "pal_name": "Nox",
+      "level": 70
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 70
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 70
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 70
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 70
+    },
+    {
+      "pal_name": "Bellanoir",
+      "level": 70
+    },
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 70
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 5
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 5
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 70
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 70
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 70
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 70
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 70
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Tarantriss",
+      "level": 70
+    },
+    {
+      "pal_name": "Splatterina",
+      "level": 50
+    },
+    {
+      "pal_name": "Omascul",
+      "level": 70
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 70
+    },
+    {
+      "pal_name": "Starryon",
+      "level": 70
+    },
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 50
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 70
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 10
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 12
+    },
+    {
+      "pal_name": "Gloopie",
+      "level": 70
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 50
+    },
+    {
+      "pal_name": "Hoodle",
+      "level": 70
+    },
+    {
+      "pal_name": "Wistella",
+      "level": 70
+    },
+    {
+      "pal_name": "Venusa",
+      "level": 50
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 70
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 70
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 70
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Majex",
+      "level": 70
+    },
+    {
+      "pal_name": "Gildra",
+      "level": 50
+    },
+    {
+      "pal_name": "Solenne",
+      "level": 50
+    },
+    {
+      "pal_name": "Loomen",
+      "level": 50
+    },
+    {
+      "pal_name": "Dandilord",
+      "level": 30
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 50
+    }
+  ],
+  "Nightmare Bloom": [
+    {
+      "pal_name": "Bellanoir Libero",
+      "level": 50
+    },
+    {
+      "pal_name": "Twilight Siren Bellanoir Libero",
+      "level": 9
+    },
+    {
+      "pal_name": "Twilight Siren (Ultra) Bellanoir Libero",
+      "level": 9
+    }
+  ],
+  "Nightmare Ray": [
+    {
+      "pal_name": "Bellanoir",
+      "level": 50
+    },
+    {
+      "pal_name": "Eclipsed Siren Bellanoir",
+      "level": 8
+    }
+  ],
+  "Divine Disaster II": [
+    {
+      "pal_name": "Shadowbeak",
+      "level": 55
+    }
+  ],
+  "Poison Scatter": [
+    {
+      "pal_name": "Venusa",
+      "level": 70
+    }
+  ],
+  "Lantern Flame": [
+    {
+      "pal_name": "Loomen",
+      "level": 70
+    }
+  ],
+  "Twin Spears": [
+    {
+      "pal_name": "Necromus",
+      "level": 40
+    }
+  ],
+  "Dark Wing": [
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 45
+    }
+  ],
+  "Dark Root": [
+    {
+      "pal_name": "Dualith Noct",
+      "level": 70
+    }
+  ],
+  "Dark Nova": [
+    {
+      "pal_name": "Celesdir Noct",
+      "level": 70
+    }
+  ],
+  "Poison Promenade": [
+    {
+      "pal_name": "Dandilord",
+      "level": 50
+    }
+  ],
+  "Toxic Dance": [
+    {
+      "pal_name": "Dandilord",
+      "level": 70
+    }
+  ],
+  "Dragon Cannon": [
+    {
+      "pal_name": "Jormuntide",
+      "level": 7
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Elphidran",
+      "level": 1
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 7
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 7
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 1
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 1
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 7
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 7
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 7
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 1
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 3
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 1
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenolord",
+      "level": 1
+    }
+  ],
+  "Dragon Burst": [
+    {
+      "pal_name": "Elphidran",
+      "level": 7
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 15
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 22
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 15
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 15
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 15
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 30
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 7
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 15
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 7
+    },
+    {
+      "pal_name": "Eidrolon",
+      "level": 1
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 1
+    }
+  ],
+  "Rocket Slam": [
+    {
+      "pal_name": "Chillet",
+      "level": 11
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 30
+    }
+  ],
+  "Mystic Whirlwind": [
+    {
+      "pal_name": "Elphidran",
+      "level": 22
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 22
+    }
+  ],
+  "Dragon Breath": [
+    {
+      "pal_name": "Jormuntide",
+      "level": 15
+    },
+    {
+      "pal_name": "Elphidran",
+      "level": 30
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 30
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 30
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 30
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 30
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 40
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 22
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 30
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 22
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 22
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 22
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 22
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 1
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 22
+    },
+    {
+      "pal_name": "Eidrolon",
+      "level": 7
+    }
+  ],
+  "Comet Strike": [
+    {
+      "pal_name": "Selyne",
+      "level": 18
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 22
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 40
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 40
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 2
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 2
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 40
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 22
+    },
+    {
+      "pal_name": "Wistella",
+      "level": 15
+    },
+    {
+      "pal_name": "Shaolong",
+      "level": 15
+    }
+  ],
+  "Blast Cannon": [
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 5
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 5
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 30
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 5
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 6
+    },
+    {
+      "pal_name": "Shaolong",
+      "level": 22
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 7
+    }
+  ],
+  "Beam Slicer": [
+    {
+      "pal_name": "Jetragon",
+      "level": 55
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 30
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 7
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 7
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 50
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 3
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 7
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 9
+    },
+    {
+      "pal_name": "Eidrolon",
+      "level": 15
+    }
+  ],
+  "Charge Cannon": [
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 40
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 9
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 11
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 22
+    }
+  ],
+  "Satellite Bit": [
+    {
+      "pal_name": "Xenolord",
+      "level": 15
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 1
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 1
+    }
+  ],
   "Comet Barrage": [
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 3
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 8
+    },
     {
       "pal_name": "Wistella",
       "level": 30
@@ -159,6 +2219,192 @@
     {
       "pal_name": "Eidrolon",
       "level": 22
+    }
+  ],
+  "Firefist Breathstorm": [
+    {
+      "pal_name": "Astegon",
+      "level": 35
+    }
+  ],
+  "Beam Slash": [
+    {
+      "pal_name": "Xenolord",
+      "level": 22
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 3
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 4
+    }
+  ],
+  "Tail Slash": [
+    {
+      "pal_name": "Eidrolon",
+      "level": 30
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 30
+    }
+  ],
+  "Dragon Meteor": [
+    {
+      "pal_name": "Foxparks",
+      "level": 70
+    },
+    {
+      "pal_name": "Jormuntide",
+      "level": 50
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Elphidran",
+      "level": 50
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 50
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 50
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 50
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Astegon",
+      "level": 50
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 50
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 50
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 50
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 50
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 6
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 6
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 70
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 70
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 6
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 8
+    },
+    {
+      "pal_name": "Wistella",
+      "level": 50
+    },
+    {
+      "pal_name": "Eidrolon",
+      "level": 40
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 50
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 70
+    }
+  ],
+  "Cosmic Meteor": [
+    {
+      "pal_name": "Xenolord",
+      "level": 40
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 4
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 5
+    }
+  ],
+  "Aegis Charge": [
+    {
+      "pal_name": "Silvegis",
+      "level": 50
+    }
+  ],
+  "Azure Dracoflare": [
+    {
+      "pal_name": "Shaolong",
+      "level": 40
+    }
+  ],
+  "Beam Comet": [
+    {
+      "pal_name": "Jetragon",
+      "level": 30
+    }
+  ],
+  "Magna Crush": [
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 50
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 1
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 1
     }
   ],
   "Meteorain": [
@@ -175,8 +2421,16 @@
       "level": 70
     },
     {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 3
+    },
+    {
       "pal_name": "Xenolord",
       "level": 70
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 10
     },
     {
       "pal_name": "Shaolong",
@@ -188,6 +2442,2198 @@
     },
     {
       "pal_name": "Eidrolon Ignis",
+      "level": 70
+    }
+  ],
+  "Omega Laser": [
+    {
+      "pal_name": "Xenolord",
+      "level": 50
+    },
+    {
+      "pal_name": "Invader from Space Xenolord",
+      "level": 12
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 3
+    }
+  ],
+  "Blazing Beam": [
+    {
+      "pal_name": "Eidrolon",
+      "level": 50
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 50
+    }
+  ],
+  "Bog Blast": [
+    {
+      "pal_name": "Mau",
+      "level": 1
+    },
+    {
+      "pal_name": "Mau Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Rushoar",
+      "level": 7
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 7
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 15
+    },
+    {
+      "pal_name": "Teafant",
+      "level": 15
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 7
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 1
+    },
+    {
+      "pal_name": "Foxparks",
+      "level": 7
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 15
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 1
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 1
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 1
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 1
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 7
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 15
+    },
+    {
+      "pal_name": "Depresso",
+      "level": 7
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 7
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 3
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 3
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 1
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 7
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 15
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 7
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 1
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 7
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 1
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 7
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 1
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 1
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 7
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 7
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 1
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 1
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 1
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 1
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Prixter Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 7
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 3
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 7
+    },
+    {
+      "pal_name": "Smokie",
+      "level": 3
+    },
+    {
+      "pal_name": "Starryon",
+      "level": 1
+    },
+    {
+      "pal_name": "Starryon Primo",
+      "level": 1
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 1
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 15
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 1
+    },
+    {
+      "pal_name": "Sekhmet",
+      "level": 1
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 1
+    },
+    {
+      "pal_name": "Dualith",
+      "level": 1
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 1
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 1
+    },
+    {
+      "pal_name": "Elgrove",
+      "level": 1
+    },
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 3
+    }
+  ],
+  "Double Fang (Ground)": [
+    {
+      "pal_name": "Gildane",
+      "level": 1
+    }
+  ],
+  "Fierce Fang (Ground)": [
+    {
+      "pal_name": "Gildane",
+      "level": 2
+    }
+  ],
+  "Reckless Charge": [
+    {
+      "pal_name": "Rushoar",
+      "level": 1
+    }
+  ],
+  "Fuddler Tunneler": [
+    {
+      "pal_name": "Fuddler",
+      "level": 5
+    }
+  ],
+  "Stone Blast": [
+    {
+      "pal_name": "Anubis",
+      "level": 1
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 1
+    },
+    {
+      "pal_name": "Rushoar",
+      "level": 22
+    },
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 15
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Digtoise",
+      "level": 7
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 22
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 15
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 15
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 7
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 22
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 15
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 15
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 22
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 15
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 22
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 22
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 15
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 15
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 15
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 15
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 7
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 7
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 15
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 15
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 15
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 15
+    },
+    {
+      "pal_name": "Nyafia",
+      "level": 15
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 7
+    },
+    {
+      "pal_name": "Sekhmet",
+      "level": 15
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 7
+    },
+    {
+      "pal_name": "Dualith",
+      "level": 7
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 1
+    },
+    {
+      "pal_name": "Pupperai",
+      "level": 7
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 7
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 22
+    }
+  ],
+  "Persistent Slash": [
+    {
+      "pal_name": "Pupperai",
+      "level": 15
+    }
+  ],
+  "Shell Spin": [
+    {
+      "pal_name": "Digtoise",
+      "level": 15
+    }
+  ],
+  "Stone Cannon": [
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 22
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Digtoise",
+      "level": 22
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 15
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 15
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 15
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 30
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 22
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 30
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 22
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 30
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 22
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 7
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 22
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 15
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 15
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 15
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 1
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 15
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 15
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 7
+    },
+    {
+      "pal_name": "Pupperai",
+      "level": 22
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 15
+    }
+  ],
+  "Mud Horn": [
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 18
+    }
+  ],
+  "Sand Tornado": [
+    {
+      "pal_name": "Anubis",
+      "level": 15
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 15
+    },
+    {
+      "pal_name": "Mau",
+      "level": 22
+    },
+    {
+      "pal_name": "Chikipi",
+      "level": 40
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 30
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Digtoise",
+      "level": 30
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 30
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 40
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 40
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 40
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 22
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 40
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 30
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 40
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 22
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 22
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 22
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 22
+    },
+    {
+      "pal_name": "Prixter Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 30
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 22
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 15
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 40
+    },
+    {
+      "pal_name": "Pupperai",
+      "level": 30
+    },
+    {
+      "pal_name": "Gildra",
+      "level": 15
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 30
+    }
+  ],
+  "Giga Horn": [
+    {
+      "pal_name": "Warsect",
+      "level": 30
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 15
+    }
+  ],
+  "Earth Dash": [
+    {
+      "pal_name": "Dazemu",
+      "level": 30
+    }
+  ],
+  "Spinning Roundhouse": [
+    {
+      "pal_name": "Anubis",
+      "level": 22
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 22
+    }
+  ],
+  "Earth Impact": [
+    {
+      "pal_name": "Mammorest",
+      "level": 30
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 30
+    }
+  ],
+  "Rockburst": [
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 35
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 40
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 40
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 22
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 22
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 40
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 30
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 30
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 30
+    },
+    {
+      "pal_name": "Moldron",
+      "level": 22
+    },
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 22
+    },
+    {
+      "pal_name": "Dualith",
+      "level": 22
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 22
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 22
+    },
+    {
+      "pal_name": "Elgrove",
+      "level": 15
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 15
+    }
+  ],
+  "Stone Claw": [
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 30
+    }
+  ],
+  "Rumble Combo": [
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 35
+    }
+  ],
+  "Somersault Scratch": [
+    {
+      "pal_name": "Sekhmet",
+      "level": 30
+    }
+  ],
+  "Jumping Stinger": [
+    {
+      "pal_name": "Menasting",
+      "level": 35
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 30
+    }
+  ],
+  "Forceful Charge": [
+    {
+      "pal_name": "Anubis",
+      "level": 30
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 30
+    }
+  ],
+  "Rock Lance": [
+    {
+      "pal_name": "Anubis",
+      "level": 50
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 50
+    },
+    {
+      "pal_name": "Rushoar",
+      "level": 40
+    },
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 40
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Digtoise",
+      "level": 50
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 50
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 50
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 50
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 50
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 40
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 40
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 30
+    },
+    {
+      "pal_name": "Menasting",
+      "level": 40
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 40
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 40
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 30
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 30
+    },
+    {
+      "pal_name": "Prixter",
+      "level": 40
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 50
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 40
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 30
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 30
+    },
+    {
+      "pal_name": "Pupperai",
+      "level": 40
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 30
+    }
+  ],
+  "Rolling Scratch": [
+    {
+      "pal_name": "Sekhmet",
+      "level": 40
+    }
+  ],
+  "Ground Cutter": [
+    {
+      "pal_name": "Knocklem",
+      "level": 40
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 40
+    }
+  ],
+  "Ground Smash": [
+    {
+      "pal_name": "Anubis",
+      "level": 40
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 40
+    }
+  ],
+  "Sand Twister": [
+    {
+      "pal_name": "Anubis",
+      "level": 55
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 55
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 50
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 50
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 50
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 50
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 50
+    },
+    {
+      "pal_name": "Sekhmet",
+      "level": 50
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 40
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 40
+    },
+    {
+      "pal_name": "Pupperai",
+      "level": 50
+    },
+    {
+      "pal_name": "Gildra",
+      "level": 30
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 40
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 30
+    }
+  ],
+  "Crash Dash": [
+    {
+      "pal_name": "Gildane",
+      "level": 40
+    }
+  ],
+  "Sumo Stomp": [
+    {
+      "pal_name": "Bulldosu",
+      "level": 50
+    }
+  ],
+  "Rocky Impact": [
+    {
+      "pal_name": "Anubis",
+      "level": 70
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 70
+    },
+    {
+      "pal_name": "Rushoar",
+      "level": 70
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Digtoise",
+      "level": 70
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 70
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 70
+    },
+    {
+      "pal_name": "Woolipop Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 70
+    },
+    {
+      "pal_name": "Surfent Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 70
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 70
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 60
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 70
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 70
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 70
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 70
+    },
+    {
+      "pal_name": "Menasting Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 70
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 70
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 70
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 50
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 17
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 40
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 50
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 50
+    },
+    {
+      "pal_name": "Lapiron",
+      "level": 70
+    },
+    {
+      "pal_name": "Moldron",
+      "level": 40
+    },
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Sekhmet",
+      "level": 70
+    },
+    {
+      "pal_name": "Pierdon",
+      "level": 70
+    },
+    {
+      "pal_name": "Tetroise",
+      "level": 70
+    },
+    {
+      "pal_name": "Pupperai",
+      "level": 70
+    },
+    {
+      "pal_name": "Gildra",
+      "level": 70
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Bulldosu",
+      "level": 70
+    },
+    {
+      "pal_name": "Aegidron",
+      "level": 40
+    }
+  ],
+  "Rocket Arm": [
+    {
+      "pal_name": "Dualith",
+      "level": 40
+    },
+    {
+      "pal_name": "Dualith Noct",
+      "level": 40
+    }
+  ],
+  "Cube Press": [
+    {
+      "pal_name": "Tetroise",
+      "level": 50
+    }
+  ],
+  "Horn Burst": [
+    {
+      "pal_name": "Pierdon",
+      "level": 50
+    }
+  ],
+  "Missile Burst": [
+    {
+      "pal_name": "Aegidron",
+      "level": 70
+    }
+  ],
+  "Thunder Spear": [
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Penking Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 1
+    }
+  ],
+  "Double Fang (Electric)": [
+    {
+      "pal_name": "Rayhound",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 1
+    }
+  ],
+  "Spark Blast": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 1
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 1
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 1
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 15
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 7
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 15
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 15
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 15
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 1
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 15
+    }
+  ],
+  "Fierce Fang (Electric)": [
+    {
+      "pal_name": "Rayhound",
+      "level": 2
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 2
+    }
+  ],
+  "Shockwave": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 7
+    },
+    {
+      "pal_name": "Jolthog",
+      "level": 1
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 7
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 7
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 30
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 15
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 7
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 15
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 30
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 30
+    },
+    {
+      "pal_name": "Prixter Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 7
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 7
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 7
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 7
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Snock",
+      "level": 1
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 7
+    }
+  ],
+  "Electric Ball": [
+    {
+      "pal_name": "Jolthog",
+      "level": 15
+    },
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 30
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 22
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 30
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 30
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 15
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 15
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 30
+    }
+  ],
+  "Beckon Lightning": [
+    {
+      "pal_name": "Rayhound",
+      "level": 26
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 26
+    }
+  ],
+  "Plasma Funnel": [
+    {
+      "pal_name": "Lunaris",
+      "level": 22
+    },
+    {
+      "pal_name": "Penking Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 15
+    }
+  ],
+  "Lightning Gale": [
+    {
+      "pal_name": "Univolt",
+      "level": 11
+    }
+  ],
+  "Lock-on Laser": [
+    {
+      "pal_name": "Univolt",
+      "level": 15
+    }
+  ],
+  "Lightning Claw": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 15
+    }
+  ],
+  "Lightning Streak": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 22
+    },
+    {
+      "pal_name": "Jolthog",
+      "level": 40
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 22
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 22
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 7
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 40
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 40
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 22
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 30
+    },
+    {
+      "pal_name": "Prixter Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 15
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 22
+    },
+    {
+      "pal_name": "Snock",
+      "level": 7
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 40
+    }
+  ],
+  "Blast Punch": [
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 22
+    }
+  ],
+  "Lightning Dive": [
+    {
+      "pal_name": "Beakon",
+      "level": 26
+    }
+  ],
+  "Tri-Lightning": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 30
+    },
+    {
+      "pal_name": "Jolthog",
+      "level": 30
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 30
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 30
+    },
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Jormuntide",
+      "level": 30
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 30
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 30
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 30
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 40
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 30
+    }
+  ],
+  "Kerauno": [
+    {
+      "pal_name": "Orserk",
+      "level": 1
+    }
+  ],
+  "TriSpark": [
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Penking Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Prixter Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 22
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 30
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 22
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Snock",
+      "level": 15
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 22
+    }
+  ],
+  "Lightning Strike": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 40
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 40
+    },
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 40
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 40
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 7
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 40
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 30
+    },
+    {
+      "pal_name": "Snock",
+      "level": 22
+    }
+  ],
+  "Thunder Tempest": [
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 22
+    }
+  ],
+  "Lightning Smash": [
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 35
+    }
+  ],
+  "Thunder Rain": [
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 50
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 30
+    }
+  ],
+  "Thunderslide": [
+    {
+      "pal_name": "Penking Lux",
+      "level": 30
+    }
+  ],
+  "Lightning Bolt": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 50
+    },
+    {
+      "pal_name": "Jolthog",
+      "level": 50
+    },
+    {
+      "pal_name": "Univolt",
+      "level": 50
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 50
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Relaxaurus Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Sparkit",
+      "level": 50
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 50
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Mossanda Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 50
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Orserk",
+      "level": 50
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 50
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 50
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 40
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 40
+    },
+    {
+      "pal_name": "Snock",
+      "level": 30
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 50
+    }
+  ],
+  "All Range Thunder": [
+    {
+      "pal_name": "Prixter Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 30
+    },
+    {
+      "pal_name": "Slowatt",
+      "level": 50
+    },
+    {
+      "pal_name": "Puffolt",
+      "level": 50
+    },
+    {
+      "pal_name": "Snock",
+      "level": 40
+    }
+  ],
+  "Flash Charge": [
+    {
+      "pal_name": "Azurmane",
+      "level": 45
+    }
+  ],
+  "Shell Charge": [
+    {
+      "pal_name": "Snock",
+      "level": 50
+    },
+    {
+      "pal_name": "Snock Lux",
+      "level": 50
+    }
+  ],
+  "Heavy Thunder Tank": [
+    {
+      "pal_name": "Grizzbolt",
+      "level": 55
+    }
+  ],
+  "Polykeraunos": [
+    {
+      "pal_name": "Orserk",
+      "level": 55
+    }
+  ],
+  "Thunderstorm": [
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Penking Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 70
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Rayhound",
+      "level": 70
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 70
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 70
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 70
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Helzephyr Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "Azurmane",
+      "level": 70
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 70
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 70
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 50
+    },
+    {
+      "pal_name": "PIDF Rider",
       "level": 70
     }
   ],
@@ -259,6 +4705,2450 @@
       "level": 70
     }
   ],
+  "Bolt Blink": [
+    {
+      "pal_name": "Azurmane",
+      "level": 50
+    }
+  ],
+  "Thunder Uppercut": [
+    {
+      "pal_name": "Prixter Lux",
+      "level": 50
+    }
+  ],
+  "Ignis Blast": [
+    {
+      "pal_name": "Incineram",
+      "level": 1
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 30
+    },
+    {
+      "pal_name": "Foxparks",
+      "level": 1
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 7
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 7
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 1
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 1
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 3
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 7
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 1
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 1
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 7
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 1
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 1
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 1
+    },
+    {
+      "pal_name": "Katress",
+      "level": 1
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 1
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 1
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 1
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 1
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 1
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 1
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 1
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 1
+    }
+  ],
+  "Double Fang (Fire)": [
+    {
+      "pal_name": "Kitsun",
+      "level": 1
+    }
+  ],
+  "Slime Press (Fire)": [
+    {
+      "pal_name": "Red Slime",
+      "level": 1
+    }
+  ],
+  "Fierce Fang (Fire)": [
+    {
+      "pal_name": "Kitsun",
+      "level": 2
+    }
+  ],
+  "Spirit Fire": [
+    {
+      "pal_name": "Incineram",
+      "level": 7
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Foxparks",
+      "level": 15
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 15
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 15
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 7
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 15
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 15
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 15
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 7
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 15
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 1
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 7
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 1
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 1
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 7
+    },
+    {
+      "pal_name": "Necromus",
+      "level": 7
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 7
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 7
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 15
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 15
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 15
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Moldron",
+      "level": 1
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 1
+    },
+    {
+      "pal_name": "Majex",
+      "level": 7
+    },
+    {
+      "pal_name": "Loomen",
+      "level": 7
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 7
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 7
+    }
+  ],
+  "Blazing Horn": [
+    {
+      "pal_name": "Arsox",
+      "level": 7
+    }
+  ],
+  "Flare Arrow": [
+    {
+      "pal_name": "Incineram",
+      "level": 15
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Foxparks",
+      "level": 22
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 22
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 22
+    },
+    {
+      "pal_name": "Elphidran",
+      "level": 15
+    },
+    {
+      "pal_name": "Maraith",
+      "level": 15
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 7
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 7
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 15
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 15
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 22
+    },
+    {
+      "pal_name": "Katress",
+      "level": 15
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 15
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 15
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 15
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 22
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 22
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 7
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 7
+    }
+  ],
+  "Iaigiri": [
+    {
+      "pal_name": "Bushi",
+      "level": 22
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 18
+    }
+  ],
+  "Ignis Breath": [
+    {
+      "pal_name": "Foxparks",
+      "level": 30
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 30
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 22
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 40
+    },
+    {
+      "pal_name": "Leezpunk",
+      "level": 40
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 22
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 22
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 22
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 22
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 22
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 30
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 40
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 30
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 7
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Moldron",
+      "level": 7
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 7
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 15
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 15
+    }
+  ],
+  "Hellfire Claw": [
+    {
+      "pal_name": "Incineram",
+      "level": 22
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 22
+    }
+  ],
+  "Daring Flames": [
+    {
+      "pal_name": "Kitsun",
+      "level": 22
+    }
+  ],
+  "Flare Storm": [
+    {
+      "pal_name": "Chikipi",
+      "level": 50
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 40
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 30
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 30
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 15
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 22
+    },
+    {
+      "pal_name": "Helzephyr",
+      "level": 22
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 30
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 30
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 30
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 30
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 30
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 15
+    }
+  ],
+  "Rush Beak": [
+    {
+      "pal_name": "Ragnahawk",
+      "level": 26
+    }
+  ],
+  "Flame Breath": [
+    {
+      "pal_name": "Vanwyrm",
+      "level": 26
+    }
+  ],
+  "Flame Wall": [
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 15
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 10
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Bushi Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Wixen Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 14
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Moldron",
+      "level": 15
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 15
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 22
+    },
+    {
+      "pal_name": "Majex",
+      "level": 22
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 22
+    }
+  ],
+  "Ignis Charge": [
+    {
+      "pal_name": "Pyrin",
+      "level": 30
+    }
+  ],
+  "Volcanic Burst": [
+    {
+      "pal_name": "Reptyro",
+      "level": 30
+    }
+  ],
+  "Flame Funnel": [
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 11
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 11
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 40
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 15
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 22
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 30
+    },
+    {
+      "pal_name": "Loomen",
+      "level": 30
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 30
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Kitsun Noct",
+      "level": 40
+    }
+  ],
+  "Phoenix Flare": [
+    {
+      "pal_name": "Faleris",
+      "level": 30
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 30
+    }
+  ],
+  "Volcanic Fang": [
+    {
+      "pal_name": "Blazehowl",
+      "level": 35
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 35
+    }
+  ],
+  "Magma Serpent": [
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 35
+    }
+  ],
+  "Volcanic Rain": [
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 8
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 8
+    },
+    {
+      "pal_name": "Sootseer",
+      "level": 50
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Moldron",
+      "level": 30
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 30
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 50
+    },
+    {
+      "pal_name": "Majex",
+      "level": 30
+    },
+    {
+      "pal_name": "Loomen",
+      "level": 40
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 40
+    }
+  ],
+  "Scorching Lantern Sweep": [
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 30
+    }
+  ],
+  "Ignis Rage": [
+    {
+      "pal_name": "Incineram",
+      "level": 50
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 50
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 40
+    },
+    {
+      "pal_name": "Pyrin Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 40
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 40
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Felbat",
+      "level": 40
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 40
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 40
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 30
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 30
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 30
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 40
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 50
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 40
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 40
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 40
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 40
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 10
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Starryon",
+      "level": 30
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 16
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 40
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 50
+    }
+  ],
+  "Fire Ball": [
+    {
+      "pal_name": "Incineram",
+      "level": 40
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Incineram Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Foxparks",
+      "level": 50
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Jormuntide Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 50
+    },
+    {
+      "pal_name": "Pyrin",
+      "level": 50
+    },
+    {
+      "pal_name": "Reptyro",
+      "level": 70
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 50
+    },
+    {
+      "pal_name": "Leezpunk Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 40
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 50
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 50
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 40
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 40
+    },
+    {
+      "pal_name": "Kelpsea Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Tanzee Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 40
+    },
+    {
+      "pal_name": "Blazehowl Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Arsox",
+      "level": 50
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 40
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 50
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 70
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Flambelle",
+      "level": 50
+    },
+    {
+      "pal_name": "Molten Daughter Flambelle",
+      "level": 50
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 50
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 50
+    },
+    {
+      "pal_name": "Chillet Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 9
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 9
+    },
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Katress Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Splatterina",
+      "level": 70
+    },
+    {
+      "pal_name": "Nitemary",
+      "level": 70
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 7
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Dupin",
+      "level": 50
+    },
+    {
+      "pal_name": "Flaracle",
+      "level": 70
+    },
+    {
+      "pal_name": "Bakemi",
+      "level": 50
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Majex",
+      "level": 50
+    },
+    {
+      "pal_name": "Eidrolon Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Renjishi",
+      "level": 70
+    }
+  ],
+  "Brawn Impact": [
+    {
+      "pal_name": "Blazamut",
+      "level": 35
+    },
+    {
+      "pal_name": "Blazamut Ryu",
+      "level": 40
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame Blazamut Ryu",
+      "level": 2
+    },
+    {
+      "pal_name": "Incarnation of the Eternal Flame (Ultra) Blazamut Ryu",
+      "level": 2
+    }
+  ],
+  "Magma Spit": [
+    {
+      "pal_name": "Moldron",
+      "level": 50
+    }
+  ],
+  "Raging Flame Wave": [
+    {
+      "pal_name": "Faleris",
+      "level": 55
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 55
+    }
+  ],
+  "Magma Laser": [
+    {
+      "pal_name": "Moldron",
+      "level": 70
+    }
+  ],
+  "Trickster Show": [
+    {
+      "pal_name": "Dupin",
+      "level": 70
+    }
+  ],
+  "Flame Cutter": [
+    {
+      "pal_name": "Knocklem Ignis",
+      "level": 70
+    }
+  ],
+  "Ice Missile": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 15
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 1
+    },
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 7
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 7
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Depresso",
+      "level": 22
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 22
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 7
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 7
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 1
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 1
+    },
+    {
+      "pal_name": "Swee",
+      "level": 7
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 7
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 15
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 7
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 1
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 7
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 7
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 1
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 1
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 1
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 1
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 1
+    }
+  ],
+  "Double Fang (Ice)": [
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 1
+    }
+  ],
+  "Fierce Fang (Ice)": [
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 2
+    }
+  ],
+  "Icicle Cutter": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 15
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 22
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 30
+    },
+    {
+      "pal_name": "Loupmoon",
+      "level": 22
+    },
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 22
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 15
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 15
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 7
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 15
+    },
+    {
+      "pal_name": "Swee",
+      "level": 15
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 15
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 22
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 15
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 15
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 15
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 7
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 7
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 7
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 7
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 7
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 7
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 7
+    }
+  ],
+  "Freezing Charge": [
+    {
+      "pal_name": "Reindrix",
+      "level": 22
+    }
+  ],
+  "Iceberg": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 30
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 30
+    },
+    {
+      "pal_name": "Penking",
+      "level": 7
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 30
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 22
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 30
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 15
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 22
+    },
+    {
+      "pal_name": "Swee",
+      "level": 30
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 22
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 40
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 15
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 30
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 30
+    },
+    {
+      "pal_name": "Silvegis",
+      "level": 15
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 7
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 15
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 15
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 15
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 15
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 15
+    },
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 15
+    }
+  ],
+  "Emperor Slide": [
+    {
+      "pal_name": "Penking",
+      "level": 15
+    }
+  ],
+  "Crystal Breath": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Penking",
+      "level": 22
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 22
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 40
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 40
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 40
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 22
+    },
+    {
+      "pal_name": "Daedream",
+      "level": 22
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 30
+    },
+    {
+      "pal_name": "Swee",
+      "level": 40
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 30
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 40
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 40
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 40
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 15
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 15
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 22
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 22
+    },
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 22
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 22
+    },
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 7
+    }
+  ],
+  "Snow Claw": [
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 15
+    }
+  ],
+  "Chaotic Spray": [
+    {
+      "pal_name": "Munchill",
+      "level": 22
+    }
+  ],
+  "Tempest Blizzard": [
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 26
+    }
+  ],
+  "Freeze Wall": [
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 30
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 30
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 30
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 30
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 30
+    },
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 15
+    }
+  ],
+  "Icicle Bullet": [
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 40
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 30
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 30
+    }
+  ],
+  "Snow Rush": [
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 22
+    }
+  ],
+  "Icicle Line": [
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 30
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 40
+    },
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 40
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 22
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 40
+    },
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 30
+    }
+  ],
+  "Blizzard Claw": [
+    {
+      "pal_name": "Cryolinx",
+      "level": 35
+    }
+  ],
+  "Frost Talon": [
+    {
+      "pal_name": "Bastigor",
+      "level": 22
+    }
+  ],
+  "Frostcall": [
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 30
+    }
+  ],
+  "Frost Burst": [
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 30
+    }
+  ],
+  "Snow Bowling": [
+    {
+      "pal_name": "Wumpo",
+      "level": 35
+    }
+  ],
+  "Frozen Press": [
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 45
+    }
+  ],
+  "Blizzard Spike": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 40
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 40
+    },
+    {
+      "pal_name": "Penking",
+      "level": 40
+    },
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 40
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 50
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 40
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 50
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 50
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 50
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 30
+    },
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 40
+    },
+    {
+      "pal_name": "Swee",
+      "level": 50
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 50
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 22
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 30
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 50
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 50
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 40
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 30
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 50
+    },
+    {
+      "pal_name": "Wispaw",
+      "level": 30
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 50
+    },
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Silvance",
+      "level": 15
+    }
+  ],
+  "Diamond Rain": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Loupmoon Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 70
+    },
+    {
+      "pal_name": "Azurobe Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Reptyro Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Rayhound Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 70
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 70
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 50
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 70
+    },
+    {
+      "pal_name": "Swee",
+      "level": 70
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 70
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Chillet",
+      "level": 70
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 70
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 70
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 70
+    },
+    {
+      "pal_name": "Smokie Cryst",
+      "level": 70
+    },
+    {
+      "pal_name": "Bastigor",
+      "level": 50
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 70
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 50
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 50
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 70
+    },
+    {
+      "pal_name": "Polapup Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 50
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Snugloo",
+      "level": 70
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 40
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 70
+    },
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 50
+    }
+  ],
+  "High Breach": [
+    {
+      "pal_name": "Whalaska",
+      "level": 40
+    },
+    {
+      "pal_name": "Whalaska Ignis",
+      "level": 50
+    }
+  ],
+  "Ice Gale Strike": [
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 70
+    }
+  ],
+  "Ice Burst": [
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 50
+    }
+  ],
+  "Ice Spit": [
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 50
+    }
+  ],
+  "Glacial Plunge": [
+    {
+      "pal_name": "Beakon Cryst",
+      "level": 70
+    }
+  ],
+  "Glacial Impact": [
+    {
+      "pal_name": "Bastigor",
+      "level": 55
+    }
+  ],
+  "Raging Snow Rush": [
+    {
+      "pal_name": "Elgrove Cryst",
+      "level": 70
+    }
+  ],
+  "Crystal Wing": [
+    {
+      "pal_name": "Frostallion",
+      "level": 30
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 30
+    }
+  ],
   "Double Blizzard Spike": [
     {
       "pal_name": "Frostallion",
@@ -271,6 +7161,644 @@
     {
       "pal_name": "Bastigor",
       "level": 70
+    }
+  ],
+  "Absolute Frost": [
+    {
+      "pal_name": "Univolt Cryst",
+      "level": 50
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 70
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 55
+    },
+    {
+      "pal_name": "Icelyn",
+      "level": 70
+    },
+    {
+      "pal_name": "Frostplume",
+      "level": 70
+    },
+    {
+      "pal_name": "Pierdon Cryst",
+      "level": 70
+    }
+  ],
+  "Ice Laser": [
+    {
+      "pal_name": "Moldron Cryst",
+      "level": 70
+    }
+  ],
+  "Bountiful Protection": [
+    {
+      "pal_name": "Lyleen",
+      "level": 55
+    }
+  ],
+  "Wind Cutter": [
+    {
+      "pal_name": "Lifmunk",
+      "level": 1
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 22
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 22
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 1
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 30
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 7
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 7
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 15
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 22
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 1
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 1
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 1
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 1
+    },
+    {
+      "pal_name": "Caprity Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 1
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 1
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 7
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 1
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 1
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 1
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 7
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 7
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 7
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 15
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 1
+    },
+    {
+      "pal_name": "Bushi",
+      "level": 7
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 1
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 7
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 1
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 7
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 1
+    },
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 1
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 7
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 1
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 30
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 1
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 1
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 15
+    }
+  ],
+  "Slime Press (Grass)": [
+    {
+      "pal_name": "Green Slime",
+      "level": 1
+    }
+  ],
+  "Seed Machine Gun": [
+    {
+      "pal_name": "Lifmunk",
+      "level": 22
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 30
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 30
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 7
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 40
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 22
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 22
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 7
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 7
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 15
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 7
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 22
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 15
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 7
+    },
+    {
+      "pal_name": "Warsect Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 30
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 15
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 15
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 15
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 7
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 7
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 7
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 1
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 40
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 1
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 7
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 7
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 7
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 7
+    },
+    {
+      "pal_name": "Leafan",
+      "level": 1
+    }
+  ],
+  "Botanical Smash": [
+    {
+      "pal_name": "Dinossom",
+      "level": 7
+    },
+    {
+      "pal_name": "Dinossom Lux",
+      "level": 15
+    }
+  ],
+  "Muscle Slam": [
+    {
+      "pal_name": "Broncherry",
+      "level": 15
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 15
+    }
+  ],
+  "Seed Mine": [
+    {
+      "pal_name": "Gumoss",
+      "level": 30
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 30
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 22
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 22
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 22
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 22
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 30
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 22
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 15
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 15
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 22
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 22
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 30
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 22
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 7
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 22
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 7
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 7
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 7
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 7
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 15
+    },
+    {
+      "pal_name": "Dualith",
+      "level": 15
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 15
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 15
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 7
+    },
+    {
+      "pal_name": "Dandilord",
+      "level": 7
+    }
+  ],
+  "Focus Shot": [
+    {
+      "pal_name": "Robinquill",
+      "level": 15
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 15
+    }
+  ],
+  "Crushing Punch": [
+    {
+      "pal_name": "Mossanda",
+      "level": 22
+    }
+  ],
+  "Needle Spear": [
+    {
+      "pal_name": "Beegarde",
+      "level": 11
+    }
+  ],
+  "Multicutter": [
+    {
+      "pal_name": "Caprity Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 15
+    },
+    {
+      "pal_name": "Leafan",
+      "level": 7
+    }
+  ],
+  "Spinning Staff": [
+    {
+      "pal_name": "Elizabee",
+      "level": 22
+    }
+  ],
+  "Grass Tornado": [
+    {
+      "pal_name": "Chikipi",
+      "level": 30
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 40
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 22
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 30
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 22
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 30
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 30
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 40
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 30
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 22
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 40
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 30
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 40
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 30
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 40
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 30
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 30
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 40
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 30
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 30
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 22
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 15
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 15
+    },
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 15
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 15
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 15
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 15
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 15
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 30
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 15
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 22
+    },
+    {
+      "pal_name": "Elgrove",
+      "level": 7
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 40
     }
   ],
   "Wind Edge": [
@@ -299,9 +7827,1971 @@
       "level": 15
     }
   ],
-  "Raid Cutter": [
+  "Spine Vine": [
+    {
+      "pal_name": "Lifmunk",
+      "level": 40
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 40
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 40
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 40
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 40
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 40
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 30
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 40
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 40
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 40
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 30
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 40
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 40
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 40
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 30
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 40
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 22
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 15
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 22
+    }
+  ],
+  "Leaping Roundhouse": [
+    {
+      "pal_name": "Verdash",
+      "level": 35
+    }
+  ],
+  "Konoha Flip": [
+    {
+      "pal_name": "Herbil",
+      "level": 30
+    }
+  ],
+  "Bull Rush": [
+    {
+      "pal_name": "Elgrove",
+      "level": 22
+    }
+  ],
+  "Rapid Kick": [
     {
       "pal_name": "Leafan",
+      "level": 22
+    }
+  ],
+  "Bee Quiet": [
+    {
+      "pal_name": "Beegarde",
+      "level": 15
+    }
+  ],
+  "Circle Vine": [
+    {
+      "pal_name": "Caprity Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 40
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 50
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 40
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 40
+    },
+    {
+      "pal_name": "Shroomer Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 22
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 1
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 1
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 22
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 30
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 22
+    },
+    {
+      "pal_name": "Elgrove",
+      "level": 30
+    },
+    {
+      "pal_name": "Dandilord",
+      "level": 15
+    }
+  ],
+  "Dash Kick": [
+    {
+      "pal_name": "Palumba",
+      "level": 30
+    }
+  ],
+  "Reflect Leaf": [
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 30
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 40
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 40
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 30
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 30
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 30
+    },
+    {
+      "pal_name": "Leafan",
+      "level": 40
+    },
+    {
+      "pal_name": "Silvance",
+      "level": 7
+    }
+  ],
+  "Deep Breath": [
+    {
+      "pal_name": "Braloha",
+      "level": 30
+    }
+  ],
+  "Solar Blast": [
+    {
+      "pal_name": "Lifmunk",
+      "level": 50
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 50
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 50
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 50
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 50
+    },
+    {
+      "pal_name": "Robinquill Terra",
+      "level": 40
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 50
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 50
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 50
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 50
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 50
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 50
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 50
+    },
+    {
+      "pal_name": "Wumpo",
+      "level": 50
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 50
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 50
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 50
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 50
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 50
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 50
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 50
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 50
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 50
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 50
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 50
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 50
+    },
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 40
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 50
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 40
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 3
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 3
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 40
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 40
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 40
+    },
+    {
+      "pal_name": "Dualith",
+      "level": 30
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 40
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 40
+    }
+  ],
+  "Crosswind": [
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 50
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 50
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 50
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 2
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 2
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 50
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 50
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 50
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 40
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 50
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 50
+    },
+    {
+      "pal_name": "Leafan",
+      "level": 50
+    },
+    {
+      "pal_name": "Elgrove",
+      "level": 40
+    },
+    {
+      "pal_name": "Silvance",
+      "level": 22
+    }
+  ],
+  "Flower Stomp": [
+    {
+      "pal_name": "Tropicaw",
+      "level": 50
+    }
+  ],
+  "Wind Burst": [
+    {
+      "pal_name": "Lifmunk",
+      "level": 70
+    },
+    {
+      "pal_name": "Bristla",
+      "level": 70
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 70
+    },
+    {
+      "pal_name": "Gumoss",
+      "level": 70
+    },
+    {
+      "pal_name": "Elphidran",
+      "level": 70
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 70
+    },
+    {
+      "pal_name": "Dinossom",
+      "level": 70
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 70
+    },
+    {
+      "pal_name": "Broncherry",
+      "level": 70
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 70
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 70
+    },
+    {
+      "pal_name": "Tanzee",
+      "level": 70
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 70
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 70
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 70
+    },
+    {
+      "pal_name": "Ribbuny Botan",
+      "level": 70
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 70
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 70
+    },
+    {
+      "pal_name": "Vaelet",
+      "level": 70
+    },
+    {
+      "pal_name": "Warsect",
+      "level": 70
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 70
+    },
+    {
+      "pal_name": "Petallia Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 70
+    },
+    {
+      "pal_name": "Verdash",
+      "level": 70
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 70
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 70
+    },
+    {
+      "pal_name": "Quivern Botan",
+      "level": 70
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 70
+    },
+    {
+      "pal_name": "Shroomer",
+      "level": 70
+    },
+    {
+      "pal_name": "Nitemary Botan",
+      "level": 70
+    },
+    {
+      "pal_name": "Prunelia",
+      "level": 70
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 70
+    },
+    {
+      "pal_name": "Braloha",
+      "level": 70
+    },
+    {
+      "pal_name": "Palumba",
+      "level": 70
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 7
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 7
+    },
+    {
+      "pal_name": "Hartalis",
+      "level": 70
+    },
+    {
+      "pal_name": "Needoll",
+      "level": 70
+    },
+    {
+      "pal_name": "Needoll Noct",
+      "level": 70
+    },
+    {
+      "pal_name": "Mycora",
+      "level": 70
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 70
+    },
+    {
+      "pal_name": "Dualith",
+      "level": 50
+    },
+    {
+      "pal_name": "Tropicaw",
+      "level": 70
+    },
+    {
+      "pal_name": "Carnibora",
+      "level": 70
+    },
+    {
+      "pal_name": "Souffline",
+      "level": 70
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 40
+    },
+    {
+      "pal_name": "Leafan",
+      "level": 70
+    },
+    {
+      "pal_name": "Elgrove",
+      "level": 50
+    },
+    {
+      "pal_name": "Dandilord",
+      "level": 40
+    },
+    {
+      "pal_name": "Silvance",
+      "level": 30
+    }
+  ],
+  "Raging Bull Rush": [
+    {
+      "pal_name": "Elgrove",
+      "level": 70
+    }
+  ],
+  "Root Cannon": [
+    {
+      "pal_name": "Dualith",
+      "level": 70
+    }
+  ],
+  "Giant Spore": [
+    {
+      "pal_name": "Silvance",
+      "level": 50
+    }
+  ],
+  "Lotus Bloom": [
+    {
+      "pal_name": "Ophydia",
+      "level": 50
+    }
+  ],
+  "Spore Burst": [
+    {
+      "pal_name": "Silvance",
+      "level": 70
+    }
+  ],
+  "Chicken Rush": [
+    {
+      "pal_name": "Chikipi",
+      "level": 1
+    }
+  ],
+  "Air Cannon": [
+    {
+      "pal_name": "Mau Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Lifmunk",
+      "level": 7
+    },
+    {
+      "pal_name": "Chikipi",
+      "level": 7
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 7
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 1
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 7
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 15
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 1
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 7
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 1
+    },
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 7
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 7
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 1
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 1
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 1
+    },
+    {
+      "pal_name": "Cawgnito",
+      "level": 1
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 1
+    },
+    {
+      "pal_name": "Vanwyrm",
+      "level": 1
+    },
+    {
+      "pal_name": "Vanwyrm Cryst",
+      "level": 1
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 1
+    },
+    {
+      "pal_name": "Frostallion Noct",
+      "level": 1
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 7
+    },
+    {
+      "pal_name": "Reindrix",
+      "level": 1
+    },
+    {
+      "pal_name": "Shadowbeak",
+      "level": 1
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 1
+    },
+    {
+      "pal_name": "Hoocrates",
+      "level": 1
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 1
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 7
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 15
+    },
+    {
+      "pal_name": "Swee",
+      "level": 1
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 1
+    },
+    {
+      "pal_name": "Elizabee",
+      "level": 1
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 1
+    },
+    {
+      "pal_name": "Tombat",
+      "level": 1
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 1
+    },
+    {
+      "pal_name": "Beakon",
+      "level": 1
+    },
+    {
+      "pal_name": "Nox",
+      "level": 1
+    },
+    {
+      "pal_name": "Ragnahawk",
+      "level": 1
+    },
+    {
+      "pal_name": "Cinnamoth",
+      "level": 1
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 1
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 1
+    },
+    {
+      "pal_name": "Foxcicle",
+      "level": 1
+    },
+    {
+      "pal_name": "Frostbound Fox Foxcicle",
+      "level": 1
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 1
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 7
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 7
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 1
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 7
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 1
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 1
+    }
+  ],
+  "Roly Poly": [
+    {
+      "pal_name": "Lamball",
+      "level": 1
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 1
+    }
+  ],
+  "Punch Flurry": [
+    {
+      "pal_name": "Cattiva",
+      "level": 1
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 1
+    }
+  ],
+  "Double Fang": [
+    {
+      "pal_name": "Direhowl",
+      "level": 1
+    }
+  ],
+  "Fluffy Tackle": [
+    {
+      "pal_name": "Melpaca",
+      "level": 7
+    }
+  ],
+  "Fierce Fang": [
+    {
+      "pal_name": "Direhowl",
+      "level": 2
+    }
+  ],
+  "Slime Press (Neutral)": [
+    {
+      "pal_name": "Illuminant Slime",
+      "level": 1
+    }
+  ],
+  "Winged Assault": [
+    {
+      "pal_name": "Cave Bat",
+      "level": 1
+    },
+    {
+      "pal_name": "Illuminant Bat",
+      "level": 1
+    }
+  ],
+  "Power Shot": [
+    {
+      "pal_name": "Rushoar",
+      "level": 15
+    },
+    {
+      "pal_name": "Lifmunk",
+      "level": 15
+    },
+    {
+      "pal_name": "Chikipi",
+      "level": 15
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 15
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 15
+    },
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 1
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 22
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 7
+    },
+    {
+      "pal_name": "Jolthog",
+      "level": 7
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 7
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 22
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 7
+    },
+    {
+      "pal_name": "Gobfin Ignis",
+      "level": 7
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 15
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 22
+    },
+    {
+      "pal_name": "Hangyu Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 15
+    },
+    {
+      "pal_name": "Cryolinx",
+      "level": 1
+    },
+    {
+      "pal_name": "Cryolinx Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 22
+    },
+    {
+      "pal_name": "Robinquill",
+      "level": 7
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 7
+    },
+    {
+      "pal_name": "Blazamut",
+      "level": 1
+    },
+    {
+      "pal_name": "Caprity",
+      "level": 22
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 7
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 1
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 7
+    },
+    {
+      "pal_name": "Mossanda",
+      "level": 1
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 7
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 7
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 1
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 1
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 7
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 7
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 1
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 15
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 7
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 22
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 22
+    },
+    {
+      "pal_name": "Rooby",
+      "level": 7
+    },
+    {
+      "pal_name": "Chief of the Herd Rooby",
+      "level": 7
+    },
+    {
+      "pal_name": "Dazemu",
+      "level": 7
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 1
+    },
+    {
+      "pal_name": "Xenovader",
+      "level": 1
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 7
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 1
+    },
+    {
+      "pal_name": "Knocklem",
+      "level": 1
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 1
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 1
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 7
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 1
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 3
+    },
+    {
+      "pal_name": "Starryon Primo",
+      "level": 7
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 1
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 7
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 15
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 22
+    },
+    {
+      "pal_name": "Hartalis",
+      "level": 1
+    },
+    {
+      "pal_name": "Sekhmet",
+      "level": 7
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 1
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 15
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 1
+    }
+  ],
+  "Gale Claw": [
+    {
+      "pal_name": "Galeclaw",
+      "level": 1
+    }
+  ],
+  "Tornado Attack": [
+    {
+      "pal_name": "Nitewing",
+      "level": 7
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 7
+    }
+  ],
+  "Sword Charge": [
+    {
+      "pal_name": "Enchanted Sword",
+      "level": 1
+    }
+  ],
+  "Antler Uppercut": [
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 7
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 7
+    }
+  ],
+  "Slime Press (Rainbow)": [
+    {
+      "pal_name": "Rainbow Slime",
+      "level": 1
+    }
+  ],
+  "Cat Press": [
+    {
+      "pal_name": "Grintale",
+      "level": 15
+    }
+  ],
+  "Power Bomb": [
+    {
+      "pal_name": "Anubis",
+      "level": 7
+    },
+    {
+      "pal_name": "Guardian of the Dark Sun Anubis",
+      "level": 7
+    },
+    {
+      "pal_name": "Rushoar",
+      "level": 30
+    },
+    {
+      "pal_name": "Lifmunk",
+      "level": 30
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 40
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 40
+    },
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 30
+    },
+    {
+      "pal_name": "Eikthyrdeer Terra",
+      "level": 30
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 40
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 40
+    },
+    {
+      "pal_name": "Jolthog",
+      "level": 22
+    },
+    {
+      "pal_name": "Jolthog Cryst",
+      "level": 22
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 30
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 40
+    },
+    {
+      "pal_name": "Hangyu",
+      "level": 30
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 40
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 40
+    },
+    {
+      "pal_name": "Mammorest",
+      "level": 15
+    },
+    {
+      "pal_name": "Mammorest Cryst",
+      "level": 15
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 15
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 30
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 30
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 22
+    },
+    {
+      "pal_name": "Fuddler",
+      "level": 30
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 40
+    },
+    {
+      "pal_name": "Swee",
+      "level": 22
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 15
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 30
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 22
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 22
+    },
+    {
+      "pal_name": "Nox",
+      "level": 22
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 40
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 40
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 40
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 22
+    },
+    {
+      "pal_name": "Kikit",
+      "level": 22
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 22
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 22
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 22
+    },
+    {
+      "pal_name": "Starryon Primo",
+      "level": 15
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 7
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 15
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 40
+    },
+    {
+      "pal_name": "Hartalis",
+      "level": 7
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 7
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 22
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 15
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 22
+    }
+  ],
+  "Ground Pound": [
+    {
+      "pal_name": "Gorirat",
+      "level": 15
+    },
+    {
+      "pal_name": "Gorirat Terra",
+      "level": 30
+    }
+  ],
+  "Cloud Tempest": [
+    {
+      "pal_name": "Fenglope",
+      "level": 15
+    }
+  ],
+  "Air Blade": [
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 22
+    },
+    {
+      "pal_name": "Selyne",
+      "level": 15
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 30
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 30
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 30
+    },
+    {
+      "pal_name": "Xenogard",
+      "level": 15
+    },
+    {
+      "pal_name": "Starryon Primo",
+      "level": 22
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 15
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 22
+    },
+    {
+      "pal_name": "Herbil",
+      "level": 22
+    },
+    {
+      "pal_name": "Sekhmet",
+      "level": 22
+    },
+    {
+      "pal_name": "Dynamoff",
+      "level": 22
+    },
+    {
+      "pal_name": "Clovee",
+      "level": 22
+    },
+    {
+      "pal_name": "Roujay",
+      "level": 22
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 15
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 30
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 22
+    },
+    {
+      "pal_name": "Solenne",
+      "level": 15
+    },
+    {
+      "pal_name": "Muffly",
+      "level": 15
+    },
+    {
+      "pal_name": "Silvance",
+      "level": 1
+    }
+  ],
+  "Kingly Slam": [
+    {
+      "pal_name": "Kingpaca",
+      "level": 22
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 22
+    }
+  ],
+  "Purifying Light": [
+    {
+      "pal_name": "Hartalis",
+      "level": 50
+    }
+  ],
+  "Implode": [
+    {
+      "pal_name": "Chikipi",
+      "level": 22
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 1
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 22
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 40
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 22
+    }
+  ],
+  "Seigetsu Blade": [
+    {
+      "pal_name": "Selyne",
+      "level": 30
+    }
+  ],
+  "Star Mine": [
+    {
+      "pal_name": "Lyleen Noct",
+      "level": 45
+    },
+    {
+      "pal_name": "Jetragon",
+      "level": 70
+    },
+    {
+      "pal_name": "Selyne",
+      "level": 40
+    },
+    {
+      "pal_name": "Wistella",
+      "level": 40
+    }
+  ],
+  "Pal Blast": [
+    {
+      "pal_name": "Rushoar",
+      "level": 50
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 50
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 50
+    },
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 50
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 50
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 50
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 50
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 50
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 50
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 50
+    },
+    {
+      "pal_name": "Elphidran",
+      "level": 40
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 50
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 50
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 50
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 40
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 50
+    },
+    {
+      "pal_name": "Blazehowl",
+      "level": 50
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 50
+    },
+    {
+      "pal_name": "Sweepa",
+      "level": 40
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 50
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 50
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 50
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 50
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 50
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 50
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 50
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 50
+    },
+    {
+      "pal_name": "Starryon Primo",
+      "level": 30
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 40
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 50
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 50
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 30
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 50
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 50
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 50
+    }
+  ],
+  "Wholehearted Stance": [
+    {
+      "pal_name": "Dogen",
+      "level": 40
+    }
+  ],
+  "Moonlight Beam": [
+    {
+      "pal_name": "Selyne",
+      "level": 50
+    }
+  ],
+  "Spear Thrust": [
+    {
+      "pal_name": "Paladius",
+      "level": 40
+    }
+  ],
+  "Holy Burst": [
+    {
+      "pal_name": "Chikipi",
+      "level": 70
+    },
+    {
+      "pal_name": "Tocotoco",
+      "level": 70
+    },
+    {
+      "pal_name": "Vixy",
+      "level": 70
+    },
+    {
+      "pal_name": "Eikthyrdeer",
+      "level": 70
+    },
+    {
+      "pal_name": "Galeclaw",
+      "level": 70
+    },
+    {
+      "pal_name": "Direhowl",
+      "level": 70
+    },
+    {
+      "pal_name": "Gorirat",
+      "level": 70
+    },
+    {
+      "pal_name": "Lunaris",
+      "level": 70
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 70
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 70
+    },
+    {
+      "pal_name": "Suzaku",
+      "level": 70
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 70
+    },
+    {
+      "pal_name": "Melpaca",
+      "level": 70
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 70
+    },
+    {
+      "pal_name": "Kitsun",
+      "level": 70
+    },
+    {
+      "pal_name": "Frostallion",
+      "level": 55
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 70
+    },
+    {
+      "pal_name": "Faleris",
+      "level": 70
+    },
+    {
+      "pal_name": "Sibelyx Primo",
+      "level": 70
+    },
+    {
+      "pal_name": "Wixen",
+      "level": 70
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 70
+    },
+    {
+      "pal_name": "Mozzarina",
+      "level": 70
+    },
+    {
+      "pal_name": "Kingpaca",
+      "level": 70
+    },
+    {
+      "pal_name": "Ribbuny",
+      "level": 70
+    },
+    {
+      "pal_name": "Nitewing",
+      "level": 70
+    },
+    {
+      "pal_name": "Paladius",
+      "level": 60
+    },
+    {
+      "pal_name": "Grintale",
+      "level": 70
+    },
+    {
+      "pal_name": "Cremis",
+      "level": 70
+    },
+    {
+      "pal_name": "Darling Furball Cremis",
+      "level": 70
+    },
+    {
+      "pal_name": "Selyne",
+      "level": 22
+    },
+    {
+      "pal_name": "Dogen",
+      "level": 70
+    },
+    {
+      "pal_name": "Lullu",
+      "level": 30
+    },
+    {
+      "pal_name": "Mimog",
+      "level": 40
+    },
+    {
+      "pal_name": "Yakumo",
+      "level": 40
+    },
+    {
+      "pal_name": "Gildane",
+      "level": 70
+    },
+    {
+      "pal_name": "Starryon Primo",
+      "level": 50
+    },
+    {
+      "pal_name": "Celesdir",
+      "level": 30
+    },
+    {
+      "pal_name": "Invader from Space (Ultra) Xenolord",
+      "level": 18
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 70
+    },
+    {
+      "pal_name": "Lamball",
+      "level": 70
+    },
+    {
+      "pal_name": "Cattiva",
+      "level": 70
+    },
+    {
+      "pal_name": "Panthalus",
+      "level": 50
+    },
+    {
+      "pal_name": "Hartalis",
+      "level": 15
+    },
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 50
+    },
+    {
+      "pal_name": "Valentail",
+      "level": 70
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 70
+    },
+    {
+      "pal_name": "Solenne",
+      "level": 70
+    },
+    {
+      "pal_name": "PIDF Rider",
+      "level": 70
+    },
+    {
+      "pal_name": "Silvance",
+      "level": 40
+    }
+  ],
+  "Seigetsu Flash": [
+    {
+      "pal_name": "Selyne",
+      "level": 70
+    }
+  ],
+  "Holy Nova": [
+    {
+      "pal_name": "Celesdir",
+      "level": 50
+    }
+  ],
+  "Divine Wing": [
+    {
+      "pal_name": "Hartalis",
       "level": 30
     }
   ],
@@ -319,10 +9809,1158 @@
       "level": 22
     }
   ],
+  "Silver Steed": [
+    {
+      "pal_name": "Starryon Primo",
+      "level": 40
+    }
+  ],
+  "Holy Press": [
+    {
+      "pal_name": "Tetroise Primo",
+      "level": 70
+    }
+  ],
+  "Sacred Rain": [
+    {
+      "pal_name": "Hartalis",
+      "level": 40
+    }
+  ],
+  "Royal Step": [
+    {
+      "pal_name": "Starryon Primo",
+      "level": 70
+    }
+  ],
   "Megaton Implode": [
     {
       "pal_name": "Tocotoco",
       "level": 22
+    }
+  ],
+  "Hydro Jet": [
+    {
+      "pal_name": "Teafant",
+      "level": 7
+    },
+    {
+      "pal_name": "Foxparks Cryst",
+      "level": 7
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 7
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 1
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 1
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 15
+    },
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 1
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 1
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 1
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 1
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 15
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 1
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 1
+    },
+    {
+      "pal_name": "Gloopie",
+      "level": 1
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 1
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 1
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 1
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 1
+    },
+    {
+      "pal_name": "Amione",
+      "level": 1
+    }
+  ],
+  "Aqua Gun": [
+    {
+      "pal_name": "Digtoise",
+      "level": 1
+    },
+    {
+      "pal_name": "Teafant",
+      "level": 1
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 15
+    },
+    {
+      "pal_name": "Penking",
+      "level": 1
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 15
+    },
+    {
+      "pal_name": "Jormuntide",
+      "level": 1
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 15
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 1
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 1
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 7
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 7
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 1
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 1
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 15
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 7
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 15
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 7
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 7
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 7
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 7
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 7
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 1
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 1
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 1
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 1
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 1
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 7
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 7
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 1
+    },
+    {
+      "pal_name": "Shaolong",
+      "level": 1
+    }
+  ],
+  "Slime Press (Water)": [
+    {
+      "pal_name": "Blue Slime",
+      "level": 1
+    }
+  ],
+  "Bubble Blast": [
+    {
+      "pal_name": "Teafant",
+      "level": 22
+    },
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Penking Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 22
+    },
+    {
+      "pal_name": "Woolipop",
+      "level": 30
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 15
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 22
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 30
+    },
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 7
+    },
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 7
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 22
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 15
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 22
+    },
+    {
+      "pal_name": "Flopie",
+      "level": 30
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 22
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Petallia",
+      "level": 22
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 22
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 22
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 7
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 7
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 7
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 15
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 7
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 7
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 15
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 15
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 7
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 7
+    },
+    {
+      "pal_name": "Amione",
+      "level": 7
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 1
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 1
+    }
+  ],
+  "Acid Rain": [
+    {
+      "pal_name": "Teafant",
+      "level": 30
+    },
+    {
+      "pal_name": "Dazzi",
+      "level": 15
+    },
+    {
+      "pal_name": "Dazzi Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 30
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 22
+    },
+    {
+      "pal_name": "Fenglope Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 15
+    },
+    {
+      "pal_name": "Lovander",
+      "level": 22
+    },
+    {
+      "pal_name": "Killamari",
+      "level": 30
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 30
+    },
+    {
+      "pal_name": "Beegarde",
+      "level": 30
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 15
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 15
+    },
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 22
+    },
+    {
+      "pal_name": "Shaolong",
+      "level": 7
+    }
+  ],
+  "Smoke Jet": [
+    {
+      "pal_name": "Gloopie",
+      "level": 15
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 15
+    }
+  ],
+  "Splash": [
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 22
+    },
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 22
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 30
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 22
+    },
+    {
+      "pal_name": "Gloopie",
+      "level": 22
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 15
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 22
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 15
+    },
+    {
+      "pal_name": "Amione",
+      "level": 15
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 7
+    }
+  ],
+  "Hydro Spin": [
+    {
+      "pal_name": "Turtacle",
+      "level": 15
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 15
+    }
+  ],
+  "Aqua Burst": [
+    {
+      "pal_name": "Digtoise",
+      "level": 40
+    },
+    {
+      "pal_name": "Teafant",
+      "level": 40
+    },
+    {
+      "pal_name": "Pengullet Lux",
+      "level": 30
+    },
+    {
+      "pal_name": "Penking",
+      "level": 30
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 40
+    },
+    {
+      "pal_name": "Jormuntide",
+      "level": 22
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 30
+    },
+    {
+      "pal_name": "Fenglope",
+      "level": 30
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 40
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 40
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 40
+    },
+    {
+      "pal_name": "Sibelyx",
+      "level": 40
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 40
+    },
+    {
+      "pal_name": "Lyleen",
+      "level": 22
+    },
+    {
+      "pal_name": "Wumpo Botan",
+      "level": 40
+    },
+    {
+      "pal_name": "Kingpaca Cryst",
+      "level": 40
+    },
+    {
+      "pal_name": "Quivern",
+      "level": 40
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 40
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 30
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 30
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 22
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 22
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 22
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 22
+    }
+  ],
+  "Bubble Rain": [
+    {
+      "pal_name": "Panthalus",
+      "level": 1
+    }
+  ],
+  "Creeping Bubbles": [
+    {
+      "pal_name": "Panthalus",
+      "level": 7
+    }
+  ],
+  "Torrential Blast": [
+    {
+      "pal_name": "Killamari Primo",
+      "level": 40
+    },
+    {
+      "pal_name": "Celaray Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Dumud Gild",
+      "level": 30
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 30
+    },
+    {
+      "pal_name": "Gloopie",
+      "level": 40
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 22
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 40
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 22
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 22
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 22
+    },
+    {
+      "pal_name": "Amione",
+      "level": 22
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 15
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 15
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 15
+    }
+  ],
+  "Splash Tackle": [
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 26
+    }
+  ],
+  "Curtain Splash": [
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 30
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 40
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 40
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 30
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 30
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 5
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 5
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 30
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 22
+    }
+  ],
+  "Trigger Happy": [
+    {
+      "pal_name": "Finsider",
+      "level": 30
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 30
+    }
+  ],
+  "Aqua Blade": [
+    {
+      "pal_name": "Panthalus",
+      "level": 15
+    }
+  ],
+  "Phoenix Tide": [
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 40
+    }
+  ],
+  "Hydro Slicer": [
+    {
+      "pal_name": "Fuack Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Croajiro Noct",
+      "level": 40
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 40
+    },
+    {
+      "pal_name": "Gloopie",
+      "level": 50
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 30
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 40
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 40
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 30
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 30
+    },
+    {
+      "pal_name": "Lapure",
+      "level": 40
+    },
+    {
+      "pal_name": "Amione",
+      "level": 30
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 30
+    }
+  ],
+  "Slither Slam": [
+    {
+      "pal_name": "Jormuntide",
+      "level": 35
+    }
+  ],
+  "Tidal Charge": [
+    {
+      "pal_name": "Panthalus",
+      "level": 22
+    }
+  ],
+  "Hydro Laser": [
+    {
+      "pal_name": "Teafant",
+      "level": 50
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 50
+    },
+    {
+      "pal_name": "Penking",
+      "level": 50
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 50
+    },
+    {
+      "pal_name": "Jormuntide",
+      "level": 40
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 50
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 40
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 40
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 50
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 50
+    },
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 50
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 50
+    },
+    {
+      "pal_name": "Killamari Primo",
+      "level": 50
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 50
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 50
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 50
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 50
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 50
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 50
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 40
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 50
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 40
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 40
+    },
+    {
+      "pal_name": "Amione",
+      "level": 40
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 40
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 30
+    }
+  ],
+  "Lantern Sweep": [
+    {
+      "pal_name": "Ghangler",
+      "level": 30
+    }
+  ],
+  "Aqua Surge": [
+    {
+      "pal_name": "Penking Lux",
+      "level": 40
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 50
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 50
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 40
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 50
+    },
+    {
+      "pal_name": "Polapup",
+      "level": 50
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 6
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 6
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 50
+    },
+    {
+      "pal_name": "Amione",
+      "level": 50
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 50
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 40
+    }
+  ],
+  "Maelstrom": [
+    {
+      "pal_name": "Panthalus",
+      "level": 30
+    }
+  ],
+  "Hydra Charge": [
+    {
+      "pal_name": "Shaolong",
+      "level": 30
+    }
+  ],
+  "Geyser Gush": [
+    {
+      "pal_name": "Teafant",
+      "level": 70
+    },
+    {
+      "pal_name": "Pengullet",
+      "level": 70
+    },
+    {
+      "pal_name": "Penking",
+      "level": 70
+    },
+    {
+      "pal_name": "Penking Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Gobfin",
+      "level": 70
+    },
+    {
+      "pal_name": "Jormuntide",
+      "level": 70
+    },
+    {
+      "pal_name": "Suzaku Aqua",
+      "level": 70
+    },
+    {
+      "pal_name": "Elphidran Aqua",
+      "level": 70
+    },
+    {
+      "pal_name": "Azurobe",
+      "level": 70
+    },
+    {
+      "pal_name": "Relaxaurus",
+      "level": 70
+    },
+    {
+      "pal_name": "Fuack",
+      "level": 70
+    },
+    {
+      "pal_name": "Broncherry Aqua",
+      "level": 70
+    },
+    {
+      "pal_name": "Faleris Aqua",
+      "level": 70
+    },
+    {
+      "pal_name": "Kelpsea",
+      "level": 70
+    },
+    {
+      "pal_name": "Surfent",
+      "level": 70
+    },
+    {
+      "pal_name": "Celaray",
+      "level": 70
+    },
+    {
+      "pal_name": "Dumud",
+      "level": 70
+    },
+    {
+      "pal_name": "Perpetual Procrastinator Dumud",
+      "level": 70
+    },
+    {
+      "pal_name": "Croajiro",
+      "level": 70
+    },
+    {
+      "pal_name": "Turtacle",
+      "level": 70
+    },
+    {
+      "pal_name": "Turtacle Terra",
+      "level": 70
+    },
+    {
+      "pal_name": "Whalaska",
+      "level": 50
+    },
+    {
+      "pal_name": "Ghangler",
+      "level": 70
+    },
+    {
+      "pal_name": "Ghangler Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Gloopie Primo",
+      "level": 50
+    },
+    {
+      "pal_name": "Finsider",
+      "level": 70
+    },
+    {
+      "pal_name": "Finsider Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Munchill",
+      "level": 70
+    },
+    {
+      "pal_name": "Neptilius",
+      "level": 50
+    },
+    {
+      "pal_name": "Jelliette",
+      "level": 70
+    },
+    {
+      "pal_name": "Jellroy",
+      "level": 70
+    },
+    {
+      "pal_name": "King of Salvation Hartalis",
+      "level": 4
+    },
+    {
+      "pal_name": "King of Salvation (Ultra) Hartalis",
+      "level": 4
+    },
+    {
+      "pal_name": "Skutlass",
+      "level": 70
+    },
+    {
+      "pal_name": "Skutlass Ignis",
+      "level": 70
+    },
+    {
+      "pal_name": "Amione",
+      "level": 70
+    },
+    {
+      "pal_name": "Solmora",
+      "level": 70
+    },
+    {
+      "pal_name": "Solmora Lux",
+      "level": 70
+    },
+    {
+      "pal_name": "Ophydia",
+      "level": 70
+    }
+  ],
+  "Thalassonic Laser": [
+    {
+      "pal_name": "Neptilius",
+      "level": 60
+    }
+  ],
+  "Grand Breach": [
+    {
+      "pal_name": "Panthalus",
+      "level": 40
+    }
+  ],
+  "Celestial Vortex": [
+    {
+      "pal_name": "Shaolong",
+      "level": 50
+    }
+  ],
+  "Aqua Tornado": [
+    {
+      "pal_name": "Panthalus",
+      "level": 60
     }
   ]
 }

@@ -38,7 +38,9 @@ public sealed class BreedingSolverSettings
         int maxThreads,
         int maxSurgeryCost,
         IEnumerable<PassiveSkill> allowedSurgeryPassives,
-        bool useGenderReversers
+        bool useGenderReversers,
+        bool useSkillFruits,
+        IEnumerable<ActiveSkill> allowedSkillFruitSkills
     )
     {
         ArgumentNullException.ThrowIfNull(db);
@@ -49,6 +51,7 @@ public sealed class BreedingSolverSettings
         ArgumentNullException.ThrowIfNull(allowedWildPals);
         ArgumentNullException.ThrowIfNull(bannedBredPals);
         ArgumentNullException.ThrowIfNull(allowedSurgeryPassives);
+        ArgumentNullException.ThrowIfNull(allowedSkillFruitSkills);
 
         DB = db;
         BreedingDB = breedingDB;
@@ -69,6 +72,8 @@ public sealed class BreedingSolverSettings
         MaxSurgeryCost = maxSurgeryCost;
         SurgeryPassives = allowedSurgeryPassives.ToList();
         UseGenderReversers = useGenderReversers;
+        UseSkillFruits = useSkillFruits;
+        SkillFruitSkills = allowedSkillFruitSkills.ToList();
     }
 
     public PalDB DB { get; }
@@ -88,4 +93,15 @@ public sealed class BreedingSolverSettings
     public int MaxSurgeryCost { get; }
     public IReadOnlyList<PassiveSkill> SurgeryPassives { get; }
     public bool UseGenderReversers { get; }
+
+    /// <summary>
+    /// Whether target active skills may be taught directly with skill fruits instead of
+    /// being inherited through breeding.
+    /// </summary>
+    public bool UseSkillFruits { get; }
+
+    /// <summary>
+    /// The active skills which may be taught with skill fruits, if <see cref="UseSkillFruits"/>.
+    /// </summary>
+    public IReadOnlyList<ActiveSkill> SkillFruitSkills { get; }
 }

@@ -145,6 +145,30 @@ namespace PalCalc.UI
         }
     }
 
+    internal class ActiveSkillConverter : PalConverterBase<ActiveSkill>
+    {
+        public ActiveSkillConverter(PalDB db, GameSettings gameSettings) : base(db, gameSettings)
+        {
+        }
+
+        protected override ActiveSkill ReadTypeJson(JsonReader reader, Type objectType, ActiveSkill existingValue, bool hasExistingValue, JsonSerializer serializer)
+        {
+            var token = JToken.ReadFrom(reader);
+            if (token.Type == JTokenType.Null) return null;
+
+            var internalName = token.Type == JTokenType.String
+                ? token.ToObject<string>()
+                : token["InternalName"]?.ToObject<string>();
+
+            return internalName?.ToActive(db);
+        }
+
+        protected override void WriteTypeJson(JsonWriter writer, ActiveSkill value, JsonSerializer serializer)
+        {
+            JToken.FromObject(value.InternalName, serializer).WriteTo(writer, dependencyConverters);
+        }
+    }
+
     internal abstract class IPalReferenceConverterBase<T> : PalConverterBase<T>
     {
         private string typeLabel;
@@ -188,6 +212,7 @@ namespace PalCalc.UI
         BredPalReferenceConverter bprc;
         CompositePalReferenceConverter cprc;
         SurgeryPalReferenceConverter sprc;
+        SkillFruitPalReferenceConverter sfprc;
 
         public PalReferenceConverter(PalDB db, GameSettings gameSettings, SerializableSolverSettings solverSettings, PalSpecifier target) : base(db, gameSettings)
         {
@@ -196,13 +221,15 @@ namespace PalCalc.UI
             this.bprc = new BredPalReferenceConverter(db, gameSettings, solverSettings, this);
             this.cprc = new CompositePalReferenceConverter(db, gameSettings, solverSettings, target);
             this.sprc = new SurgeryPalReferenceConverter(db, gameSettings, this);
+            this.sfprc = new SkillFruitPalReferenceConverter(db, gameSettings, this);
 
             dependencyConverters = [
                 ..oprc.DependencyConverters,
                 ..wprc.DependencyConverters,
                 ..bprc.DependencyConverters,
                 ..cprc.DependencyConverters,
-                ..sprc.DependencyConverters
+                ..sprc.DependencyConverters,
+                ..sfprc.DependencyConverters
             ];
         }
 
@@ -228,6 +255,7 @@ namespace PalCalc.UI
             if (type == bprc.TypeLabel) return bprc.ReadRefJson(wrappedContent, objectType, existingValue as BredPalReference, hasExistingValue, serializer);
             if (type == cprc.TypeLabel) return cprc.ReadRefJson(wrappedContent, objectType, existingValue as CompositeOwnedPalReference, hasExistingValue, serializer);
             if (type == sprc.TypeLabel) return sprc.ReadRefJson(wrappedContent, objectType, existingValue as SurgeryTablePalReference, hasExistingValue, serializer);
+            if (type == sfprc.TypeLabel) return sfprc.ReadRefJson(wrappedContent, objectType, existingValue as SkillFruitPalReference, hasExistingValue, serializer);
 
             throw new Exception($"Unhandled IPalReference type label {type}");
         }
@@ -241,6 +269,7 @@ namespace PalCalc.UI
                 case BredPalReference bpr: bprc.WriteJson(writer, bpr, serializer); break;
                 case CompositeOwnedPalReference cpr: cprc.WriteJson(writer, cpr, serializer); break;
                 case SurgeryTablePalReference spr: sprc.WriteJson(writer, spr, serializer); break;
+                case SkillFruitPalReference sfpr: sfprc.WriteJson(writer, sfpr, serializer); break;
                 default: throw new Exception($"Unhandled IPalReference type {value?.GetType()?.Name}");
             }
         }
@@ -508,6 +537,35 @@ namespace PalCalc.UI
         }
     }
 
+    internal class SkillFruitPalReferenceConverter : IPalReferenceConverterBase<SkillFruitPalReference>
+    {
+        public SkillFruitPalReferenceConverter(PalDB db, GameSettings gameSettings, PalReferenceConverter genericConverter) : base(db, gameSettings, "SKILL_FRUIT_PAL")
+        {
+            dependencyConverters = [
+                genericConverter,
+                new ILocalizedTextConverter(db, gameSettings),
+                new ActiveSkillConverter(db, gameSettings),
+            ];
+        }
+
+        internal override JToken MakeRefJson(SkillFruitPalReference value, JsonSerializer serializer)
+        {
+            return JToken.FromObject(new
+            {
+                Input = value.Input,
+                TaughtSkills = value.TaughtSkills
+            }, serializer);
+        }
+
+        internal override SkillFruitPalReference ReadRefJson(JToken token, Type objectType, SkillFruitPalReference existingValue, bool hasExistingValue, JsonSerializer serializer)
+        {
+            return new SkillFruitPalReference(
+                input: token["Input"].ToObject<IPalReference>(serializer),
+                taughtSkills: token["TaughtSkills"].ToObject<List<ActiveSkill>>(serializer)
+            );
+        }
+    }
+
     internal class IV_IValueConverter : JsonConverter<IV_Value>
     {
         public override IV_Value ReadJson(JsonReader reader, Type objectType, IV_Value existingValue, bool hasExistingValue, JsonSerializer serializer)
@@ -659,6 +717,31 @@ namespace PalCalc.UI
         }
     }
 
+    internal class ActiveSkillViewModelConverter : PalConverterBase<ActiveSkillViewModel>
+    {
+        public ActiveSkillViewModelConverter(PalDB db, GameSettings gameSettings) : base(db, gameSettings)
+        {
+            dependencyConverters = new JsonConverter[]
+            {
+                new ActiveSkillConverter(db, gameSettings),
+                new ILocalizedTextConverter(db, gameSettings),
+            };
+        }
+
+        protected override ActiveSkillViewModel ReadTypeJson(JsonReader reader, Type objectType, ActiveSkillViewModel existingValue, bool hasExistingValue, JsonSerializer serializer)
+        {
+            var skill = JToken.ReadFrom(reader).ToObject<ActiveSkill>(serializer);
+            return skill != null
+                ? ActiveSkillViewModel.Make(skill)
+                : null;
+        }
+
+        protected override void WriteTypeJson(JsonWriter writer, ActiveSkillViewModel value, JsonSerializer serializer)
+        {
+            JToken.FromObject(value.ModelObject, serializer).WriteTo(writer, dependencyConverters);
+        }
+    }
+
     // NOTE - These converters inject result-list converters whose dependents
     //        expect a specific pal target. Multiple PalSpecifierViewModels should _not_ be stored in the same JSON
     //        data, and JsonSerializers should either be reset or newly created during each operation.
@@ -675,6 +758,7 @@ namespace PalCalc.UI
             {
                 new PalViewModelConverter(db, gameSettings),
                 new PassiveSkillViewModelConverter(db, gameSettings),
+                new ActiveSkillViewModelConverter(db, gameSettings),
                 new ILocalizedTextConverter(db, gameSettings),
             };
         }
@@ -697,7 +781,11 @@ namespace PalCalc.UI
                     (obj["OptionalPassive2"] ?? obj["OptionalTrait2"]) ?.ToObject<PassiveSkillViewModel>(serializer)?.ModelObject,
                     (obj["OptionalPassive3"] ?? obj["OptionalTrait3"]) ?.ToObject<PassiveSkillViewModel>(serializer)?.ModelObject,
                     (obj["OptionalPassive4"] ?? obj["OptionalTrait4"])?.ToObject<PassiveSkillViewModel>(serializer)?.ModelObject,
-                ]
+                ],
+                TargetActiveSkills = Enumerable.Range(1, 6)
+                    .Select(i => obj[$"ActiveSkill{i}"]?.ToObject<ActiveSkillViewModel>(serializer)?.ModelObject)
+                    .SkipNull()
+                    .ToList()
             };
 
             List<IPalSourceTreeSelection> palSourceSelections;
@@ -746,6 +834,7 @@ namespace PalCalc.UI
             {
                 new PalViewModelConverter(db, gameSettings),
                 new PassiveSkillViewModelConverter(db, gameSettings),
+                new ActiveSkillViewModelConverter(db, gameSettings),
                 new ILocalizedTextConverter(db, gameSettings),
             };
         }
@@ -767,6 +856,12 @@ namespace PalCalc.UI
                 OptionalPassive2 = value.OptionalPassives.Passive2,
                 OptionalPassive3 = value.OptionalPassives.Passive3,
                 OptionalPassive4 = value.OptionalPassives.Passive4,
+                ActiveSkill1 = value.TargetActiveSkills.ActiveSkill1,
+                ActiveSkill2 = value.TargetActiveSkills.ActiveSkill2,
+                ActiveSkill3 = value.TargetActiveSkills.ActiveSkill3,
+                ActiveSkill4 = value.TargetActiveSkills.ActiveSkill4,
+                ActiveSkill5 = value.TargetActiveSkills.ActiveSkill5,
+                ActiveSkill6 = value.TargetActiveSkills.ActiveSkill6,
                 MinIV_HP = value.MinIv_HP,
                 MinIV_Attack = value.MinIv_Attack,
                 MinIV_Defense = value.MinIv_Defense,
@@ -781,6 +876,7 @@ namespace PalCalc.UI
     internal sealed class BreedingResultViewModelReader : PalReadOnlyConverterBase<BreedingResultViewModel>
     {
         private readonly CachedSaveGame source;
+        private readonly PalSpecifier target;
 
         public BreedingResultViewModelReader(PalDB db, GameSettings gameSettings, SerializableSolverSettings solverSettings, CachedSaveGame source, PalSpecifier target) : base(db, gameSettings)
         {
@@ -791,6 +887,7 @@ namespace PalCalc.UI
                 new ILocalizedTextConverter(db, gameSettings),
             };
             this.source = source;
+            this.target = target;
         }
 
         protected override BreedingResultViewModel ReadTypeJson(JsonReader reader, Type objectType, BreedingResultViewModel existingValue, bool hasExistingValue, JsonSerializer serializer)
@@ -810,7 +907,7 @@ namespace PalCalc.UI
                 palRef = token.ToObject<IPalReference>(serializer);
             }
 
-            var vm = new BreedingResultViewModel(source, gameSettings, palRef);
+            var vm = new BreedingResultViewModel(source, gameSettings, palRef, target?.TargetActiveSkills);
 
             if (checkedNodes != null && vm.Graph != null)
             {

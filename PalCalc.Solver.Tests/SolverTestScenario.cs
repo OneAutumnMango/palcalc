@@ -77,7 +77,9 @@ internal static class SolverTestScenario
                 maxThreads: maxThreads,
                 maxSurgeryCost: maxSurgeryCost,
                 allowedSurgeryPassives: allowedSurgeryPassives?.ToList() ?? [],
-                useGenderReversers: false
+                useGenderReversers: false,
+                useSkillFruits: false,
+                allowedSkillFruitSkills: []
             )
         );
 

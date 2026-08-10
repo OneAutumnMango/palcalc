@@ -192,6 +192,7 @@ public class EffectivePropertiesKeyTests
 
         public Pal Pal { get; }
         public List<PassiveSkill> EffectivePassives { get; }
+        public List<ActiveSkill> InheritedActiveSkills { get; } = [];
         public int EffectivePassivesHash { get; }
         public IV_Set IVs { get; }
         public List<PassiveSkill> ActualPassives => EffectivePassives;

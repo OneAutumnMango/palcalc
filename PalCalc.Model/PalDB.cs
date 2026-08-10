@@ -41,9 +41,16 @@ namespace PalCalc.Model
 
         /// <summary>
         /// Dictionary mapping active skill names to lists of pals that can pass them through breeding,
-        /// along with the minimum level requirements.
+        /// along with the minimum level requirements. Excludes pal-exclusive skills.
         /// </summary>
         public Dictionary<string, List<LearnableActiveSkill>> BreedingSkills { get; set; }
+
+        /// <summary>
+        /// Active skills which can be taught to any pal by feeding it a skill fruit.
+        /// </summary>
+        public List<SkillFruit> SkillFruits { get; set; } = [];
+
+        public IEnumerable<ActiveSkill> SkillFruitSkills => SkillFruits.Select(f => f.Skill);
 
         public IEnumerable<Pal> Pals => PalsById.Values;
 
@@ -103,55 +110,68 @@ namespace PalCalc.Model
                 result = FromJson(streamReader.ReadToEnd());
             }
 
-            // Load breeding_skills.json
+            result.BreedingSkills = [];
+            result.SkillFruits = [];
+
             try
             {
-                using (var stream = Assembly
-                    .GetExecutingAssembly()
-                    .GetManifestResourceStream($"{name}.breeding_skills.json"))
+                var skillsByName = result.ActiveSkills.GroupBy(s => s.Name).ToDictionary(g => g.Key, g => g.First());
+
+                var exclusiveSkills = ReadEmbeddedJson<List<ExclusiveSkill>>($"{name}.exclusive_skills.json") ?? [];
+                var exclusiveSkillNames = exclusiveSkills.Select(s => s.SkillName).ToHashSet();
+
+                result.SkillFruits = (ReadEmbeddedJson<List<SkillFruit>>($"{name}.skill_fruits.json") ?? [])
+                    .Where(f => skillsByName.ContainsKey(f.SkillName))
+                    .DistinctBy(f => f.SkillName)
+                    .ToList();
+
+                foreach (var fruit in result.SkillFruits)
+                    fruit.Skill = skillsByName[fruit.SkillName];
+
+                var rawBreedingSkills = ReadEmbeddedJson<Dictionary<string, List<LearnableActiveSkill>>>($"{name}.breeding_skills.json") ?? [];
+
+                // pal-exclusive skills can't be inherited through breeding
+                foreach (var (skillName, learnableSkills) in rawBreedingSkills)
                 {
-                    if (stream != null)
+                    if (exclusiveSkillNames.Contains(skillName)) continue;
+                    if (!skillsByName.TryGetValue(skillName, out var skill)) continue;
+
+                    foreach (var ls in learnableSkills)
                     {
-                        using (var streamReader = new StreamReader(stream, Encoding.UTF8))
-                        {
-                            var breedingSkillsJson = streamReader.ReadToEnd();
-                            var rawData = JsonConvert.DeserializeObject<Dictionary<string, List<LearnableActiveSkill>>>(breedingSkillsJson);
-                            
-                            result.BreedingSkills = new Dictionary<string, List<LearnableActiveSkill>>();
-                            
-                            // Populate skill names and resolve ActiveSkill references
-                            foreach (var kvp in rawData)
-                            {
-                                var skillName = kvp.Key;
-                                var learnableSkills = kvp.Value;
-                                
-                                foreach (var ls in learnableSkills)
-                                {
-                                    ls.SkillName = skillName;
-                                    ls.Skill = result.ActiveSkills.FirstOrDefault(s => s.Name == skillName);
-                                }
-                                
-                                result.BreedingSkills[skillName] = learnableSkills;
-                            }
-                            
-                            logger.Information("Loaded {count} inheritable active skills", result.BreedingSkills.Count);
-                        }
+                        ls.SkillName = skillName;
+                        ls.Skill = skill;
                     }
-                    else
-                    {
-                        logger.Warning("breeding_skills.json not found in embedded resources");
-                        result.BreedingSkills = new Dictionary<string, List<LearnableActiveSkill>>();
-                    }
+
+                    result.BreedingSkills[skillName] = learnableSkills;
                 }
+
+                logger.Information(
+                    "Loaded {count} inheritable active skills ({excluded} exclusive skills ignored), {fruits} skill fruits",
+                    result.BreedingSkills.Count,
+                    exclusiveSkillNames.Count,
+                    result.SkillFruits.Count
+                );
             }
             catch (Exception ex)
             {
-                logger.Error(ex, "Error loading breeding_skills.json");
-                result.BreedingSkills = new Dictionary<string, List<LearnableActiveSkill>>();
+                logger.Error(ex, "Error loading active skill data");
             }
 
             logger.Information("Successfully loaded embedded pal DB in {ms}ms", sw.ElapsedMilliseconds);
             return result;
+        }
+
+        private static T ReadEmbeddedJson<T>(string resourceName)
+        {
+            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
+            if (stream == null)
+            {
+                logger.Warning("{name} not found in embedded resources", resourceName);
+                return default;
+            }
+
+            using var streamReader = new StreamReader(stream, Encoding.UTF8);
+            return JsonConvert.DeserializeObject<T>(streamReader.ReadToEnd());
         }
 
         public static void BeginLoadEmbedded()

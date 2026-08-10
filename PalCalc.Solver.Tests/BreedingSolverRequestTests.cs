@@ -71,7 +71,9 @@ public class BreedingSolverRequestTests
             maxThreads: 1,
             maxSurgeryCost: 100,
             allowedSurgeryPassives: surgeryPassives,
-            useGenderReversers: false
+            useGenderReversers: false,
+            useSkillFruits: false,
+            allowedSkillFruitSkills: []
         );
 
         gameSettings.BreedingTime = TimeSpan.FromHours(1);
