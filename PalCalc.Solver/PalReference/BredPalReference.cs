@@ -53,9 +53,10 @@ namespace PalCalc.Solver.PalReference
             EffectivePassives = passives;
             EffectivePassivesHash = passives.SetHash(p => p.InternalName);
 
-            // Collect inheritable active skills from both parents
+            // Collect inheritable active skills from both parents, plus whatever this pal learns on its own
             InheritedActiveSkills = parent1.InheritedActiveSkills
                 .Concat(parent2.InheritedActiveSkills)
+                .Concat(ActiveSkillInheritance.NaturalSkillsOf(pal))
                 .Distinct()
                 .ToList();
 

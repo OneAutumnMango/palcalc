@@ -354,7 +354,10 @@ namespace PalCalc.Solver.Processing
 
                         // Check if parents can collectively provide all target active skills
                         bool canProvideAllTargetSkills = context.Target.TargetActiveSkills
-                            .All(targetSkill => inheritableFromParents.Contains(targetSkill));
+                            .All(targetSkill =>
+                                inheritableFromParents.Contains(targetSkill) ||
+                                ActiveSkillInheritance.LearnsNaturally(childPalType, targetSkill)
+                            );
 
                         if (!canProvideAllTargetSkills)
                             continue;

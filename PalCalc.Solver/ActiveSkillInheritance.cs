@@ -13,15 +13,26 @@ namespace PalCalc.Solver
     /// </summary>
     public static class ActiveSkillInheritance
     {
-        private static readonly ConcurrentDictionary<string, HashSet<string>> naturalSkillsByPal = new();
+        private static readonly ConcurrentDictionary<string, List<ActiveSkill>> naturalSkillsByPal = new();
+        private static readonly ConcurrentDictionary<string, HashSet<string>> naturalSkillNamesByPal = new();
 
-        private static bool LearnsNaturally(Pal pal, ActiveSkill skill) =>
-            naturalSkillsByPal.GetOrAdd(pal.Name, static palName =>
-                PalDB.LoadEmbedded().BreedingSkills
-                    .Where(kvp => kvp.Value.Any(ls => ls.PalName == palName))
-                    .Select(kvp => kvp.Key)
-                    .ToHashSet()
-            ).Contains(skill.Name);
+        /// <summary>
+        /// The skills this pal species learns on its own by leveling up, regardless of its parents.
+        /// </summary>
+        public static List<ActiveSkill> NaturalSkillsOf(Pal pal) =>
+            naturalSkillsByPal.GetOrAdd(pal.Name, palName =>
+                PalDB.LoadEmbedded().BreedingSkills.Values
+                    .SelectMany(ls => ls)
+                    .Where(ls => ls.PalName == palName)
+                    .Select(ls => ls.Skill)
+                    .Distinct()
+                    .ToList()
+            );
+
+        public static bool LearnsNaturally(Pal pal, ActiveSkill skill) =>
+            naturalSkillNamesByPal
+                .GetOrAdd(pal.Name, _ => NaturalSkillsOf(pal).Select(s => s.Name).ToHashSet())
+                .Contains(skill.Name);
 
         /// <summary>
         /// Whether <paramref name="reference"/> can actually end up with all of <paramref name="required"/>
