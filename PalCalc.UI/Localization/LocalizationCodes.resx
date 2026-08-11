@@ -225,6 +225,15 @@
   <data name="LC_EXPORT_SAVE_DESCRIPTION" xml:space="preserve">
     <value />
   </data>
+  <data name="LC_EXPORT_TREE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LC_EXPORT_TREE_JSON" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LC_EXPORT_TREE_TEXT" xml:space="preserve">
+    <value />
+  </data>
   <data name="LC_GAME_SETTINGS" xml:space="preserve">
     <value />
   </data>

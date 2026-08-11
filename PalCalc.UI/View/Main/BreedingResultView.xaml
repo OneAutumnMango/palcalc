@@ -325,18 +325,39 @@
 
             </Style>
         </UserControl.Resources>
-        <zoom:ZoomControl Grid.Column="1"
-                          Background="{DynamicResource {x:Static adonisUi:Brushes.Layer3BorderBrush}}"
-                          Mode="Fill"
-                          FillMarginPercent="0.05"
-                          FillLabel="{itl:LocalizedText Code=LC_GRAPH_ZOOM_FILL}"
-                          CustomLabel="{itl:LocalizedText Code=LC_GRAPH_ZOOM_CUSTOM}"
-                          ZoomLabel="{itl:LocalizedText Code=LC_GRAPH_ZOOM_PERCENT}">
-            <gsvm:BreedingGraphLayout
-                Graph="{Binding Graph}"
-                AnimationLength="0"
-                IsAnimationEnabled="False"
-            />
-        </zoom:ZoomControl>
+        <Grid>
+            <zoom:ZoomControl Grid.Column="1"
+                              Background="{DynamicResource {x:Static adonisUi:Brushes.Layer3BorderBrush}}"
+                              Mode="Fill"
+                              FillMarginPercent="0.05"
+                              FillLabel="{itl:LocalizedText Code=LC_GRAPH_ZOOM_FILL}"
+                              CustomLabel="{itl:LocalizedText Code=LC_GRAPH_ZOOM_CUSTOM}"
+                              ZoomLabel="{itl:LocalizedText Code=LC_GRAPH_ZOOM_PERCENT}">
+                <gsvm:BreedingGraphLayout
+                    Graph="{Binding Graph}"
+                    AnimationLength="0"
+                    IsAnimationEnabled="False"
+                />
+            </zoom:ZoomControl>
+
+            <Button x:Name="ExportTreeButton"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="10"
+                    Width="30"
+                    Height="30"
+                    Padding="0"
+                    Visibility="{Binding Graph, Converter={StaticResource VVC}}"
+                    ToolTip="{itl:LocalizedText Code=LC_EXPORT_TREE}"
+                    Click="ExportTreeButton_Click">
+                <materialIcons:MaterialIcon Kind="ContentCopy" Width="16" Height="16" />
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="{itl:LocalizedText Code=LC_EXPORT_TREE_TEXT}" Click="CopyTreeAsText_Click" />
+                        <MenuItem Header="{itl:LocalizedText Code=LC_EXPORT_TREE_JSON}" Click="CopyTreeAsJson_Click" />
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+        </Grid>
     </UserControl>
 </UserControl>

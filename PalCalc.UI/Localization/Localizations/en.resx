@@ -310,6 +310,15 @@ Please find the generated ZIP file to send with any support questions:
   <data name="LC_EXPORT_SAVE_DESCRIPTION" xml:space="preserve">
     <value>Exports all known Palworld files for the selected save as a ZIP.</value>
   </data>
+  <data name="LC_EXPORT_TREE" xml:space="preserve">
+    <value>Copy Breeding Tree</value>
+  </data>
+  <data name="LC_EXPORT_TREE_JSON" xml:space="preserve">
+    <value>Copy as JSON</value>
+  </data>
+  <data name="LC_EXPORT_TREE_TEXT" xml:space="preserve">
+    <value>Copy as Text</value>
+  </data>
   <data name="LC_GAME_SETTINGS" xml:space="preserve">
     <value>Game Settings</value>
   </data>

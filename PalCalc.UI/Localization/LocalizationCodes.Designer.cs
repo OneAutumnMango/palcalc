@@ -304,6 +304,18 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        LC_EXPORT_TREE,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_EXPORT_TREE_JSON,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_EXPORT_TREE_TEXT,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         LC_GAME_SETTINGS,
         /// <summary>
         ///   Looks up a localized string similar to .

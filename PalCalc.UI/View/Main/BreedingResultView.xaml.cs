@@ -55,5 +55,23 @@ namespace PalCalc.UI.View.Main
         {
             InitializeComponent();
         }
+
+        private void ExportTreeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            button.ContextMenu.PlacementTarget = button;
+            button.ContextMenu.IsOpen = true;
+        }
+
+        private void CopyTreeAsText_Click(object sender, RoutedEventArgs e) =>
+            CopyToClipboard(BreedingTreeExporter.ToText(DisplayedResult));
+
+        private void CopyTreeAsJson_Click(object sender, RoutedEventArgs e) =>
+            CopyToClipboard(BreedingTreeExporter.ToJson(DisplayedResult));
+
+        private static void CopyToClipboard(string content)
+        {
+            if (!string.IsNullOrEmpty(content)) Clipboard.SetText(content);
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace PalCalc.UI.ViewModel.GraphSharp
         }
 
         // A skill only needs to be carried by one lineage; once a pal learns it naturally its parents don't need it.
-        private static Dictionary<IBreedingTreeNode, List<ActiveSkill>> ResolveRequiredSkills(BreedingTree tree, IEnumerable<ActiveSkill> targetActiveSkills)
+        public static Dictionary<IBreedingTreeNode, List<ActiveSkill>> ResolveRequiredSkills(BreedingTree tree, IEnumerable<ActiveSkill> targetActiveSkills)
         {
             var db = PalDB.LoadEmbedded();
             var result = new Dictionary<IBreedingTreeNode, List<ActiveSkill>>();
