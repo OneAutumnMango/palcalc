@@ -153,6 +153,7 @@ namespace PalCalc.UI.ViewModel
 
             PalTargetList = targets;
             PalTargetList.SourcePals.PropertyChanged += SourcePals_PropertyChanged;
+            PalTargetList.ConfigPasted += PalTargetList_ConfigPasted;
 
             SolverControls = new SolverControlsViewModel(
                 sourcePals: PalTargetList.SourcePals,
@@ -208,6 +209,7 @@ namespace PalCalc.UI.ViewModel
                 PalTargetList.SourcePals.PropertyChanged -= SourcePals_PropertyChanged;
                 PalTargetList.PropertyChanged -= PalTargetList_PropertyChanged;
                 PalTargetList.OrderChanged -= SaveTargetList;
+                PalTargetList.ConfigPasted -= PalTargetList_ConfigPasted;
             }
 
             if (SelectedGameSettings != null)
@@ -257,6 +259,12 @@ namespace PalCalc.UI.ViewModel
         {
             var spec = PalTarget?.CurrentPalSpecifier;
             if (spec != null) selectedPreset.ApplyTo(spec);
+        }
+
+        private void PalTargetList_ConfigPasted(PalTargetConfig config)
+        {
+            var spec = PalTarget?.CurrentPalSpecifier;
+            if (spec != null) config.ApplyTo(spec);
         }
 
         private void Storage_SaveReloaded(ISaveGame save)

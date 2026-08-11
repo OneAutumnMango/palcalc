@@ -1236,11 +1236,27 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        LC_TARGET_COPY_CONFIG,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         LC_TARGET_PAL,
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         LC_TARGET_PALS,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_TARGET_PASTE_CONFIG,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_TARGET_PASTE_CONFIG_ERROR_MSG,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_TARGET_PASTE_CONFIG_ERROR_TITLE,
         /// <summary>
         ///   Looks up a localized string similar to InternalName.
         /// </summary>

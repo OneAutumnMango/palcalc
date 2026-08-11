@@ -91,6 +91,10 @@ namespace PalCalc.Solver.Utils
                 case SurgeryTablePalReference stpr:
                     foreach (var r in stpr.Input.AllReferences()) yield return r;
                     break;
+
+                case SkillFruitPalReference sfpr:
+                    foreach (var r in sfpr.Input.AllReferences()) yield return r;
+                    break;
             }
         }
 

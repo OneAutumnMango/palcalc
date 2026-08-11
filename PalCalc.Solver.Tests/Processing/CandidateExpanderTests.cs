@@ -127,7 +127,8 @@ public class CandidateExpanderTests
                 selectionPolicy,
                 frontier,
                 settings.DB.PalsById.Keys
-            )
+            ),
+            RequiredInheritedSkills: target.TargetActiveSkillSet
         );
         var progress = new WorkBatchProgress();
         var expander = new CandidateExpander(

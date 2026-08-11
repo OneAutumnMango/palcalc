@@ -910,11 +910,23 @@ Higher values linearly affect time required, depending on how many types of pals
   <data name="LC_SURGERY_REPLACE_PASSIVE" xml:space="preserve">
     <value>Replace {RemovedPassive} with {AddedPassive}</value>
   </data>
+  <data name="LC_TARGET_COPY_CONFIG" xml:space="preserve">
+    <value>Copy Target Config</value>
+  </data>
   <data name="LC_TARGET_PAL" xml:space="preserve">
     <value>Target Pal</value>
   </data>
   <data name="LC_TARGET_PALS" xml:space="preserve">
     <value>Target Pals</value>
+  </data>
+  <data name="LC_TARGET_PASTE_CONFIG" xml:space="preserve">
+    <value>Paste Target Config</value>
+  </data>
+  <data name="LC_TARGET_PASTE_CONFIG_ERROR_MSG" xml:space="preserve">
+    <value>The clipboard does not contain a valid target config.</value>
+  </data>
+  <data name="LC_TARGET_PASTE_CONFIG_ERROR_TITLE" xml:space="preserve">
+    <value>Paste Failed</value>
   </data>
   <data name="LC_TRAITS_COUNT_EMPTY" xml:space="preserve">
     <value>no passives</value>

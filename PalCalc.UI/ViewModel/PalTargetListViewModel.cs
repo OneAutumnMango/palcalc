@@ -60,6 +60,27 @@ namespace PalCalc.UI.ViewModel
 
         public event Action<PalTargetListViewModel> OrderChanged;
 
+        /// <summary>
+        /// Raised when a valid target config was pasted. Handled by the owner, which applies it to
+        /// the currently-edited specifier.
+        /// </summary>
+        public event Action<PalTargetConfig> ConfigPasted;
+
+        public string ExportConfigJson(PalSpecifierViewModel value) =>
+            value != null && value.IsValid
+                ? value.ToTargetConfig().ToJson()
+                : null;
+
+        public bool ImportConfigJson(PalSpecifierViewModel target, string json)
+        {
+            var config = PalTargetConfig.FromJson(json);
+            if (config == null) return false;
+
+            SelectedTarget = target;
+            ConfigPasted?.Invoke(config);
+            return true;
+        }
+
         public void Add(PalSpecifierViewModel value) => targets.Insert(1, value);
         public void Remove(PalSpecifierViewModel value) => targets.Remove(value);
 

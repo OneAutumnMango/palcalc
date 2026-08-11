@@ -74,5 +74,34 @@ namespace PalCalc.UI
                 ActiveSkill5InternalName = spec.TargetActiveSkills.ActiveSkill5?.ModelObject?.InternalName,
                 ActiveSkill6InternalName = spec.TargetActiveSkills.ActiveSkill6?.ModelObject?.InternalName,
             };
+
+        public static PalTargetConfig ToTargetConfig(this PalSpecifierViewModel spec) =>
+            new()
+            {
+                Pal = spec.TargetPal?.ModelObject?.InternalName,
+                RequiredPassives = spec.RequiredPassives.AsModelEnumerable().Select(p => p.InternalName).ToList(),
+                OptionalPassives = spec.OptionalPassives.AsModelEnumerable().Select(p => p.InternalName).ToList(),
+                ActiveSkills = spec.TargetActiveSkills.AsModelEnumerable().Select(s => s.InternalName).ToList(),
+                RequiredGender = spec.RequiredGender?.Value ?? PalGender.WILDCARD,
+                MinIV_HP = spec.MinIv_HP,
+                MinIV_Attack = spec.MinIv_Attack,
+                MinIV_Defense = spec.MinIv_Defense,
+            };
+
+        public static void ApplyTo(this PalTargetConfig config, PalSpecifierViewModel spec)
+        {
+            var db = PalDB.LoadEmbedded();
+
+            spec.TargetPal = PalViewModel.Make(config.Pal.InternalToPal(db));
+
+            spec.RequiredPassives.CopyFrom(new(config.RequiredPassives.Select(n => n.InternalToStandardPassive(db))));
+            spec.OptionalPassives.CopyFrom(new(config.OptionalPassives.Select(n => n.InternalToStandardPassive(db))));
+            spec.TargetActiveSkills.CopyFrom(new(config.ActiveSkills.Select(n => n.ToActive(db))));
+
+            spec.RequiredGender = PalGenderViewModel.Make(config.RequiredGender);
+            spec.MinIv_HP = config.MinIV_HP;
+            spec.MinIv_Attack = config.MinIV_Attack;
+            spec.MinIv_Defense = config.MinIV_Defense;
+        }
     }
 }
