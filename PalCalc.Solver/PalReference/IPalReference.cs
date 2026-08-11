@@ -31,6 +31,12 @@ namespace PalCalc.Solver.PalReference
         List<ActiveSkill> InheritedActiveSkills { get; }
 
         /// <summary>
+        /// <see cref="InheritedActiveSkills"/> as a bit mask. Used instead of the list wherever
+        /// set operations happen in the solver's hot paths.
+        /// </summary>
+        ActiveSkillSet InheritableActiveSkills => ActiveSkillSet.Of(InheritedActiveSkills);
+
+        /// <summary>
         /// The list of active skills this pal is expected to actually have. Owned pals use the skills
         /// they've already learned, other pals are assumed to have anything they could learn.
         /// </summary>

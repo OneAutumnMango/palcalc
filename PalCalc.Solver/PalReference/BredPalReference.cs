@@ -51,15 +51,14 @@ namespace PalCalc.Solver.PalReference
             IVs = ivs;
 
             EffectivePassives = passives;
-            EffectivePassivesHash = passives.SetHash(p => p.InternalName);
+            EffectivePassivesHash = passives.SetHash(p => p.InternalNameHash);
 
             // Collect inheritable active skills from both parents, plus whatever this pal learns on its own
-            NaturalActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(pal, gameSettings.MaxPalLevel);
-            InheritedActiveSkills = parent1.InheritedActiveSkills
-                .Concat(parent2.InheritedActiveSkills)
-                .Concat(NaturalActiveSkills)
-                .Distinct()
-                .ToList();
+            NaturalActiveSkillSet = ActiveSkillInheritance.NaturalSkillMaskOf(pal, gameSettings.MaxPalLevel);
+            InheritableActiveSkills =
+                parent1.InheritableActiveSkills |
+                parent2.InheritableActiveSkills |
+                NaturalActiveSkillSet;
 
             parentBreedingEffort = gameSettings.MultipleBreedingFarms && Parent1 is BredPalReference && Parent2 is BredPalReference
                 ? Parent1.BreedingEffort > Parent2.BreedingEffort
@@ -185,10 +184,16 @@ namespace PalCalc.Solver.PalReference
 
         public int EffectivePassivesHash { get; }
 
-        public List<ActiveSkill> InheritedActiveSkills { get; }
+        public ActiveSkillSet InheritableActiveSkills { get; }
 
         // skills this pal learns on its own, which its parents don't need to pass down
-        public List<ActiveSkill> NaturalActiveSkills { get; }
+        public ActiveSkillSet NaturalActiveSkillSet { get; }
+
+        // (materialized on demand - most bred references are only ever inspected through the bit sets)
+        private List<ActiveSkill> inheritedActiveSkills;
+        public List<ActiveSkill> InheritedActiveSkills => inheritedActiveSkills ??= InheritableActiveSkills.ToList();
+
+        public List<ActiveSkill> NaturalActiveSkills => ActiveSkillInheritance.NaturalSkillsOf(Pal, gameSettings.MaxPalLevel);
 
         public List<PassiveSkill> ActualPassives => EffectivePassives;
 
@@ -266,19 +271,33 @@ namespace PalCalc.Solver.PalReference
         {
             var asBred = obj as BredPalReference;
             if (ReferenceEquals(asBred, null)) return false;
+            if (ReferenceEquals(this, asBred)) return true;
 
-            return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == asBred.GetHashCode();
         }
 
-        public override int GetHashCode() => HashCode.Combine(
-            nameof(BredPalReference),
-            Pal,
-            Parent1.GetHashCode() ^ Parent2.GetHashCode(),
-            EffectivePassivesHash,
-            BreedingEffort,
-            SelfBreedingEffort,
-            Gender,
-            IVs
-        );
+        private static readonly int TypeHash = nameof(BredPalReference).GetHashCode();
+
+        // Hashing a bred pal otherwise re-walks its entire parent tree, and these references get
+        // hashed constantly while searching. Every hashed property is assigned during construction.
+        private int hashCode;
+
+        public override int GetHashCode()
+        {
+            if (hashCode != 0) return hashCode;
+
+            var result = HashCode.Combine(
+                TypeHash,
+                Pal,
+                Parent1.GetHashCode() ^ Parent2.GetHashCode(),
+                EffectivePassivesHash,
+                BreedingEffort,
+                SelfBreedingEffort,
+                Gender,
+                IVs
+            );
+
+            return hashCode = result == 0 ? 1 : result;
+        }
     }
 }

@@ -39,10 +39,22 @@ namespace PalCalc.Model
         public int Power { get; set; }
         public float CooldownSeconds { get; set; }
 
+        /// <summary>
+        /// Dense index assigned to skills which can be inherited through breeding, used for bit-set
+        /// representations of skill collections. -1 for skills which can't be inherited.
+        /// </summary>
+        [JsonIgnore]
+        public int InheritanceIndex { get; internal set; } = -1;
+
         public override string ToString() => Name;
 
-        public override bool Equals(object obj) => (obj as ActiveSkill)?.InternalName == InternalName;
-        public override int GetHashCode() => InternalName.GetHashCode();
+        // (these are used as set/dictionary keys throughout the solver, so the string hash is cached)
+        private int hashCode;
+
+        public override bool Equals(object obj) =>
+            ReferenceEquals(this, obj) || (obj as ActiveSkill)?.InternalName == InternalName;
+
+        public override int GetHashCode() => hashCode != 0 ? hashCode : (hashCode = InternalName.GetHashCode());
     }
 
     public class UnrecognizedActiveSkill : ActiveSkill

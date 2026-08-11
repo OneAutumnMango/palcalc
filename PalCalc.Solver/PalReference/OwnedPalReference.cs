@@ -20,7 +20,7 @@ namespace PalCalc.Solver.PalReference
             this.instance = instance;
 
             EffectivePassives = effectivePassives;
-            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalName).SetHash();
+            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalNameHash).SetHash();
             TimeFactor = instance.PassiveSkills.ToTimeFactor();
 
             ActualPassives = instance.PassiveSkills;
@@ -32,6 +32,7 @@ namespace PalCalc.Solver.PalReference
             // Initialize inherited active skills based on what this pal species can learn
             MaxPalLevel = maxPalLevel;
             InheritedActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(instance.Pal, maxPalLevel);
+            InheritableActiveSkills = ActiveSkillInheritance.NaturalSkillMaskOf(instance.Pal, maxPalLevel);
 
             ActualActiveSkills = instance.ActiveSkills ?? [];
         }
@@ -45,6 +46,8 @@ namespace PalCalc.Solver.PalReference
         public int EffectivePassivesHash { get; }
 
         public List<ActiveSkill> InheritedActiveSkills { get; private set; }
+
+        public ActiveSkillSet InheritableActiveSkills { get; private set; }
 
         public int MaxPalLevel { get; }
 
@@ -81,6 +84,7 @@ namespace PalCalc.Solver.PalReference
             var res = new OwnedPalReference(instance, EffectivePassives, IVs, MaxPalLevel);
             res.Gender = gender;
             res.InheritedActiveSkills = InheritedActiveSkills;
+            res.InheritableActiveSkills = InheritableActiveSkills;
             return res;
         }
 
@@ -107,12 +111,23 @@ namespace PalCalc.Solver.PalReference
         {
             var asOwned = obj as OwnedPalReference;
             if (ReferenceEquals(asOwned, null)) return false;
+            if (ReferenceEquals(this, asOwned)) return true;
 
-            return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == asOwned.GetHashCode();
         }
 
         public override string ToString() => $"Owned {Gender} {Pal.Name} w/ ({EffectivePassives.PassiveSkillListToString()}) in {Location}";
 
-        public override int GetHashCode() => HashCode.Combine(nameof(OwnedPalReference), UnderlyingInstance.GetHashCode());
+        private static readonly int TypeHash = nameof(OwnedPalReference).GetHashCode();
+
+        private int hashCode;
+
+        public override int GetHashCode()
+        {
+            if (hashCode != 0) return hashCode;
+
+            var result = HashCode.Combine(TypeHash, UnderlyingInstance.GetHashCode());
+            return hashCode = result == 0 ? 1 : result;
+        }
     }
 }

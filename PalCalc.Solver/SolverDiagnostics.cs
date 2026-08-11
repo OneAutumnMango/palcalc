@@ -94,14 +94,19 @@ public static class SolverDiagnostics
         Action<SolverDiagnostic> add
     )
     {
+        // wild pals can stand in for owned pals, so nothing about the owned list is fatal on its own
+        var haveUsableWildPals = wildPals.Any(withinSteps);
+
         if (settings.OwnedPals.Count == 0)
         {
-            add(new(SolverDiagnosticCode.NoOwnedPals, SolverDiagnosticSeverity.Blocking));
+            if (!haveUsableWildPals)
+                add(new(SolverDiagnosticCode.NoOwnedPals, SolverDiagnosticSeverity.Blocking));
+
             return [];
         }
 
         var withinBreedingSteps = settings.OwnedPals.Where(p => withinSteps(p.Pal)).ToList();
-        if (withinBreedingSteps.Count == 0 && !wildPals.Any(withinSteps))
+        if (withinBreedingSteps.Count == 0 && !haveUsableWildPals)
         {
             var minSteps = settings.OwnedPals
                 .Select(p => settings.BreedingDB.MinBreedingSteps[p.Pal][target.Pal])
@@ -119,7 +124,7 @@ public static class SolverDiagnostics
             .Where(p => p.PassiveSkills.Except(target.DesiredPassives).Count() <= settings.MaxInputIrrelevantPassives)
             .ToList();
 
-        if (withinBreedingSteps.Count > 0 && usable.Count == 0)
+        if (withinBreedingSteps.Count > 0 && usable.Count == 0 && !haveUsableWildPals)
             add(new(SolverDiagnosticCode.AllOwnedPalsFilteredByIrrelevantPassives, SolverDiagnosticSeverity.Blocking)
             {
                 Value = settings.MaxInputIrrelevantPassives,

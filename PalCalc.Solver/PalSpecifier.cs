@@ -17,7 +17,20 @@ namespace PalCalc.Solver
         public List<PassiveSkill> OptionalPassives { get; set; } = new List<PassiveSkill>();
 
         // Target active skills that must be inherited through breeding (up to 6)
-        public List<ActiveSkill> TargetActiveSkills { get; set; } = new List<ActiveSkill>();
+        private List<ActiveSkill> targetActiveSkills = new List<ActiveSkill>();
+        private ActiveSkillSet? targetActiveSkillSet;
+
+        public List<ActiveSkill> TargetActiveSkills
+        {
+            get => targetActiveSkills;
+            set
+            {
+                targetActiveSkills = value;
+                targetActiveSkillSet = null;
+            }
+        }
+
+        public ActiveSkillSet TargetActiveSkillSet => targetActiveSkillSet ??= ActiveSkillSet.Of(targetActiveSkills);
 
         public IEnumerable<PassiveSkill> DesiredPassives => RequiredPassives.Concat(OptionalPassives);
 
@@ -27,15 +40,29 @@ namespace PalCalc.Solver
 
         public override string ToString() => $"{Pal.Name} with {RequiredPassives.PassiveSkillListToString()}";
 
-        public bool IsSatisfiedBy(IPalReference palRef) =>
-            Pal == palRef.Pal &&
-            !RequiredPassives.Except(palRef.EffectivePassives).Any() &&
-            !TargetActiveSkills.Except(palRef.ActualActiveSkills).Any() &&
-            (RequiredGender == PalGender.WILDCARD || palRef.Gender == PalGender.WILDCARD || palRef.Gender == RequiredGender) &&
-            (IV_HP == 0 || palRef.IVs.HP.Satisfies(IV_HP)) &&
-            (IV_Attack == 0 || palRef.IVs.Attack.Satisfies(IV_Attack)) &&
-            (IV_Defense == 0 || palRef.IVs.Defense.Satisfies(IV_Defense)) &&
-            ActiveSkillInheritance.CanProvide(palRef, TargetActiveSkills);
+        public bool IsSatisfiedBy(IPalReference palRef)
+        {
+            if (Pal != palRef.Pal) return false;
+
+            if (RequiredGender != PalGender.WILDCARD && palRef.Gender != PalGender.WILDCARD && palRef.Gender != RequiredGender)
+                return false;
+
+            var effectivePassives = palRef.EffectivePassives;
+            for (int i = 0; i < RequiredPassives.Count; i++)
+                if (!effectivePassives.Contains(RequiredPassives[i])) return false;
+
+            if (IV_HP != 0 && !palRef.IVs.HP.Satisfies(IV_HP)) return false;
+            if (IV_Attack != 0 && !palRef.IVs.Attack.Satisfies(IV_Attack)) return false;
+            if (IV_Defense != 0 && !palRef.IVs.Defense.Satisfies(IV_Defense)) return false;
+
+            if (targetActiveSkills.Count == 0) return true;
+
+            var actualActiveSkills = palRef.ActualActiveSkills;
+            for (int i = 0; i < targetActiveSkills.Count; i++)
+                if (!actualActiveSkills.Contains(targetActiveSkills[i])) return false;
+
+            return ActiveSkillInheritance.CanProvide(palRef, TargetActiveSkillSet);
+        }
 
         public void Normalize()
         {

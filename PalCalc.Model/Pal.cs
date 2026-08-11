@@ -118,7 +118,7 @@ namespace PalCalc.Model
         public static bool operator ==(Pal a, Pal b) => (ReferenceEquals(a, null) && ReferenceEquals(b, null)) || (a?.Equals(b) ?? false);
         public static bool operator !=(Pal a, Pal b) => !(a == b);
 
-        public override bool Equals(object obj) => (obj as Pal)?.Id == Id;
+        public override bool Equals(object obj) => ReferenceEquals(this, obj) || (obj as Pal)?.Id == Id;
         public override int GetHashCode() => Id.GetHashCode();
     }
 }

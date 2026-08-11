@@ -1,6 +1,7 @@
 using PalCalc.Model;
 using PalCalc.Solver.PalReference;
 using System.Collections.Concurrent;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,108 +14,136 @@ namespace PalCalc.Solver
     /// </summary>
     public static class ActiveSkillInheritance
     {
-        private static readonly ConcurrentDictionary<(string, int), List<ActiveSkill>> naturalSkillsByPal = new();
+        private static readonly ConcurrentDictionary<(Pal, int), List<ActiveSkill>> naturalSkillsByPal = new();
+        private static readonly ConcurrentDictionary<(Pal, int), ActiveSkillSet> naturalSkillMaskByPal = new();
+        private static readonly ConcurrentDictionary<(PalDB, int), FrozenDictionary<Pal, ActiveSkillSet>> naturalSkillMasksByLevel = new();
 
         /// <summary>
         /// The skills this pal species learns on its own by leveling up to at most <paramref name="maxLevel"/>.
         /// </summary>
         public static List<ActiveSkill> NaturalSkillsOf(Pal pal, int maxLevel) =>
-            naturalSkillsByPal.GetOrAdd((pal.Name, maxLevel), static key =>
+            naturalSkillsByPal.GetOrAdd((pal, maxLevel), static key =>
                 PalDB.LoadEmbedded().BreedingSkills.Values
                     .SelectMany(ls => ls)
-                    .Where(ls => ls.PalName == key.Item1 && ls.Level <= key.Item2)
+                    .Where(ls => ls.PalName == key.Item1.Name && ls.Level <= key.Item2)
                     .Select(ls => ls.Skill)
                     .Distinct()
                     .ToList()
             );
 
+        public static ActiveSkillSet NaturalSkillMaskOf(Pal pal, int maxLevel) =>
+            naturalSkillMaskByPal.GetOrAdd((pal, maxLevel), static key => ActiveSkillSet.Of(NaturalSkillsOf(key.Item1, key.Item2)));
+
+        /// <summary>
+        /// A prebuilt lookup of every known pal's natural skill mask, for use in hot loops where the
+        /// max level is fixed.
+        /// </summary>
+        public static FrozenDictionary<Pal, ActiveSkillSet> NaturalSkillMasks(PalDB db, int maxLevel) =>
+            naturalSkillMasksByLevel.GetOrAdd(
+                (db, maxLevel),
+                static key => key.Item1.Pals.ToFrozenDictionary(p => p, p => NaturalSkillMaskOf(p, key.Item2))
+            );
+
         public static bool LearnsNaturally(Pal pal, ActiveSkill skill, int maxLevel) =>
-            NaturalSkillsOf(pal, maxLevel).Contains(skill);
+            NaturalSkillMaskOf(pal, maxLevel).Contains(skill);
 
         /// <summary>
         /// Whether <paramref name="reference"/> can actually end up with all of <paramref name="required"/>
         /// without any single parent needing to pass down more than the game allows.
         /// </summary>
         public static bool CanProvide(IPalReference reference, IReadOnlyList<ActiveSkill> required) =>
-            CanProvide(reference, required, []);
+            required.Count == 0 || CanProvide(reference, ActiveSkillSet.Of(required));
 
-        private static bool CanProvide(
-            IPalReference reference,
-            IReadOnlyList<ActiveSkill> required,
-            Dictionary<(IPalReference, int), bool> memo
-        )
+        public static bool CanProvide(IPalReference reference, ActiveSkillSet required)
         {
-            if (required.Count == 0) return true;
+            if (required.IsEmpty) return true;
 
-            var memoKey = (reference, required.Select(s => s.InternalName).SetHash());
-            if (memo.TryGetValue(memoKey, out var cached)) return cached;
+            // skill fruits add skills their input can't inherit, so they're handled before the shortcut below
+            if (reference is SkillFruitPalReference || reference is SurgeryTablePalReference || reference is BredPalReference)
+                return Evaluate(reference, required, null);
 
-            memo[memoKey] = false; // guard against re-entry
-            var result = Evaluate(reference, required, memo);
-            memo[memoKey] = result;
-            return result;
+            return reference.InheritableActiveSkills.ContainsAll(required);
         }
 
         private static bool Evaluate(
             IPalReference reference,
-            IReadOnlyList<ActiveSkill> required,
-            Dictionary<(IPalReference, int), bool> memo
+            ActiveSkillSet required,
+            Dictionary<(IPalReference, ActiveSkillSet), bool> memo
         )
         {
+            if (required.IsEmpty) return true;
+
             switch (reference)
             {
                 case SkillFruitPalReference fruit:
-                    return CanProvide(fruit.Input, required.Except(fruit.TaughtSkills).ToList(), memo);
+                    return Evaluate(fruit.Input, required.Except(ActiveSkillSet.Of(fruit.TaughtSkills)), memo);
 
                 case SurgeryTablePalReference surgery:
-                    return CanProvide(surgery.Input, required, memo);
+                    return Evaluate(surgery.Input, required, memo);
 
                 case BredPalReference bred:
-                    var inherited = required.Where(s => !bred.NaturalActiveSkills.Contains(s)).ToList();
-                    if (inherited.Count == 0) return true;
-                    if (inherited.Count > GameConstants.MaxInheritedActiveSkills * 2) return false;
+                    if (!bred.InheritableActiveSkills.ContainsAll(required)) return false;
 
-                    return TrySplit(bred.Parent1, bred.Parent2, inherited, 0, [], [], memo);
+                    var inherited = required.Except(bred.NaturalActiveSkillSet);
+                    if (inherited.IsEmpty) return true;
+                    if (inherited.Count > 2 * GameConstants.MaxInheritedActiveSkills) return false;
+
+                    memo ??= [];
+                    var memoKey = (reference, inherited);
+                    if (memo.TryGetValue(memoKey, out var cached)) return cached;
+
+                    memo[memoKey] = false; // guard against re-entry
+
+                    Span<int> indices = stackalloc int[2 * GameConstants.MaxInheritedActiveSkills];
+                    var count = inherited.CopyIndicesTo(indices);
+                    var result = TrySplit(
+                        bred.Parent1,
+                        bred.Parent2,
+                        indices[..count],
+                        0,
+                        default, 0,
+                        default, 0,
+                        memo
+                    );
+
+                    memo[memoKey] = result;
+                    return result;
 
                 default:
-                    return required.All(s => CanSupply(reference, s));
+                    return reference.InheritableActiveSkills.ContainsAll(required);
             }
         }
 
         private static bool TrySplit(
             IPalReference parent1,
             IPalReference parent2,
-            List<ActiveSkill> skills,
+            ReadOnlySpan<int> skillIndices,
             int index,
-            List<ActiveSkill> from1,
-            List<ActiveSkill> from2,
-            Dictionary<(IPalReference, int), bool> memo
+            ActiveSkillSet from1,
+            int count1,
+            ActiveSkillSet from2,
+            int count2,
+            Dictionary<(IPalReference, ActiveSkillSet), bool> memo
         )
         {
-            if (index == skills.Count)
-                return CanProvide(parent1, from1, memo) && CanProvide(parent2, from2, memo);
+            if (index == skillIndices.Length)
+                return Evaluate(parent1, from1, memo) && Evaluate(parent2, from2, memo);
 
-            var skill = skills[index];
+            var skillIndex = skillIndices[index];
 
-            if (from1.Count < GameConstants.MaxInheritedActiveSkills && CanSupply(parent1, skill))
-            {
-                from1.Add(skill);
-                if (TrySplit(parent1, parent2, skills, index + 1, from1, from2, memo)) return true;
-                from1.RemoveAt(from1.Count - 1);
-            }
+            if (
+                count1 < GameConstants.MaxInheritedActiveSkills &&
+                parent1.InheritableActiveSkills.ContainsIndex(skillIndex) &&
+                TrySplit(parent1, parent2, skillIndices, index + 1, from1.WithIndex(skillIndex), count1 + 1, from2, count2, memo)
+            ) return true;
 
-            if (from2.Count < GameConstants.MaxInheritedActiveSkills && CanSupply(parent2, skill))
-            {
-                from2.Add(skill);
-                if (TrySplit(parent1, parent2, skills, index + 1, from1, from2, memo)) return true;
-                from2.RemoveAt(from2.Count - 1);
-            }
+            if (
+                count2 < GameConstants.MaxInheritedActiveSkills &&
+                parent2.InheritableActiveSkills.ContainsIndex(skillIndex) &&
+                TrySplit(parent1, parent2, skillIndices, index + 1, from1, count1, from2.WithIndex(skillIndex), count2 + 1, memo)
+            ) return true;
 
             return false;
         }
-
-        // every reference builds its own pool from the levels it's allowed to reach, so this is already level-aware
-        private static bool CanSupply(IPalReference parent, ActiveSkill skill) =>
-            parent.InheritedActiveSkills.Contains(skill);
     }
 }

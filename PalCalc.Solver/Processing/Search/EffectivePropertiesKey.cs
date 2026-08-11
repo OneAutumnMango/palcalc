@@ -32,23 +32,22 @@ internal readonly struct PassiveSetKey : IEquatable<PassiveSetKey>
         passive2 = passives.Count > 2 ? passives[2].InternalName : null;
         passive3 = passives.Count > 3 ? passives[3].InternalName : null;
 
+        var hash0 = passives.Count > 0 ? passives[0].InternalNameHash : 0;
+        var hash1 = passives.Count > 1 ? passives[1].InternalNameHash : 0;
+        var hash2 = passives.Count > 2 ? passives[2].InternalNameHash : 0;
+        var hash3 = passives.Count > 3 ? passives[3].InternalNameHash : 0;
+
         // Sorting network for four values. Missing values are null and remain at
         // the end. This avoids allocating a temporary collection in the hot path.
-        Sort(ref passive0, ref passive1);
-        Sort(ref passive2, ref passive3);
-        Sort(ref passive0, ref passive2);
-        Sort(ref passive1, ref passive3);
-        Sort(ref passive1, ref passive2);
+        Sort(ref passive0, ref hash0, ref passive1, ref hash1);
+        Sort(ref passive2, ref hash2, ref passive3, ref hash3);
+        Sort(ref passive0, ref hash0, ref passive2, ref hash2);
+        Sort(ref passive1, ref hash1, ref passive3, ref hash3);
+        Sort(ref passive1, ref hash1, ref passive2, ref hash2);
 
         hashCode = Count == 0
             ? 0
-            : HashCode.Combine(
-                Count,
-                passive0,
-                passive1,
-                passive2,
-                passive3
-            );
+            : HashCode.Combine(Count, hash0, hash1, hash2, hash3);
     }
 
     public byte Count { get; }
@@ -71,7 +70,7 @@ internal readonly struct PassiveSetKey : IEquatable<PassiveSetKey>
     public static bool operator !=(PassiveSetKey left, PassiveSetKey right) =>
         !left.Equals(right);
 
-    private static void Sort(ref string left, ref string right)
+    private static void Sort(ref string left, ref int leftHash, ref string right, ref int rightHash)
     {
         if (
             right != null &&
@@ -79,6 +78,7 @@ internal readonly struct PassiveSetKey : IEquatable<PassiveSetKey>
         )
         {
             (left, right) = (right, left);
+            (leftHash, rightHash) = (rightHash, leftHash);
         }
     }
 }

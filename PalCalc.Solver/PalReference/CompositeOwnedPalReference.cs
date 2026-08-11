@@ -43,7 +43,7 @@ namespace PalCalc.Solver.PalReference
 
             // effective passives based on which pal has the most irrelevant passives
             EffectivePassives = male.EffectivePassives.Count > female.EffectivePassives.Count ? male.EffectivePassives : female.EffectivePassives;
-            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalName).SetHash();
+            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalNameHash).SetHash();
 
             ActualPassives = Male.ActualPassives.Intersect(Female.ActualPassives).ToList();
             while (ActualPassives.Count < EffectivePassives.Count) ActualPassives.Add(new RandomPassiveSkill());
@@ -59,6 +59,7 @@ namespace PalCalc.Solver.PalReference
 
             // Inherited active skills based on intersection (skills both can pass)
             InheritedActiveSkills = male.InheritedActiveSkills.Intersect(female.InheritedActiveSkills).ToList();
+            InheritableActiveSkills = male.InheritableActiveSkills & female.InheritableActiveSkills;
             ActualActiveSkills = male.ActualActiveSkills.Intersect(female.ActualActiveSkills).ToList();
         }
 
@@ -72,6 +73,8 @@ namespace PalCalc.Solver.PalReference
         public int EffectivePassivesHash { get; private set; }
 
         public List<ActiveSkill> InheritedActiveSkills { get; private set; }
+
+        public ActiveSkillSet InheritableActiveSkills { get; private set; }
 
         public List<ActiveSkill> ActualActiveSkills { get; private set; }
 
@@ -123,18 +126,29 @@ namespace PalCalc.Solver.PalReference
         {
             var asComposite = obj as CompositeOwnedPalReference;
             if (ReferenceEquals(asComposite, null)) return false;
+            if (ReferenceEquals(this, asComposite)) return true;
 
-            return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == asComposite.GetHashCode();
         }
 
+        private static readonly int TypeHash = nameof(CompositeOwnedPalReference).GetHashCode();
+
+        private int hashCode;
+
         // TODO - maybe just use Pal, PassivesHash, Gender, IVs? don't need hashes specific to the instances chosen?
-        public override int GetHashCode() =>
-            HashCode.Combine(
-                nameof(CompositeOwnedPalReference),
+        public override int GetHashCode()
+        {
+            if (hashCode != 0) return hashCode;
+
+            var result = HashCode.Combine(
+                TypeHash,
                 Male, Female,
                 EffectivePassivesHash,
                 Gender,
                 IVs
             );
+
+            return hashCode = result == 0 ? 1 : result;
+        }
     }
 }

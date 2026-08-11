@@ -4,6 +4,7 @@ using PalCalc.Solver.PalReference.Properties;
 using PalCalc.Solver.Processing.Search;
 using PalCalc.Solver.Utils;
 using System;
+using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -39,6 +40,9 @@ namespace PalCalc.Solver.Processing
     )
     {
         private readonly PalDB db = settings.DB;
+        private readonly int maxPalLevel = settings.GameSettings.MaxPalLevel;
+        private readonly FrozenDictionary<Pal, ActiveSkillSet> naturalSkillMasks =
+            ActiveSkillInheritance.NaturalSkillMasks(settings.DB, settings.GameSettings.MaxPalLevel);
 
         private readonly LocalListPool<PassiveSkill> passiveListPool = poolFactory.GetListPool<PassiveSkill>();
         private readonly LocalListPool<(IPalReference, IPalReference)> palPairListPool = poolFactory.GetListPool<(IPalReference, IPalReference)>();
@@ -242,6 +246,26 @@ namespace PalCalc.Solver.Processing
                     if (!canReach) continue;
                 }
 
+                // reject pairs which can't cover the target skills for any of their possible children before
+                // doing any of the (much more expensive) passive and gender work below
+                if (!context.Target.TargetActiveSkillSet.IsEmpty)
+                {
+                    var parentSkills = p.Item1.InheritableActiveSkills | p.Item2.InheritableActiveSkills;
+
+                    bool anyChildCanProvide = false;
+                    foreach (var result in breedingResults)
+                    {
+                        var available = parentSkills | naturalSkillMasks[result.Child];
+                        if (available.ContainsAll(context.Target.TargetActiveSkillSet))
+                        {
+                            anyChildCanProvide = true;
+                            break;
+                        }
+                    }
+
+                    if (!anyChildCanProvide) continue;
+                }
+
                 // if we disallow any irrelevant passives, neither parents have a useful passive, and at least 1 parent
                 // has an irrelevant passive, then it's impossible to breed a child with zero total passives
                 //
@@ -344,21 +368,15 @@ namespace PalCalc.Solver.Processing
                     if (settings.BannedBredPals.Contains(childPalType))
                         continue;
 
-                    if (context.Target.TargetActiveSkills.Any())
+                    if (context.Target.TargetActiveSkills.Count > 0)
                     {
-                        // Get all active skills that can be passed from both parents (union)
-                        var inheritableFromParents = parent1.InheritedActiveSkills
-                            .Union(parent2.InheritedActiveSkills)
-                            .ToHashSet();
+                        // parents can only pass on what they can inherit, and the child covers the rest itself
+                        var available =
+                            parent1.InheritableActiveSkills |
+                            parent2.InheritableActiveSkills |
+                            naturalSkillMasks[childPalType];
 
-                        // Check if parents can collectively provide all target active skills
-                        bool canProvideAllTargetSkills = context.Target.TargetActiveSkills
-                            .All(targetSkill =>
-                                inheritableFromParents.Contains(targetSkill) ||
-                                ActiveSkillInheritance.LearnsNaturally(childPalType, targetSkill, settings.GameSettings.MaxPalLevel)
-                            );
-
-                        if (!canProvideAllTargetSkills)
+                        if (!available.ContainsAll(context.Target.TargetActiveSkillSet))
                             continue;
                     }
 

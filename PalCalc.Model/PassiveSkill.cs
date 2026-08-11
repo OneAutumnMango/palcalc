@@ -51,8 +51,20 @@ namespace PalCalc.Model
 
         public override string ToString() => Name;
 
-        public override bool Equals(object obj) => (obj as PassiveSkill)?.InternalName == InternalName;
-        public override int GetHashCode() => InternalName.GetHashCode();
+        // (these are used as set/dictionary keys throughout the solver, so the string hash is cached)
+        private int internalNameHash;
+
+        /// <summary>
+        /// Hash of <see cref="InternalName"/>. Unlike <see cref="GetHashCode"/> this is shared by all
+        /// random passives, which are interchangeable when grouping passive sets.
+        /// </summary>
+        [JsonIgnore]
+        public int InternalNameHash => internalNameHash != 0 ? internalNameHash : (internalNameHash = InternalName.GetHashCode());
+
+        public override bool Equals(object obj) =>
+            ReferenceEquals(this, obj) || (obj as PassiveSkill)?.InternalName == InternalName;
+
+        public override int GetHashCode() => InternalNameHash;
     }
 
     public interface IUnknownPassive { }

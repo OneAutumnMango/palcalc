@@ -17,6 +17,10 @@ public sealed class BreedingSolver
         SolverStateController controller
     )
     {
+        // a blocking diagnostic means no path can exist, so don't spend a full search proving it
+        if (SolverDiagnostics.Analyze(request).Any(d => d.Severity == SolverDiagnosticSeverity.Blocking))
+            return new([], controller.CancellationToken.IsCancellationRequested);
+
         var context = SolverRunContext.Create(request, controller);
         var run = new SolverRun(
             context,

@@ -197,7 +197,7 @@ namespace PalCalc.Solver.PalReference
                 Debugger.Break();
 #endif
 
-            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalName).SetHash();
+            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalNameHash).SetHash();
 
             TimeFactor = EffectivePassives.ToTimeFactor();
 
@@ -211,6 +211,7 @@ namespace PalCalc.Solver.PalReference
         public Pal Pal => Input.Pal;
         public int EffectivePassivesHash { get; }
         public List<ActiveSkill> InheritedActiveSkills { get; }
+        public ActiveSkillSet InheritableActiveSkills => Input.InheritableActiveSkills;
         public List<ActiveSkill> ActualActiveSkills => Input.ActualActiveSkills;
         public IV_Set IVs => Input.IVs;
 
@@ -277,11 +278,21 @@ namespace PalCalc.Solver.PalReference
         {
             var asSurgery = obj as SurgeryTablePalReference;
             if (ReferenceEquals(asSurgery, null)) return false;
+            if (ReferenceEquals(this, asSurgery)) return true;
 
-            return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == asSurgery.GetHashCode();
         }
 
-        public override int GetHashCode() =>
-            HashCode.Combine(nameof(SurgeryTablePalReference), inputHash, operationsHash);
+        private static readonly int TypeHash = nameof(SurgeryTablePalReference).GetHashCode();
+
+        private int hashCode;
+
+        public override int GetHashCode()
+        {
+            if (hashCode != 0) return hashCode;
+
+            var result = HashCode.Combine(TypeHash, inputHash, operationsHash);
+            return hashCode = result == 0 ? 1 : result;
+        }
     }
 }

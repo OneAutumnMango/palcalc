@@ -215,4 +215,28 @@ public class SolverDiagnosticsTests
         Assert.AreEqual(0, results.Count);
         Assert.IsTrue(SolverDiagnostics.Analyze(request).Any(d => d.Severity == SolverDiagnosticSeverity.Blocking));
     }
+
+    [TestMethod]
+    public void SolveStopsImmediatelyWhenATargetSkillCannotBeBred()
+    {
+        var exclusive = DB.ActiveSkills.First(s => !DB.BreedingSkills.ContainsKey(s.Name));
+
+        var solver = SolverTestScenario.Solver([
+            SolverTestScenario.Owned("Lamball", PalGender.MALE),
+            SolverTestScenario.Owned("Cattiva", PalGender.FEMALE),
+        ]);
+
+        var request = new BreedingSolverRequest(
+            new PalSpecifier { Pal = "Lamball".ToPal(DB), TargetActiveSkills = [exclusive] },
+            solver.Settings
+        );
+
+        var expanded = 0;
+        solver.Solver.StatusUpdated += _ => expanded++;
+
+        var results = solver.Solver.Solve(request, new SolverStateController(CancellationToken.None)).Results;
+
+        Assert.AreEqual(0, results.Count);
+        Assert.AreEqual(0, expanded);
+    }
 }

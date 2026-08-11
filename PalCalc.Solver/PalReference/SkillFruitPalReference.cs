@@ -39,6 +39,7 @@ namespace PalCalc.Solver.PalReference
         public List<PassiveSkill> ActualPassives => Input.ActualPassives;
 
         public List<ActiveSkill> InheritedActiveSkills => Input.InheritedActiveSkills;
+        public ActiveSkillSet InheritableActiveSkills => Input.InheritableActiveSkills;
         public List<ActiveSkill> ActualActiveSkills { get; }
 
         public IV_Set IVs => Input.IVs;
@@ -63,12 +64,23 @@ namespace PalCalc.Solver.PalReference
         public override string ToString() => $"Skill fruits on {{{Input}}} : {string.Join("; ", TaughtSkills.Select(s => s.Name))}";
 
         public override bool Equals(object obj) =>
-            obj is SkillFruitPalReference && obj.GetHashCode() == GetHashCode();
+            ReferenceEquals(this, obj) || (obj is SkillFruitPalReference && obj.GetHashCode() == GetHashCode());
 
-        public override int GetHashCode() => HashCode.Combine(
-            nameof(SkillFruitPalReference),
-            Input.GetHashCode(),
-            TaughtSkills.Select(s => s.InternalName).SetHash()
-        );
+        private static readonly int TypeHash = nameof(SkillFruitPalReference).GetHashCode();
+
+        private int hashCode;
+
+        public override int GetHashCode()
+        {
+            if (hashCode != 0) return hashCode;
+
+            var result = HashCode.Combine(
+                TypeHash,
+                Input.GetHashCode(),
+                TaughtSkills.Select(s => s.InternalName).SetHash()
+            );
+
+            return hashCode = result == 0 ? 1 : result;
+        }
     }
 }

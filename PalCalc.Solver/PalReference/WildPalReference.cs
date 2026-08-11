@@ -33,11 +33,12 @@ namespace PalCalc.Solver.PalReference
             if (guaranteedPassives.Any(t => !pal.GuaranteedPassivesInternalIds.Contains(t.InternalName))) throw new InvalidOperationException();
             if (EffectivePassives.Count > GameConstants.MaxTotalPassives) throw new InvalidOperationException();
 
-            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalName).SetHash();
+            EffectivePassivesHash = EffectivePassives.Select(p => p.InternalNameHash).SetHash();
             IVs = new IV_Set() { HP = IV_Value.Random, Attack =  IV_Value.Random, Defense = IV_Value.Random };
 
             // Initialize inherited active skills based on what this pal species can learn
             InheritedActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(pal, maxPalLevel);
+            InheritableActiveSkills = ActiveSkillInheritance.NaturalSkillMaskOf(pal, maxPalLevel);
         }
 
         private WildPalReference(Pal pal)
@@ -50,6 +51,8 @@ namespace PalCalc.Solver.PalReference
         public List<PassiveSkill> EffectivePassives { get; private set; }
 
         public List<ActiveSkill> InheritedActiveSkills { get; private set; }
+
+        public ActiveSkillSet InheritableActiveSkills { get; private set; }
 
         public IV_Set IVs { get; private set; }
 
@@ -91,6 +94,7 @@ namespace PalCalc.Solver.PalReference
                 EffectivePassives = EffectivePassives,
                 EffectivePassivesHash = this.EffectivePassivesHash,
                 InheritedActiveSkills = InheritedActiveSkills,
+                InheritableActiveSkills = InheritableActiveSkills,
                 IVs = IVs,
                 CapturesRequiredForGender = useReverser ? 1 : gender switch
                 {
@@ -131,12 +135,23 @@ namespace PalCalc.Solver.PalReference
         {
             var asWild = obj as WildPalReference;
             if (asWild is null) return false;
+            if (ReferenceEquals(this, asWild)) return true;
 
-            return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == asWild.GetHashCode();
         }
 
         public override string ToString() => $"Captured {Gender} {Pal} w/ up to {EffectivePassives.Count} random passive skills";
 
-        public override int GetHashCode() => HashCode.Combine(nameof(WildPalReference), Pal, Gender, EffectivePassivesHash);
+        private static readonly int TypeHash = nameof(WildPalReference).GetHashCode();
+
+        private int hashCode;
+
+        public override int GetHashCode()
+        {
+            if (hashCode != 0) return hashCode;
+
+            var result = HashCode.Combine(TypeHash, Pal, Gender, EffectivePassivesHash);
+            return hashCode = result == 0 ? 1 : result;
+        }
     }
 }

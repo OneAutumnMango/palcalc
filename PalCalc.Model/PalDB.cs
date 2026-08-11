@@ -145,6 +145,10 @@ namespace PalCalc.Model
                     result.BreedingSkills[skillName] = learnableSkills;
                 }
 
+                var inheritanceIndex = 0;
+                foreach (var skillName in result.BreedingSkills.Keys.OrderBy(n => n, StringComparer.Ordinal))
+                    skillsByName[skillName].InheritanceIndex = inheritanceIndex++;
+
                 logger.Information(
                     "Loaded {count} inheritable active skills ({excluded} exclusive skills ignored), {fruits} skill fruits",
                     result.BreedingSkills.Count,
