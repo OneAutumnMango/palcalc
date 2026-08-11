@@ -41,8 +41,9 @@ namespace PalCalc.Solver.Processing
     {
         private readonly PalDB db = settings.DB;
         private readonly int maxPalLevel = settings.GameSettings.MaxPalLevel;
+        // every child produced here is freshly bred, so it only knows what a new pal knows
         private readonly FrozenDictionary<Pal, ActiveSkillSet> naturalSkillMasks =
-            ActiveSkillInheritance.NaturalSkillMasks(settings.DB, settings.GameSettings.MaxPalLevel);
+            ActiveSkillInheritance.NaturalSkillMasks(settings.DB, settings.GameSettings.NewPalSkillLevel);
 
         private readonly LocalListPool<PassiveSkill> passiveListPool = poolFactory.GetListPool<PassiveSkill>();
         private readonly LocalListPool<(IPalReference, IPalReference)> palPairListPool = poolFactory.GetListPool<(IPalReference, IPalReference)>();
@@ -248,7 +249,7 @@ namespace PalCalc.Solver.Processing
 
                 // reject pairs which can't cover the target skills for any of their possible children before
                 // doing any of the (much more expensive) passive and gender work below
-                if (!context.Target.TargetActiveSkillSet.IsEmpty)
+                if (!context.RequiredInheritedSkills.IsEmpty)
                 {
                     var parentSkills = p.Item1.InheritableActiveSkills | p.Item2.InheritableActiveSkills;
 
@@ -256,7 +257,7 @@ namespace PalCalc.Solver.Processing
                     foreach (var result in breedingResults)
                     {
                         var available = parentSkills | naturalSkillMasks[result.Child];
-                        if (available.ContainsAll(context.Target.TargetActiveSkillSet))
+                        if (available.ContainsAll(context.RequiredInheritedSkills))
                         {
                             anyChildCanProvide = true;
                             break;
@@ -368,7 +369,7 @@ namespace PalCalc.Solver.Processing
                     if (settings.BannedBredPals.Contains(childPalType))
                         continue;
 
-                    if (context.Target.TargetActiveSkills.Count > 0)
+                    if (!context.RequiredInheritedSkills.IsEmpty)
                     {
                         // parents can only pass on what they can inherit, and the child covers the rest itself
                         var available =
@@ -376,7 +377,7 @@ namespace PalCalc.Solver.Processing
                             parent2.InheritableActiveSkills |
                             naturalSkillMasks[childPalType];
 
-                        if (!available.ContainsAll(context.Target.TargetActiveSkillSet))
+                        if (!available.ContainsAll(context.RequiredInheritedSkills))
                             continue;
                     }
 

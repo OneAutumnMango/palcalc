@@ -124,5 +124,6 @@ internal sealed class CandidatePreFilter
 internal sealed record CandidateExpansionContext(
     int StepIndex,
     PalSpecifier Target,
-    CandidatePreFilter PreFilter
+    CandidatePreFilter PreFilter,
+    ActiveSkillSet RequiredInheritedSkills
 );

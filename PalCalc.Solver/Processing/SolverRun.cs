@@ -52,6 +52,11 @@ namespace PalCalc.Solver.Processing
             );
             var batchExecutor = new ParallelBatchExecutor(context, stateUpdateInterval);
 
+            // the target learns some skills by itself, so its ancestors never have to carry those
+            var requiredInheritedSkills = spec.TargetActiveSkillSet.Except(
+                ActiveSkillInheritance.NaturalSkillMaskOf(spec.Pal, settings.GameSettings.NewPalSkillLevel)
+            );
+
             // Repeatedly breed newly useful parent pairs. Each pass only
             // schedules combinations introduced by the previous frontier change.
 
@@ -68,7 +73,8 @@ namespace PalCalc.Solver.Processing
                         selectionPolicy: context.SelectionPolicy,
                         frontier: frontier,
                         palIds: settings.DB.PalsById.Keys
-                    )
+                    ),
+                    RequiredInheritedSkills: requiredInheritedSkills
                 );
 
                 var delta = frontier.ExpandPairs(work =>
