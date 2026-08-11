@@ -69,7 +69,8 @@ namespace PalCalc.UI.ViewModel.GraphSharp
                 foreach (var child in children) Visit(child, childNeeds[child]);
             }
 
-            Visit(tree.Root, (targetActiveSkills ?? []).Intersect(tree.Root.PalRef.InheritedActiveSkills).ToList());
+            // the final pal's skills include anything taught by skill fruits, which isn't inherited
+            Visit(tree.Root, (targetActiveSkills ?? []).Intersect(tree.Root.PalRef.ActualActiveSkills).ToList());
 
             return result;
         }
