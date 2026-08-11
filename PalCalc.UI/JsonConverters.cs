@@ -347,7 +347,8 @@ namespace PalCalc.UI
                     HP = hp,
                     Attack = attack,
                     Defense = defense
-                }
+                },
+                gameSettings.MaxPalLevel
             );
 
             if (solverSettings.UseGenderReversers && inst.Gender != actualGender)
@@ -434,7 +435,8 @@ namespace PalCalc.UI
                 guaranteedPassives,
                 numPassives,
                 db.BreedingMechanics,
-                db
+                db,
+                gameSettings.MaxPalLevel
             ).WithGuaranteedGender(
                 db,
                 gender,

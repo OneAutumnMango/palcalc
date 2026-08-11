@@ -763,10 +763,10 @@
   <data name="LC_EXPORT_SAVE_CSV_DESCRIPTION" xml:space="preserve">
     <value />
   </data>
-  <data name="LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70" xml:space="preserve">
+  <data name="LC_SETTINGS_MAX_PAL_LEVEL" xml:space="preserve">
     <value />
   </data>
-  <data name="LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC" xml:space="preserve">
+  <data name="LC_SETTINGS_MAX_PAL_LEVEL_DESC" xml:space="preserve">
     <value />
   </data>
   <data name="LC_SETTINGS_PALBOX_TAB_SIZE" xml:space="preserve">

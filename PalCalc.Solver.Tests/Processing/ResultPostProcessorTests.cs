@@ -36,7 +36,8 @@ public class ResultPostProcessorTests
         var ownedReference = new OwnedPalReference(
             owned,
             effectivePassives: [],
-            effectiveIVs: new IV_Set()
+            effectiveIVs: new IV_Set(),
+            maxPalLevel: GameConstants.MaxPalLevel
         );
         var frontier = new SearchFrontier(
             target,
@@ -94,7 +95,8 @@ public class ResultPostProcessorTests
                 guaranteedPassives: [],
                 numRandomPassives: 0,
                 mechanics: SolverTestScenario.DB.BreedingMechanics,
-                db: SolverTestScenario.DB
+                db: SolverTestScenario.DB,
+                maxPalLevel: GameConstants.MaxPalLevel
             ),
         ]);
         var processor = new ResultPostProcessor(
@@ -135,7 +137,8 @@ public class ResultPostProcessorTests
                 owned.PassiveSkills.ToDedicatedPassives(
                     target.DesiredPassives
                 ),
-                new IV_Set()
+                new IV_Set(),
+                GameConstants.MaxPalLevel
             ),
         ]);
         var processor = new ResultPostProcessor(

@@ -74,16 +74,18 @@
             />
 
             <Label Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
-                <TextBlock TextWrapping="Wrap" Text="{itl:LocalizedText Code=LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70}" />
+                <TextBlock TextWrapping="Wrap" Text="{itl:LocalizedText Code=LC_SETTINGS_MAX_PAL_LEVEL}" />
             </Label>
-            <CheckBox
+            <vu:IntegerTextBox
                 Grid.Row="6"
                 Grid.Column="2"
-                ToolTipService.ToolTip="{itl:LocalizedText Code=LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC}"
+                ToolTipService.ToolTip="{itl:LocalizedText Code=LC_SETTINGS_MAX_PAL_LEVEL_DESC}"
                 ToolTipService.ShowOnDisabled="True"
-                IsChecked="{Binding AssumeAllPalsLevel70}"
+                Value="{Binding MaxPalLevel}"
+                MinValue="1"
+                MaxValue="70"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Center"
+                VerticalAlignment="Top"
             />
 
             <Label Grid.Row="8" Grid.Column="0" Content="{itl:LocalizedText Code=LC_SETTINGS_PALBOX_TAB_SIZE}" HorizontalAlignment="Left" VerticalAlignment="Center" />

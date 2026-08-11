@@ -999,11 +999,11 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70,
+        LC_SETTINGS_MAX_PAL_LEVEL,
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC,
+        LC_SETTINGS_MAX_PAL_LEVEL_DESC,
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>

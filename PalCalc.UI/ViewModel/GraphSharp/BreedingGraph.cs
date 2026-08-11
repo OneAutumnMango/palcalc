@@ -1,5 +1,6 @@
 ﻿using GraphSharp;
 using PalCalc.Model;
+using PalCalc.Solver;
 using PalCalc.Solver.PalReference;
 using PalCalc.Solver.Tree;
 using PalCalc.UI.Model;
@@ -25,20 +26,19 @@ namespace PalCalc.UI.ViewModel.GraphSharp
         {
             Tree = tree;
 
-            var requiredSkills = ResolveRequiredSkills(tree, targetActiveSkills);
+            var requiredSkills = ResolveRequiredSkills(tree, targetActiveSkills, settings.MaxPalLevel);
             Nodes = tree.AllNodes
                 .Select(p => IBreedingTreeNodeViewModel.FromModel(source, settings, p.Item1, requiredSkills.GetValueOrDefault(p.Item1) ?? []))
                 .ToList();
         }
 
         // A skill only needs to be carried by one lineage; once a pal learns it naturally its parents don't need it.
-        public static Dictionary<IBreedingTreeNode, List<ActiveSkill>> ResolveRequiredSkills(BreedingTree tree, IEnumerable<ActiveSkill> targetActiveSkills)
+        public static Dictionary<IBreedingTreeNode, List<ActiveSkill>> ResolveRequiredSkills(BreedingTree tree, IEnumerable<ActiveSkill> targetActiveSkills, int maxPalLevel)
         {
-            var db = PalDB.LoadEmbedded();
             var result = new Dictionary<IBreedingTreeNode, List<ActiveSkill>>();
 
             bool LearnsNaturally(IBreedingTreeNode node, ActiveSkill skill) =>
-                db.BreedingSkills.GetValueOrDefault(skill.Name)?.Any(ls => ls.PalName == node.PalRef.Pal.Name) ?? false;
+                ActiveSkillInheritance.LearnsNaturally(node.PalRef.Pal, skill, maxPalLevel);
 
             void Visit(IBreedingTreeNode node, List<ActiveSkill> needed)
             {

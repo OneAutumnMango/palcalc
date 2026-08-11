@@ -8,23 +8,25 @@ namespace PalCalc.Solver.Tests;
 public class ActiveSkillInheritanceTests
 {
     private static readonly PalDB DB = SolverTestScenario.DB;
-    private static readonly GameSettings Settings = new();
+    private const int AnyLevel = 70;
 
-    // Loomen learns Dark Ball at level 1; neither Lamball nor Cattiva can learn it.
+    // Loomen learns Dark Ball at level 1, Depresso at level 15; neither Lamball nor Cattiva can learn it.
     private static ActiveSkill Skill(string name) => DB.ActiveSkills.Single(s => s.Name == name);
-    private static List<ActiveSkill> Natural(string palName) =>
-        ActiveSkillInheritance.NaturalSkillsOf(palName.ToPal(DB));
 
-    private static IPalReference Owned(string palName, PalGender gender) =>
+    private static List<ActiveSkill> Natural(string palName, int maxLevel = AnyLevel) =>
+        ActiveSkillInheritance.NaturalSkillsOf(palName.ToPal(DB), maxLevel);
+
+    private static IPalReference Owned(string palName, PalGender gender, int maxLevel = AnyLevel) =>
         new OwnedPalReference(
             SolverTestScenario.Owned(palName, gender),
             [],
-            new IV_Set(IV_Value.Random, IV_Value.Random, IV_Value.Random)
+            new IV_Set(IV_Value.Random, IV_Value.Random, IV_Value.Random),
+            maxLevel
         );
 
-    private static IPalReference Bred(string palName, IPalReference parent1, IPalReference parent2) =>
+    private static IPalReference Bred(string palName, IPalReference parent1, IPalReference parent2, int maxLevel = AnyLevel) =>
         new BredPalReference(
-            Settings,
+            new GameSettings { MaxPalLevel = maxLevel },
             palName.ToPal(DB),
             parent1,
             parent2,
@@ -37,11 +39,37 @@ public class ActiveSkillInheritanceTests
     [TestMethod]
     public void NaturalSkillsOf_IncludesLevelUpSkills()
     {
-        CollectionAssert.Contains(ActiveSkillInheritance.NaturalSkillsOf("Loomen".ToPal(DB)), Skill("Dark Ball"));
+        CollectionAssert.Contains(Natural("Loomen"), Skill("Dark Ball"));
 
-        Assert.IsTrue(ActiveSkillInheritance.LearnsNaturally("Loomen".ToPal(DB), Skill("Dark Ball")));
-        Assert.IsFalse(ActiveSkillInheritance.LearnsNaturally("Lamball".ToPal(DB), Skill("Dark Ball")));
-        Assert.IsFalse(ActiveSkillInheritance.LearnsNaturally("Cattiva".ToPal(DB), Skill("Dark Ball")));
+        Assert.IsTrue(ActiveSkillInheritance.LearnsNaturally("Loomen".ToPal(DB), Skill("Dark Ball"), AnyLevel));
+        Assert.IsFalse(ActiveSkillInheritance.LearnsNaturally("Lamball".ToPal(DB), Skill("Dark Ball"), AnyLevel));
+        Assert.IsFalse(ActiveSkillInheritance.LearnsNaturally("Cattiva".ToPal(DB), Skill("Dark Ball"), AnyLevel));
+    }
+
+    [TestMethod]
+    public void NaturalSkillsOf_ExcludesSkillsLearnedAboveMaxLevel()
+    {
+        CollectionAssert.Contains(Natural("Depresso", 15), Skill("Dark Ball"));
+        CollectionAssert.DoesNotContain(Natural("Depresso", 14), Skill("Dark Ball"));
+
+        CollectionAssert.Contains(Natural("Loomen", 1), Skill("Dark Ball"));
+    }
+
+    [TestMethod]
+    public void OwnedPal_SkillPoolRespectsMaxPalLevel()
+    {
+        CollectionAssert.Contains(Owned("Depresso", PalGender.MALE, 15).InheritedActiveSkills, Skill("Dark Ball"));
+        CollectionAssert.DoesNotContain(Owned("Depresso", PalGender.MALE, 14).InheritedActiveSkills, Skill("Dark Ball"));
+    }
+
+    [TestMethod]
+    public void CanProvide_RejectsSkillLockedBehindTooHighALevel()
+    {
+        var tooLow = Bred("Cattiva", Owned("Depresso", PalGender.MALE, 14), Owned("Cattiva", PalGender.FEMALE, 14), 14);
+        Assert.IsFalse(ActiveSkillInheritance.CanProvide(tooLow, [Skill("Dark Ball")]));
+
+        var highEnough = Bred("Cattiva", Owned("Depresso", PalGender.MALE, 15), Owned("Cattiva", PalGender.FEMALE, 15), 15);
+        Assert.IsTrue(ActiveSkillInheritance.CanProvide(highEnough, [Skill("Dark Ball")]));
     }
 
     [TestMethod]

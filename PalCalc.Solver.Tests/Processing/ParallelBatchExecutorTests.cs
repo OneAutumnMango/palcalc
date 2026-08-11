@@ -110,7 +110,8 @@ public class ParallelBatchExecutorTests
         var healthyReference = new OwnedPalReference(
             SolverTestScenario.Owned("Wixen", PalGender.FEMALE),
             effectivePassives: [],
-            effectiveIVs: new IV_Set()
+            effectiveIVs: new IV_Set(),
+            maxPalLevel: GameConstants.MaxPalLevel
         );
         var frontier = new SearchFrontier(
             target,

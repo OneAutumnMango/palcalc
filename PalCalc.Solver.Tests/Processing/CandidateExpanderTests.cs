@@ -168,7 +168,8 @@ public class CandidateExpanderTests
                     target.IV_Defense,
                     instance.IV_Defense
                 )
-            )
+            ),
+            GameConstants.MaxPalLevel
         );
 
     private static IV_Value EffectiveIV(int minimum, int value) =>

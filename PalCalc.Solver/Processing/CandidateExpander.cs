@@ -344,8 +344,7 @@ namespace PalCalc.Solver.Processing
                     if (settings.BannedBredPals.Contains(childPalType))
                         continue;
 
-                    // Check active skill requirements when AssumeAllPalsLevel70 is enabled
-                    if (settings.GameSettings.AssumeAllPalsLevel70 && context.Target.TargetActiveSkills.Any())
+                    if (context.Target.TargetActiveSkills.Any())
                     {
                         // Get all active skills that can be passed from both parents (union)
                         var inheritableFromParents = parent1.InheritedActiveSkills
@@ -356,7 +355,7 @@ namespace PalCalc.Solver.Processing
                         bool canProvideAllTargetSkills = context.Target.TargetActiveSkills
                             .All(targetSkill =>
                                 inheritableFromParents.Contains(targetSkill) ||
-                                ActiveSkillInheritance.LearnsNaturally(childPalType, targetSkill)
+                                ActiveSkillInheritance.LearnsNaturally(childPalType, targetSkill, settings.GameSettings.MaxPalLevel)
                             );
 
                         if (!canProvideAllTargetSkills)

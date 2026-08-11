@@ -22,7 +22,7 @@ namespace PalCalc.UI.Model
             if (result?.Graph == null) return null;
 
             var root = result.Graph.Tree.Root;
-            var required = BreedingGraph.ResolveRequiredSkills(result.Graph.Tree, result.TargetActiveSkills);
+            var required = BreedingGraph.ResolveRequiredSkills(result.Graph.Tree, result.TargetActiveSkills, result.GameSettings.MaxPalLevel);
             var final = result.DisplayedResult;
 
             var export = new Dictionary<string, object>
@@ -51,7 +51,7 @@ namespace PalCalc.UI.Model
         {
             if (result?.Graph == null) return null;
 
-            var required = BreedingGraph.ResolveRequiredSkills(result.Graph.Tree, result.TargetActiveSkills);
+            var required = BreedingGraph.ResolveRequiredSkills(result.Graph.Tree, result.TargetActiveSkills, result.GameSettings.MaxPalLevel);
             var final = result.DisplayedResult;
 
             var sb = new StringBuilder();

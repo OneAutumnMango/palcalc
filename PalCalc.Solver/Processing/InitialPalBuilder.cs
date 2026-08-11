@@ -60,7 +60,8 @@ internal sealed class InitialPalBuilder(
                         HP = MakeIV(target.IV_HP, p.IV_HP),
                         Attack = MakeIV(target.IV_Attack, p.IV_Attack),
                         Defense = MakeIV(target.IV_Defense, p.IV_Defense),
-                    }
+                    },
+                    maxPalLevel: settings.GameSettings.MaxPalLevel
                 )
             )
             .GroupBy(pal => (
@@ -139,7 +140,8 @@ internal sealed class InitialPalBuilder(
                                 guaranteedPassives,
                                 numRandomPassives,
                                 mechanics,
-                                settings.DB
+                                settings.DB,
+                                settings.GameSettings.MaxPalLevel
                             )
                         );
                 })

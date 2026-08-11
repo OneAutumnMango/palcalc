@@ -13,26 +13,23 @@ namespace PalCalc.Solver
     /// </summary>
     public static class ActiveSkillInheritance
     {
-        private static readonly ConcurrentDictionary<string, List<ActiveSkill>> naturalSkillsByPal = new();
-        private static readonly ConcurrentDictionary<string, HashSet<string>> naturalSkillNamesByPal = new();
+        private static readonly ConcurrentDictionary<(string, int), List<ActiveSkill>> naturalSkillsByPal = new();
 
         /// <summary>
-        /// The skills this pal species learns on its own by leveling up, regardless of its parents.
+        /// The skills this pal species learns on its own by leveling up to at most <paramref name="maxLevel"/>.
         /// </summary>
-        public static List<ActiveSkill> NaturalSkillsOf(Pal pal) =>
-            naturalSkillsByPal.GetOrAdd(pal.Name, palName =>
+        public static List<ActiveSkill> NaturalSkillsOf(Pal pal, int maxLevel) =>
+            naturalSkillsByPal.GetOrAdd((pal.Name, maxLevel), static key =>
                 PalDB.LoadEmbedded().BreedingSkills.Values
                     .SelectMany(ls => ls)
-                    .Where(ls => ls.PalName == palName)
+                    .Where(ls => ls.PalName == key.Item1 && ls.Level <= key.Item2)
                     .Select(ls => ls.Skill)
                     .Distinct()
                     .ToList()
             );
 
-        public static bool LearnsNaturally(Pal pal, ActiveSkill skill) =>
-            naturalSkillNamesByPal
-                .GetOrAdd(pal.Name, _ => NaturalSkillsOf(pal).Select(s => s.Name).ToHashSet())
-                .Contains(skill.Name);
+        public static bool LearnsNaturally(Pal pal, ActiveSkill skill, int maxLevel) =>
+            NaturalSkillsOf(pal, maxLevel).Contains(skill);
 
         /// <summary>
         /// Whether <paramref name="reference"/> can actually end up with all of <paramref name="required"/>
@@ -73,7 +70,7 @@ namespace PalCalc.Solver
                     return CanProvide(surgery.Input, required, memo);
 
                 case BredPalReference bred:
-                    var inherited = required.Where(s => !LearnsNaturally(bred.Pal, s)).ToList();
+                    var inherited = required.Where(s => !bred.NaturalActiveSkills.Contains(s)).ToList();
                     if (inherited.Count == 0) return true;
                     if (inherited.Count > GameConstants.MaxInheritedActiveSkills * 2) return false;
 
@@ -116,7 +113,8 @@ namespace PalCalc.Solver
             return false;
         }
 
+        // every reference builds its own pool from the levels it's allowed to reach, so this is already level-aware
         private static bool CanSupply(IPalReference parent, ActiveSkill skill) =>
-            parent.InheritedActiveSkills.Contains(skill) || LearnsNaturally(parent.Pal, skill);
+            parent.InheritedActiveSkills.Contains(skill);
     }
 }

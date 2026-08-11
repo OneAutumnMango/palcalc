@@ -152,7 +152,8 @@ public class EffectivePropertiesKeyTests
             guaranteedPassives: [],
             numRandomPassives: 2,
             mechanics: SolverTestScenario.DB.BreedingMechanics,
-            db: SolverTestScenario.DB
+            db: SolverTestScenario.DB,
+            maxPalLevel: GameConstants.MaxPalLevel
         );
 
         var gendered = wild.WithGuaranteedGender(

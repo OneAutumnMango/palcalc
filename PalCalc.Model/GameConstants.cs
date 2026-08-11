@@ -48,5 +48,7 @@ namespace PalCalc.Model
 
         // max number of active skills a single parent can pass down to its child
         public static readonly int MaxInheritedActiveSkills = 3;
+
+        public static readonly int MaxPalLevel = 70;
     }
 }

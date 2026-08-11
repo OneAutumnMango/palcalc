@@ -227,12 +227,14 @@ public class SearchFrontierCharacterizationTests
             new OwnedPalReference(
                 SolverTestScenario.Owned("Katress", PalGender.MALE),
                 effectivePassives: [],
-                effectiveIVs: new IV_Set()
+                effectiveIVs: new IV_Set(),
+                maxPalLevel: GameConstants.MaxPalLevel
             ),
             new OwnedPalReference(
                 SolverTestScenario.Owned("Wixen", PalGender.FEMALE),
                 effectivePassives: [],
-                effectiveIVs: new IV_Set()
+                effectiveIVs: new IV_Set(),
+                maxPalLevel: GameConstants.MaxPalLevel
             )
         );
 

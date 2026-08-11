@@ -729,13 +729,15 @@ This will not delete the save files from your computer.</value>
   <data name="LC_SETTINGS_MASSIVE_EGG_INCUBATION_DESC" xml:space="preserve">
     <value>How long it takes to incubate a massive egg without any bonuses (temperature modifiers).</value>
   </data>
-  <data name="LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70" xml:space="preserve">
-    <value>Assume All Pals Level 70+ (Active Skills)</value>
+  <data name="LC_SETTINGS_MAX_PAL_LEVEL" xml:space="preserve">
+    <value>Max Pal Level (Active Skills)</value>
   </data>
-  <data name="LC_SETTINGS_ASSUME_ALL_PALS_LEVEL_70_DESC" xml:space="preserve">
-    <value>When enabled, the solver will assume all pals are level 70 or higher for active skill inheritance. This allows any pal that can learn an inheritable active skill to pass it on, ignoring the minimum level requirement.
+  <data name="LC_SETTINGS_MAX_PAL_LEVEL_DESC" xml:space="preserve">
+    <value>The highest level you're willing to raise a pal to.
 
-When disabled, active skill inheritance is not considered in breeding calculations.</value>
+Pals learn their active skills at specific levels, so a pal can only know - and therefore only pass down - skills it learns at or below this level. Lowering this makes results more realistic if you don't want to grind levels, but fewer skills will be reachable.
+
+Leave this at 70 to allow every active skill a pal can learn.</value>
   </data>
   <data name="LC_SETTINGS_PALBOX_TAB_SIZE" xml:space="preserve">
     <value>Palbox Tab Size</value>

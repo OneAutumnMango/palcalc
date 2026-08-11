@@ -82,6 +82,7 @@ namespace PalCalc.UI.ViewModel.Solver
         public BreedingResultViewModel(CachedSaveGame source, GameSettings settings, IPalReference displayedResult, IEnumerable<ActiveSkill> targetActiveSkills = null)
         {
             this.source = source;
+            GameSettings = settings;
             TargetActiveSkills = targetActiveSkills?.ToList() ?? [];
 
             if (displayedResult == null)
@@ -196,6 +197,8 @@ namespace PalCalc.UI.ViewModel.Solver
         public IPalReference DisplayedResult { get; }
 
         public List<ActiveSkill> TargetActiveSkills { get; } = [];
+
+        public GameSettings GameSettings { get; } = GameSettings.Defaults;
 
         public PassiveSkillCollectionViewModel EffectivePassives { get; }
 

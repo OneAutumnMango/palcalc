@@ -16,7 +16,8 @@ namespace PalCalc.Solver.PalReference
             IEnumerable<PassiveSkill> guaranteedPassives,
             int numRandomPassives,
             BreedingMechanics mechanics,
-            PalDB db
+            PalDB db,
+            int maxPalLevel
         )
         {
             ArgumentNullException.ThrowIfNull(mechanics);
@@ -36,12 +37,7 @@ namespace PalCalc.Solver.PalReference
             IVs = new IV_Set() { HP = IV_Value.Random, Attack =  IV_Value.Random, Defense = IV_Value.Random };
 
             // Initialize inherited active skills based on what this pal species can learn
-            InheritedActiveSkills = db.BreedingSkills.Values
-                .SelectMany(skills => skills)
-                .Where(ls => ls.PalName == pal.Name)
-                .Select(ls => ls.Skill)
-                .Distinct()
-                .ToList();
+            InheritedActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(pal, maxPalLevel);
         }
 
         private WildPalReference(Pal pal)
