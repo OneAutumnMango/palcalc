@@ -437,6 +437,45 @@ If disabled, the time to breed a pal is always based on the sum of the time requ
   <data name="LC_NO_RESULTS_FAQ_3" xml:space="preserve">
     <value>for possible causes.</value>
   </data>
+  <data name="LC_DIAGNOSTICS_TITLE" xml:space="preserve">
+    <value>No results were found. Possible reasons:</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_NO_OWNED_PALS" xml:space="preserve">
+    <value>None of your pals are available as breeding sources. Check the "Source Pals" selection.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_NO_PALS_WITHIN_STEPS" xml:space="preserve">
+    <value>None of your pals can reach {PalName} within the current breeding step limit. The closest one needs {MinSteps} steps - raise "Max breeding steps".</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_IRRELEVANT_PASSIVES" xml:space="preserve">
+    <value>Every usable pal was excluded because it has more than {MaxIrrelevant} unwanted passives. Raise "Max irrelevant passives (input)".</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_TARGET_BANNED" xml:space="preserve">
+    <value>{PalName} is in the list of pals you've banned from being bred.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_SKILL_NOT_BREEDABLE" xml:space="preserve">
+    <value>{SkillName} can't be inherited through breeding. It's either exclusive to a specific pal or only obtainable outside of breeding.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_SKILL_ABOVE_LEVEL_CAP" xml:space="preserve">
+    <value>No pal learns {SkillName} at or below level {Level}, which is your current max pal level. The earliest it can be learned is by: {PalNames}.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_SKILL_NO_SOURCE" xml:space="preserve">
+    <value>No pal that can appear in this breeding tree learns {SkillName}. It comes from: {PalNames}.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_SKILL_NEEDS_WILD" xml:space="preserve">
+    <value>None of your pals learn {SkillName}. You'd need to catch or breed one of: {PalNames}.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_PASSIVE_UNAVAILABLE" xml:space="preserve">
+    <value>None of your pals have {PassiveName}, and it can't be added by surgery or picked up from a wild catch.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_PASSIVE_NEEDS_SURGERY" xml:space="preserve">
+    <value>None of your pals have {PassiveName}. It can only be added by surgery, which isn't enabled for this passive.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_SURGERY_COST_TOO_LOW" xml:space="preserve">
+    <value>{PassiveName} can only be added by surgery, which costs {Cost} - more than your surgery budget.</value>
+  </data>
+  <data name="LC_DIAGNOSTICS_NO_OBVIOUS_CAUSE" xml:space="preserve">
+    <value>Nothing about this target is impossible on its own, so the search most likely ran out of room. Try raising the max breeding steps, allowing more irrelevant passives, or allowing wild pals.</value>
+  </data>
   <data name="LC_NO_TRAITS" xml:space="preserve">
     <value>With no passives</value>
   </data>

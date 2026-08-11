@@ -29,6 +29,13 @@ namespace PalCalc.UI.ViewModel.Solver
     {
         public BreedingResultListViewModelSettingsSnapshot SettingsSnapshot { get; set; }
 
+        // not serialized; only meaningful for the run which produced this list
+        [JsonIgnore]
+        public List<SolverDiagnosticViewModel> Diagnostics { get; set; }
+
+        [JsonIgnore]
+        public bool HasDiagnostics => Diagnostics is { Count: > 0 };
+
         public event Action<object, EventArgs> CheckedStateChanged;
 
         private void SubscribeCheckedEvents(List<BreedingResultViewModel> resultList)

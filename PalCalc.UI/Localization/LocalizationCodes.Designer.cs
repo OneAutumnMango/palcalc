@@ -270,6 +270,58 @@ namespace PalCalc.UI.Localization {
         /// </summary>
         LC_DELETE_PAL_TARGET_TITLE,
         /// <summary>
+        ///   Looks up a localized string similar to MaxIrrelevant.
+        /// </summary>
+        LC_DIAGNOSTICS_IRRELEVANT_PASSIVES,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_DIAGNOSTICS_NO_OBVIOUS_CAUSE,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_DIAGNOSTICS_NO_OWNED_PALS,
+        /// <summary>
+        ///   Looks up a localized string similar to PalName | MinSteps.
+        /// </summary>
+        LC_DIAGNOSTICS_NO_PALS_WITHIN_STEPS,
+        /// <summary>
+        ///   Looks up a localized string similar to PassiveName.
+        /// </summary>
+        LC_DIAGNOSTICS_PASSIVE_NEEDS_SURGERY,
+        /// <summary>
+        ///   Looks up a localized string similar to PassiveName.
+        /// </summary>
+        LC_DIAGNOSTICS_PASSIVE_UNAVAILABLE,
+        /// <summary>
+        ///   Looks up a localized string similar to SkillName | Level | PalNames.
+        /// </summary>
+        LC_DIAGNOSTICS_SKILL_ABOVE_LEVEL_CAP,
+        /// <summary>
+        ///   Looks up a localized string similar to SkillName | PalNames.
+        /// </summary>
+        LC_DIAGNOSTICS_SKILL_NEEDS_WILD,
+        /// <summary>
+        ///   Looks up a localized string similar to SkillName | PalNames.
+        /// </summary>
+        LC_DIAGNOSTICS_SKILL_NO_SOURCE,
+        /// <summary>
+        ///   Looks up a localized string similar to SkillName.
+        /// </summary>
+        LC_DIAGNOSTICS_SKILL_NOT_BREEDABLE,
+        /// <summary>
+        ///   Looks up a localized string similar to PassiveName | Cost.
+        /// </summary>
+        LC_DIAGNOSTICS_SURGERY_COST_TOO_LOW,
+        /// <summary>
+        ///   Looks up a localized string similar to PalName.
+        /// </summary>
+        LC_DIAGNOSTICS_TARGET_BANNED,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_DIAGNOSTICS_TITLE,
+        /// <summary>
         ///   Looks up a localized string similar to CrashlogPath.
         /// </summary>
         LC_ERROR_HARD_CRASH,

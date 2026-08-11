@@ -400,15 +400,16 @@ namespace PalCalc.UI.ViewModel
 
             var originalSolverSettings = SolverControls.AsModel;
             var originalGameSettings = SelectedGameSettings.ModelObject;
+            var solverRequest = new BreedingSolverRequest(
+                currentSpec.ModelObject,
+                SolverControls.ConfiguredSolverSettings(
+                    originalGameSettings,
+                    PalTargetList.SourcePals.AvailablePals.ToList()
+                )
+            );
             var job = new SolverJobViewModel(
                 dispatcher,
-                new BreedingSolverRequest(
-                    currentSpec.ModelObject,
-                    SolverControls.ConfiguredSolverSettings(
-                        originalGameSettings,
-                        PalTargetList.SourcePals.AvailablePals.ToList()
-                    )
-                ),
+                solverRequest,
                 currentSpec,
                 cachedData.StateId
             );
@@ -418,6 +419,9 @@ namespace PalCalc.UI.ViewModel
                 currentSpec.CurrentResults = new BreedingResultListViewModel()
                 {
                     Results = job.Results.Select(r => new BreedingResultViewModel(cachedData, originalGameSettings, r, currentSpec.ModelObject.TargetActiveSkills)).ToList(),
+                    Diagnostics = job.Results.Count > 0
+                        ? null
+                        : SolverDiagnosticViewModel.MakeAll(SolverDiagnostics.Analyze(solverRequest)),
                     SettingsSnapshot = new BreedingResultListViewModelSettingsSnapshot()
                     {
                         GameSettings = originalGameSettings,

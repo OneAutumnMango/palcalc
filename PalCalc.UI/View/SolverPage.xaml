@@ -142,8 +142,64 @@
                     </StackPanel>
 
                     <!-- Graph view -->
-                    <v:BreedingResultView IsReadOnly="{Binding PalTarget.CanEdit, Converter={StaticResource NegatedVBC}}"
-                                          DisplayedResult="{Binding PalTarget.CurrentPalSpecifier.CurrentResults.SelectedResult}" />
+                    <Grid>
+                        <v:BreedingResultView IsReadOnly="{Binding PalTarget.CanEdit, Converter={StaticResource NegatedVBC}}"
+                                              DisplayedResult="{Binding PalTarget.CurrentPalSpecifier.CurrentResults.SelectedResult}" />
+
+                        <!-- Shown in place of the tree when a completed run found nothing -->
+                        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                      Background="{DynamicResource {x:Static adonisUi:Brushes.Layer0BackgroundBrush}}"
+                                      Visibility="{Binding PalTarget.CurrentPalSpecifier.CurrentResults.HasDiagnostics, Converter={StaticResource VVC}, FallbackValue=Collapsed}">
+                            <StackPanel MaxWidth="620" Margin="20" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBlock Text="{itl:LocalizedText Code=LC_DIAGNOSTICS_TITLE}"
+                                           FontWeight="Bold"
+                                           TextWrapping="Wrap"
+                                           Margin="0,0,0,10" />
+
+                                <ItemsControl ItemsSource="{Binding PalTarget.CurrentPalSpecifier.CurrentResults.Diagnostics}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Margin="0,0,0,8"
+                                                    Padding="10"
+                                                    BorderThickness="1"
+                                                    adonisExtensions:CornerRadiusExtension.CornerRadius="4"
+                                                    Background="{DynamicResource {x:Static adonisUi:Brushes.Layer1BackgroundBrush}}">
+                                                <Border.Style>
+                                                    <Style TargetType="Border">
+                                                        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static adonisUi:Brushes.Layer1BorderBrush}}" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsBlocking}" Value="True">
+                                                                <Setter Property="BorderBrush" Value="{DynamicResource {x:Static adonisUi:Brushes.AlertBrush}}" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Border.Style>
+                                                <DockPanel>
+                                                    <materialIcons:MaterialIcon DockPanel.Dock="Left"
+                                                                                Width="18" Height="18"
+                                                                                Margin="0,2,8,0"
+                                                                                VerticalAlignment="Top">
+                                                        <materialIcons:MaterialIcon.Style>
+                                                            <Style TargetType="materialIcons:MaterialIcon">
+                                                                <Setter Property="Kind" Value="InformationOutline" />
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding IsBlocking}" Value="True">
+                                                                        <Setter Property="Kind" Value="AlertCircleOutline" />
+                                                                        <Setter Property="Foreground" Value="{DynamicResource {x:Static adonisUi:Brushes.AlertBrush}}" />
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </materialIcons:MaterialIcon.Style>
+                                                    </materialIcons:MaterialIcon>
+                                                    <TextBlock Text="{Binding Description.Value}" TextWrapping="Wrap" />
+                                                </DockPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
                 </DockPanel>
 
                 <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
