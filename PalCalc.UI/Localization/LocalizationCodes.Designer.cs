@@ -298,6 +298,10 @@ namespace PalCalc.UI.Localization {
         /// </summary>
         LC_DIAGNOSTICS_SKILL_ABOVE_LEVEL_CAP,
         /// <summary>
+        ///   Looks up a localized string similar to SkillName | Level | PalNames.
+        /// </summary>
+        LC_DIAGNOSTICS_SKILL_NEEDS_LEVELLING,
+        /// <summary>
         ///   Looks up a localized string similar to SkillName | PalNames.
         /// </summary>
         LC_DIAGNOSTICS_SKILL_NEEDS_WILD,
@@ -1056,6 +1060,14 @@ namespace PalCalc.UI.Localization {
         ///   Looks up a localized string similar to .
         /// </summary>
         LC_SETTINGS_MAX_PAL_LEVEL_DESC,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SETTINGS_USE_CURRENT_PAL_LEVELS,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_SETTINGS_USE_CURRENT_PAL_LEVELS_DESC,
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>

@@ -54,6 +54,11 @@ namespace PalCalc.UI.ViewModel.Solver
                         new { SkillName = SkillName(), Level = d.Value, PalNames = PalNames() }
                     ),
 
+                SolverDiagnosticCode.ActiveSkillNeedsLevelling =>
+                    LocalizationCodes.LC_DIAGNOSTICS_SKILL_NEEDS_LEVELLING.Bind(
+                        new { SkillName = SkillName(), Level = d.Value, PalNames = PalNames() }
+                    ),
+
                 SolverDiagnosticCode.ActiveSkillNoAvailableSource =>
                     LocalizationCodes.LC_DIAGNOSTICS_SKILL_NO_SOURCE.Bind(
                         new { SkillName = SkillName(), PalNames = PalNames() }

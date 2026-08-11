@@ -24,7 +24,8 @@ internal sealed class InitialPalBuilder(
         static (
             Pal Pal,
             PassiveSetKey Passives,
-            RelevantIVKey IVs
+            RelevantIVKey IVs,
+            ActiveSkillSet ActiveSkills
         ) StateWithoutGender(OwnedPalReference reference) =>
             (
                 reference.Pal,
@@ -33,7 +34,8 @@ internal sealed class InitialPalBuilder(
                         .Intersect(reference.EffectivePassives)
                         .ToList()
                 ),
-                new RelevantIVKey(reference.IVs)
+                new RelevantIVKey(reference.IVs),
+                reference.InheritableActiveSkills
             );
 
         bool WithinBreedingSteps(Pal pal) =>
@@ -61,7 +63,8 @@ internal sealed class InitialPalBuilder(
                         Attack = MakeIV(target.IV_Attack, p.IV_Attack),
                         Defense = MakeIV(target.IV_Defense, p.IV_Defense),
                     },
-                    maxPalLevel: settings.GameSettings.MaxPalLevel
+                    maxPalLevel: settings.GameSettings.MaxPalLevel,
+                    useCurrentPalLevel: settings.GameSettings.UseCurrentPalLevels
                 )
             )
             .GroupBy(pal => (
@@ -141,7 +144,7 @@ internal sealed class InitialPalBuilder(
                                 numRandomPassives,
                                 mechanics,
                                 settings.DB,
-                                settings.GameSettings.MaxPalLevel
+                                settings.GameSettings.NewPalSkillLevel
                             )
                         );
                 })

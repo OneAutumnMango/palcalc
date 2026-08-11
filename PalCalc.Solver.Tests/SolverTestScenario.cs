@@ -18,7 +18,8 @@ internal static class SolverTestScenario
         IEnumerable<PassiveSkill>? passives = null,
         int ivHp = 0,
         int ivAttack = 0,
-        int ivDefense = 0
+        int ivDefense = 0,
+        int level = 70
     )
     {
         var instanceIndex = Interlocked.Increment(ref nextInstanceId);
@@ -29,6 +30,7 @@ internal static class SolverTestScenario
             OwnerPlayerId = "solver-test-player",
             Pal = palName.ToPal(DB),
             Gender = gender,
+            Level = level,
             PassiveSkills = passives?.ToList() ?? [],
             Location = new PalLocation
             {

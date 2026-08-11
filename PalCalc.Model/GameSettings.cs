@@ -29,6 +29,15 @@ namespace PalCalc.Model
         // active skills it learns at or below this level
         public int MaxPalLevel { get; set; } = GameConstants.MaxPalLevel;
 
+        // when set, an owned pal is limited to the skills it knows at its current level instead of
+        // assuming it gets raised to MaxPalLevel
+        public bool UseCurrentPalLevels { get; set; } = false;
+
+        // pals which still have to be bred or caught arrive unleveled, so UseCurrentPalLevels leaves
+        // them with only the skills they know on arrival
+        [JsonIgnore]
+        public int NewPalSkillLevel => UseCurrentPalLevels ? 1 : MaxPalLevel;
+
         // base time for incubating a massive egg without any e.g. temperature buffs
         public TimeSpan MassiveEggIncubationTime { get; set; } = TimeSpan.FromHours(2);
 

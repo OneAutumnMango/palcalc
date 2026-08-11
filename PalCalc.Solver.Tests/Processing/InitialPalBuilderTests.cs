@@ -104,4 +104,55 @@ public class InitialPalBuilderTests
         {
             Pal = "Wixen Noct".ToPal(SolverTestScenario.DB),
         };
+
+    // Depresso learns Dark Ball at level 15
+    [TestMethod]
+    public void Build_KeepsOwnedPalsWithDifferentKnownSkillsWhenUsingCurrentLevels()
+    {
+        var seeds = DepressoSeeds(useCurrentPalLevels: true, out var low, out var high);
+
+        CollectionAssert.AreEquivalent(
+            new[] { low, high },
+            seeds.OfType<OwnedPalReference>().Select(r => r.UnderlyingInstance).ToArray()
+        );
+
+        var darkBall = SolverTestScenario.DB.ActiveSkills.Single(s => s.Name == "Dark Ball");
+        var byInstance = seeds.OfType<OwnedPalReference>().ToDictionary(r => r.UnderlyingInstance);
+
+        Assert.IsFalse(byInstance[low].InheritableActiveSkills.Contains(darkBall));
+        Assert.IsTrue(byInstance[high].InheritableActiveSkills.Contains(darkBall));
+    }
+
+    [TestMethod]
+    public void Build_MergesOwnedPalsOfTheSameSpeciesWhenNotUsingCurrentLevels()
+    {
+        var seeds = DepressoSeeds(useCurrentPalLevels: false, out _, out _);
+
+        var darkBall = SolverTestScenario.DB.ActiveSkills.Single(s => s.Name == "Dark Ball");
+
+        Assert.AreEqual(1, seeds.Count);
+        Assert.IsTrue(seeds.Single().InheritableActiveSkills.Contains(darkBall));
+    }
+
+    private static List<IPalReference> DepressoSeeds(
+        bool useCurrentPalLevels,
+        out PalInstance low,
+        out PalInstance high
+    )
+    {
+        low = SolverTestScenario.Owned("Depresso", PalGender.MALE, level: 14);
+        high = SolverTestScenario.Owned("Depresso", PalGender.MALE, level: 15);
+
+        var configuredSolver = SolverTestScenario.Solver(
+            [low, high],
+            maxBreedingSteps: 1,
+            gameSettings: new GameSettings { UseCurrentPalLevels = useCurrentPalLevels }
+        );
+
+        return new InitialPalBuilder(
+            configuredSolver.Settings,
+            configuredSolver.Settings.DB.BreedingMechanics,
+            configuredSolver.Settings.BreedingDB
+        ).Build(new PalSpecifier { Pal = "Depresso".ToPal(SolverTestScenario.DB) });
+    }
 }

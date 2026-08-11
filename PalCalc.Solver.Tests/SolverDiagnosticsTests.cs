@@ -112,6 +112,37 @@ public class SolverDiagnosticsTests
     }
 
     [TestMethod]
+    public void ReportsActiveSkillWhichWouldRequireLevellingUp()
+    {
+        // nothing knows this one on arrival, so it can only come from a pal that's already levelled
+        var late = DB.BreedingSkills
+            .Where(kvp => kvp.Value.Count > 0 && kvp.Value.Min(ls => ls.Level) > 1)
+            .OrderBy(kvp => kvp.Key, StringComparer.Ordinal)
+            .First();
+
+        var source = late.Value.OrderBy(ls => ls.Level).First();
+        var skill = Skill(late.Key);
+
+        IReadOnlyList<SolverDiagnostic> Run(int ownedLevel, bool useCurrentPalLevels) =>
+            Analyze(
+                SolverTestScenario.Solver(
+                    [SolverTestScenario.Owned(source.PalName, PalGender.MALE, level: ownedLevel)],
+                    gameSettings: new GameSettings { UseCurrentPalLevels = useCurrentPalLevels }
+                ),
+                source.PalName,
+                targetActiveSkills: [skill]
+            );
+
+        var blocked = Run(1, useCurrentPalLevels: true);
+        var reported = blocked.Single(d => d.Code == SolverDiagnosticCode.ActiveSkillNeedsLevelling);
+        Assert.AreEqual(skill, reported.ActiveSkill);
+        Assert.AreEqual(source.Level, reported.Value);
+
+        Assert.IsFalse(Has(Run(1, useCurrentPalLevels: false), SolverDiagnosticCode.ActiveSkillNeedsLevelling));
+        Assert.IsFalse(Has(Run(source.Level, useCurrentPalLevels: true), SolverDiagnosticCode.ActiveSkillNeedsLevelling));
+    }
+
+    [TestMethod]
     public void IgnoresActiveSkillsWhichWillBeTaughtWithFruit()
     {
         var exclusive = DB.ActiveSkills.First(s => !DB.BreedingSkills.ContainsKey(s.Name));

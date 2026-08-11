@@ -10,6 +10,7 @@ public enum SolverDiagnosticCode
     TargetPalBanned,
     ActiveSkillNotBreedable,
     ActiveSkillAboveLevelCap,
+    ActiveSkillNeedsLevelling,
     ActiveSkillNoAvailableSource,
     ActiveSkillNeedsWildPals,
     RequiredPassiveUnavailable,
@@ -55,7 +56,6 @@ public static class SolverDiagnostics
         var settings = request.Settings;
         var db = settings.DB;
         var breedingDB = settings.BreedingDB;
-        var maxLevel = settings.GameSettings.MaxPalLevel;
 
         var target = request.Target;
         if (settings.UseSkillFruits && target.TargetActiveSkills.Count > 0)
@@ -77,7 +77,7 @@ public static class SolverDiagnostics
         var reachableSpecies = db.Pals.Where(WithinSteps).ToHashSet();
         var obtainableSpecies = usableOwned.Select(p => p.Pal).Concat(wildPals).ToHashSet();
 
-        CheckActiveSkills(db, target, maxLevel, reachableSpecies, obtainableSpecies, settings.MaxWildPals > 0, Add);
+        CheckActiveSkills(db, settings.GameSettings, target, reachableSpecies, obtainableSpecies, usableOwned, settings.MaxWildPals > 0, Add);
         CheckRequiredPassives(db, settings, target, usableOwned, wildPals, Add);
 
         if (results.Count == 0)
@@ -135,10 +135,11 @@ public static class SolverDiagnostics
 
     private static void CheckActiveSkills(
         PalDB db,
+        GameSettings gameSettings,
         PalSpecifier target,
-        int maxLevel,
         IReadOnlySet<Pal> reachableSpecies,
         IReadOnlySet<Pal> obtainableSpecies,
+        IReadOnlyList<PalInstance> usableOwned,
         bool wildPalsAllowed,
         Action<SolverDiagnostic> add
     )
@@ -146,6 +147,12 @@ public static class SolverDiagnostics
         if (target.TargetActiveSkills.Count == 0) return;
 
         var palsByName = db.Pals.ToLookup(p => p.Name);
+        var maxLevel = gameSettings.MaxPalLevel;
+        var newPalLevel = gameSettings.NewPalSkillLevel;
+
+        var ownedLevelByPalName = usableOwned
+            .GroupBy(p => p.Pal.Name)
+            .ToDictionary(g => g.Key, g => g.Max(p => Math.Min(p.Level, maxLevel)));
 
         foreach (var skill in target.TargetActiveSkills)
         {
@@ -170,7 +177,26 @@ public static class SolverDiagnostics
                 continue;
             }
 
-            var sources = PalsOf(palsByName, withinCap, limit: int.MaxValue);
+            // a pal you already own counts at the level it's at now; anything bred or caught arrives unleveled
+            var withSkill = withinCap
+                .Where(ls =>
+                    ls.Level <= newPalLevel ||
+                    (ownedLevelByPalName.TryGetValue(ls.PalName, out var ownedLevel) && ls.Level <= ownedLevel)
+                )
+                .ToList();
+
+            if (withSkill.Count == 0)
+            {
+                add(new(SolverDiagnosticCode.ActiveSkillNeedsLevelling, SolverDiagnosticSeverity.Blocking)
+                {
+                    ActiveSkill = skill,
+                    Value = withinCap.Min(ls => ls.Level),
+                    SuggestedPals = PalsOf(palsByName, withinCap.OrderBy(ls => ls.Level)),
+                });
+                continue;
+            }
+
+            var sources = PalsOf(palsByName, withSkill, limit: int.MaxValue);
 
             if (!sources.Any(reachableSpecies.Contains))
             {

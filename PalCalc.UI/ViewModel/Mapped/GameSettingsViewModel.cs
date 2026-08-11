@@ -30,6 +30,7 @@ namespace PalCalc.UI.ViewModel.Mapped
             MassiveEggIncubationTimeMinutes = (int)modelObject.MassiveEggIncubationTime.TotalMinutes;
             MultipleBreedingFarms = modelObject.MultipleBreedingFarms;
             MaxPalLevel = modelObject.MaxPalLevel;
+            UseCurrentPalLevels = modelObject.UseCurrentPalLevels;
             PalboxTabWidth = modelObject.LocationTypeGridWidths[LocationType.Palbox];
             PalboxTabHeight = modelObject.LocationTypeGridHeights[LocationType.Palbox].Value;
 
@@ -43,6 +44,7 @@ namespace PalCalc.UI.ViewModel.Mapped
             MassiveEggIncubationTime = TimeSpan.FromMinutes(MassiveEggIncubationTimeMinutes),
             MultipleBreedingFarms = MultipleBreedingFarms,
             MaxPalLevel = MaxPalLevel,
+            UseCurrentPalLevels = UseCurrentPalLevels,
             LocationTypeGridWidths = new()
             {
                 { LocationType.Palbox, PalboxTabWidth },
@@ -78,6 +80,9 @@ namespace PalCalc.UI.ViewModel.Mapped
 
         [ObservableProperty]
         private int maxPalLevel = GameConstants.MaxPalLevel;
+
+        [ObservableProperty]
+        private bool useCurrentPalLevels;
 
         private int palboxTabWidth;
         public int PalboxTabWidth

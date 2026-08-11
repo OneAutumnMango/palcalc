@@ -15,7 +15,8 @@ namespace PalCalc.Solver.PalReference
         PalInstance instance;
 
         /// <param name="effectivePassives">The list of passives held by the `instance`, filtered/re-mapped based on desired passives. (.ToDedicatedPassives())</param>
-        public OwnedPalReference(PalInstance instance, List<PassiveSkill> effectivePassives, IV_Set effectiveIVs, int maxPalLevel)
+        /// <param name="useCurrentPalLevel">Limit the pal to the skills it knows now instead of assuming it gets raised to <paramref name="maxPalLevel"/>.</param>
+        public OwnedPalReference(PalInstance instance, List<PassiveSkill> effectivePassives, IV_Set effectiveIVs, int maxPalLevel, bool useCurrentPalLevel = false)
         {
             this.instance = instance;
 
@@ -31,8 +32,11 @@ namespace PalCalc.Solver.PalReference
 
             // Initialize inherited active skills based on what this pal species can learn
             MaxPalLevel = maxPalLevel;
-            InheritedActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(instance.Pal, maxPalLevel);
-            InheritableActiveSkills = ActiveSkillInheritance.NaturalSkillMaskOf(instance.Pal, maxPalLevel);
+            UseCurrentPalLevel = useCurrentPalLevel;
+
+            var skillLevel = useCurrentPalLevel ? Math.Min(instance.Level, maxPalLevel) : maxPalLevel;
+            InheritedActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(instance.Pal, skillLevel);
+            InheritableActiveSkills = ActiveSkillInheritance.NaturalSkillMaskOf(instance.Pal, skillLevel);
 
             ActualActiveSkills = instance.ActiveSkills ?? [];
         }
@@ -50,6 +54,8 @@ namespace PalCalc.Solver.PalReference
         public ActiveSkillSet InheritableActiveSkills { get; private set; }
 
         public int MaxPalLevel { get; }
+
+        public bool UseCurrentPalLevel { get; }
 
         public List<ActiveSkill> ActualActiveSkills { get; }
 
@@ -81,7 +87,7 @@ namespace PalCalc.Solver.PalReference
 
         private OwnedPalReference MakeGuaranteedGenderImpl(PalGender gender)
         {
-            var res = new OwnedPalReference(instance, EffectivePassives, IVs, MaxPalLevel);
+            var res = new OwnedPalReference(instance, EffectivePassives, IVs, MaxPalLevel, UseCurrentPalLevel);
             res.Gender = gender;
             res.InheritedActiveSkills = InheritedActiveSkills;
             res.InheritableActiveSkills = InheritableActiveSkills;

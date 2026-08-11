@@ -24,9 +24,18 @@ public class ActiveSkillInheritanceTests
             maxLevel
         );
 
-    private static IPalReference Bred(string palName, IPalReference parent1, IPalReference parent2, int maxLevel = AnyLevel) =>
+    private static IPalReference OwnedAtLevel(string palName, int level, int maxLevel = AnyLevel, bool useCurrentPalLevel = true) =>
+        new OwnedPalReference(
+            SolverTestScenario.Owned(palName, PalGender.MALE, level: level),
+            [],
+            new IV_Set(IV_Value.Random, IV_Value.Random, IV_Value.Random),
+            maxLevel,
+            useCurrentPalLevel
+        );
+
+    private static IPalReference Bred(string palName, IPalReference parent1, IPalReference parent2, int maxLevel = AnyLevel, bool useCurrentPalLevels = false) =>
         new BredPalReference(
-            new GameSettings { MaxPalLevel = maxLevel },
+            new GameSettings { MaxPalLevel = maxLevel, UseCurrentPalLevels = useCurrentPalLevels },
             palName.ToPal(DB),
             parent1,
             parent2,
@@ -60,6 +69,58 @@ public class ActiveSkillInheritanceTests
     {
         CollectionAssert.Contains(Owned("Depresso", PalGender.MALE, 15).InheritedActiveSkills, Skill("Dark Ball"));
         CollectionAssert.DoesNotContain(Owned("Depresso", PalGender.MALE, 14).InheritedActiveSkills, Skill("Dark Ball"));
+    }
+
+    [TestMethod]
+    public void OwnedPal_AssumesItCanBeRaisedToMaxPalLevelByDefault()
+    {
+        CollectionAssert.Contains(OwnedAtLevel("Depresso", 1, useCurrentPalLevel: false).InheritedActiveSkills, Skill("Dark Ball"));
+    }
+
+    [TestMethod]
+    public void OwnedPal_UseCurrentPalLevel_LimitsSkillsToWhatThePalAlreadyKnows()
+    {
+        CollectionAssert.DoesNotContain(OwnedAtLevel("Depresso", 14).InheritedActiveSkills, Skill("Dark Ball"));
+        CollectionAssert.Contains(OwnedAtLevel("Depresso", 15).InheritedActiveSkills, Skill("Dark Ball"));
+
+        // Loomen already knows it from level 1, so it's usable without any levelling
+        CollectionAssert.Contains(OwnedAtLevel("Loomen", 1).InheritedActiveSkills, Skill("Dark Ball"));
+    }
+
+    [TestMethod]
+    public void OwnedPal_UseCurrentPalLevel_StillRespectsMaxPalLevel()
+    {
+        CollectionAssert.DoesNotContain(
+            OwnedAtLevel("Depresso", 70, maxLevel: 14).InheritedActiveSkills,
+            Skill("Dark Ball")
+        );
+    }
+
+    [TestMethod]
+    public void BredPal_UseCurrentPalLevels_OnlyLearnsWhatItKnowsOnArrival()
+    {
+        var parents = (Owned("Lamball", PalGender.MALE), Owned("Cattiva", PalGender.FEMALE));
+
+        // Depresso learns Dark Ball at level 15, so a freshly bred one doesn't have it
+        var raised = Bred("Depresso", parents.Item1, parents.Item2);
+        var unraised = Bred("Depresso", parents.Item1, parents.Item2, useCurrentPalLevels: true);
+
+        CollectionAssert.Contains(raised.InheritedActiveSkills, Skill("Dark Ball"));
+        CollectionAssert.DoesNotContain(unraised.InheritedActiveSkills, Skill("Dark Ball"));
+
+        // Loomen knows it from level 1, so breeding one is still enough
+        var loomen = Bred("Loomen", parents.Item1, parents.Item2, useCurrentPalLevels: true);
+        CollectionAssert.Contains(loomen.InheritedActiveSkills, Skill("Dark Ball"));
+    }
+
+    [TestMethod]
+    public void BredPal_UseCurrentPalLevels_StillInheritsFromAnAlreadyLevelledParent()
+    {
+        var levelled = OwnedAtLevel("Depresso", 15);
+        var bred = Bred("Cattiva", levelled, Owned("Lamball", PalGender.FEMALE), useCurrentPalLevels: true);
+
+        CollectionAssert.Contains(bred.InheritedActiveSkills, Skill("Dark Ball"));
+        Assert.IsTrue(ActiveSkillInheritance.CanProvide(bred, [Skill("Dark Ball")]));
     }
 
     [TestMethod]

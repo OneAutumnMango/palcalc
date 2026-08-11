@@ -458,6 +458,9 @@ If disabled, the time to breed a pal is always based on the sum of the time requ
   <data name="LC_DIAGNOSTICS_SKILL_ABOVE_LEVEL_CAP" xml:space="preserve">
     <value>No pal learns {SkillName} at or below level {Level}, which is your current max pal level. The earliest it can be learned is by: {PalNames}.</value>
   </data>
+  <data name="LC_DIAGNOSTICS_SKILL_NEEDS_LEVELLING" xml:space="preserve">
+    <value>None of the pals you own already know {SkillName}, and "Use current levels" stops Pal Calc from assuming you'll raise one to learn it. The earliest it's learned is level {Level}, by: {PalNames}.</value>
+  </data>
   <data name="LC_DIAGNOSTICS_SKILL_NO_SOURCE" xml:space="preserve">
     <value>No pal that can appear in this breeding tree learns {SkillName}. It comes from: {PalNames}.</value>
   </data>
@@ -777,6 +780,16 @@ This will not delete the save files from your computer.</value>
 Pals learn their active skills at specific levels, so a pal can only know - and therefore only pass down - skills it learns at or below this level. Lowering this makes results more realistic if you don't want to grind levels, but fewer skills will be reachable.
 
 Leave this at 70 to allow every active skill a pal can learn.</value>
+  </data>
+  <data name="LC_SETTINGS_USE_CURRENT_PAL_LEVELS" xml:space="preserve">
+    <value>Use current levels</value>
+  </data>
+  <data name="LC_SETTINGS_USE_CURRENT_PAL_LEVELS_DESC" xml:space="preserve">
+    <value>Never assume a pal gets levelled up just to learn an active skill.
+
+By default Pal Calc assumes any pal could be raised to the Max Pal Level, so it may suggest grinding a pal up to 50 purely to unlock a skill. With this enabled, a pal you own only offers the skills it knows at its current level, and a pal you still have to breed or catch only offers the skills it knows on arrival.
+
+Every target active skill then has to come from a pal that already has it, which favours a longer breeding path using pals you've already levelled. Fewer skills will be reachable, so turn this off if no path can be found.</value>
   </data>
   <data name="LC_SETTINGS_PALBOX_TAB_SIZE" xml:space="preserve">
     <value>Palbox Tab Size</value>

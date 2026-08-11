@@ -348,7 +348,8 @@ namespace PalCalc.UI
                     Attack = attack,
                     Defense = defense
                 },
-                gameSettings.MaxPalLevel
+                gameSettings.MaxPalLevel,
+                gameSettings.UseCurrentPalLevels
             );
 
             if (solverSettings.UseGenderReversers && inst.Gender != actualGender)
@@ -436,7 +437,7 @@ namespace PalCalc.UI
                 numPassives,
                 db.BreedingMechanics,
                 db,
-                gameSettings.MaxPalLevel
+                gameSettings.NewPalSkillLevel
             ).WithGuaranteedGender(
                 db,
                 gender,
