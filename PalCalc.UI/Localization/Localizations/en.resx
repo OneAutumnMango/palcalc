@@ -865,6 +865,12 @@ Higher values linearly affect time required, depending on how many types of pals
   <data name="LC_TRAITS_PRESETS" xml:space="preserve">
     <value>Presets</value>
   </data>
+  <data name="LC_ACTIVE_SKILLS_PRESETS_ADD" xml:space="preserve">
+    <value>Save active skills as new preset...</value>
+  </data>
+  <data name="LC_ACTIVE_SKILLS_PRESETS_OVERWRITE_MSG" xml:space="preserve">
+    <value>Overwrite the preset '{PresetName}' with the current selection of active skills?</value>
+  </data>
   <data name="LC_TRAITS_PRESETS_ADD" xml:space="preserve">
     <value>Save passives as new preset...</value>
   </data>

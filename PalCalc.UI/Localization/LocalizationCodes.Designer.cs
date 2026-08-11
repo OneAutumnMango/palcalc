@@ -1188,6 +1188,14 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        LC_ACTIVE_SKILLS_PRESETS_ADD,
+        /// <summary>
+        ///   Looks up a localized string similar to PresetName.
+        /// </summary>
+        LC_ACTIVE_SKILLS_PRESETS_OVERWRITE_MSG,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         LC_TRAITS_PRESETS_ADD,
         /// <summary>
         ///   Looks up a localized string similar to .

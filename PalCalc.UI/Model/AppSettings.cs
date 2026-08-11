@@ -27,6 +27,18 @@ namespace PalCalc.UI.Model
         public List<string> PalInternalNames { get; set; }
     }
 
+    public class ActiveSkillsPreset
+    {
+        public string Name { get; set; }
+
+        public string ActiveSkill1InternalName { get; set; }
+        public string ActiveSkill2InternalName { get; set; }
+        public string ActiveSkill3InternalName { get; set; }
+        public string ActiveSkill4InternalName { get; set; }
+        public string ActiveSkill5InternalName { get; set; }
+        public string ActiveSkill6InternalName { get; set; }
+    }
+
     public class SerializableSolverSettings
     {
         public int MaxBreedingSteps { get; set; } = 10;
@@ -113,6 +125,8 @@ namespace PalCalc.UI.Model
         public SerializableSolverSettings SolverSettings { get; set; } = new();
 
         public List<PassiveSkillsPreset> PassiveSkillsPresets { get; set; } = [];
+
+        public List<ActiveSkillsPreset> ActiveSkillsPresets { get; set; } = [];
 
         public List<PalListPreset> PalListPresets { get; set; } = [];
 

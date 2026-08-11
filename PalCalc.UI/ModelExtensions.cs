@@ -63,5 +63,16 @@ namespace PalCalc.UI
                 OptionalPassive3InternalName = spec.OptionalPassives.Passive3?.ModelObject?.InternalName,
                 OptionalPassive4InternalName = spec.OptionalPassives.Passive4?.ModelObject?.InternalName,
             };
+
+        public static ActiveSkillsPreset ToActiveSkillsPreset(this PalSpecifierViewModel spec) =>
+            new()
+            {
+                ActiveSkill1InternalName = spec.TargetActiveSkills.ActiveSkill1?.ModelObject?.InternalName,
+                ActiveSkill2InternalName = spec.TargetActiveSkills.ActiveSkill2?.ModelObject?.InternalName,
+                ActiveSkill3InternalName = spec.TargetActiveSkills.ActiveSkill3?.ModelObject?.InternalName,
+                ActiveSkill4InternalName = spec.TargetActiveSkills.ActiveSkill4?.ModelObject?.InternalName,
+                ActiveSkill5InternalName = spec.TargetActiveSkills.ActiveSkill5?.ModelObject?.InternalName,
+                ActiveSkill6InternalName = spec.TargetActiveSkills.ActiveSkill6?.ModelObject?.InternalName,
+            };
     }
 }

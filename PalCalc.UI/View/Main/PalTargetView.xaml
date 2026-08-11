@@ -49,21 +49,15 @@
             </ComboBox>
         </StackPanel>
     </Grid>
-    <GroupBox adonisExtensions:LayerExtension.IncreaseLayer="False" Padding="0" Background="{x:Null}" Margin="0,5,0,0">
-        <GroupBox.Header>
-            <Grid adonisExtensions:LayerExtension.Layer="3">
-                <TextBlock Text="{itl:LocalizedText LC_COMMON_TRAITS}" Margin="8" />
-                <Grid HorizontalAlignment="Right">
-                    <Viewbox StretchDirection="DownOnly" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}, Path=ActualHeight}">
-                        <Border Padding="3">
-                            <Button Command="{Binding OpenPassivesSearchCommand}" VerticalAlignment="Center" HorizontalAlignment="Right" adonisExtensions:LayerExtension.Layer="2">
-                                <materialIcons:MaterialIcon Kind="Search" />
-                            </Button>
-                        </Border>
-                    </Viewbox>
-                </Grid>
-            </Grid>
-        </GroupBox.Header>
+    <Expander IsExpanded="True" adonisExtensions:LayerExtension.IncreaseLayer="False" Padding="0" Background="{x:Null}" Margin="0,5,0,0">
+        <Expander.Header>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{itl:LocalizedText LC_COMMON_TRAITS}" VerticalAlignment="Center" />
+                <Button Command="{Binding OpenPassivesSearchCommand}" Margin="8,0,0,0" Padding="2" VerticalAlignment="Center" adonisExtensions:LayerExtension.Layer="2">
+                    <materialIcons:MaterialIcon Kind="Search" />
+                </Button>
+            </StackPanel>
+        </Expander.Header>
         <Grid>
             <TabControl Margin="0" Padding="0" Background="{x:Null}">
                 <TabControl.Resources>
@@ -186,9 +180,9 @@
                 </vu:EditableListMenu>
             </Popup>
         </Grid>
-    </GroupBox>
-    <GroupBox Header="{itl:LocalizedText Code=LC_COMMON_ACTIVE_SKILLS}" adonisExtensions:LayerExtension.IncreaseLayer="False" Background="{x:Null}" Margin="0,5,0,0">
-        <GroupBox.Resources>
+    </Expander>
+    <Expander Header="{itl:LocalizedText Code=LC_COMMON_ACTIVE_SKILLS}" IsExpanded="True" adonisExtensions:LayerExtension.IncreaseLayer="False" Background="{x:Null}" Margin="0,5,0,0">
+        <Expander.Resources>
             <DataTemplate x:Key="ActiveSkillTemplate" DataType="{x:Type mvm:ActiveSkillViewModel}">
                 <TextBlock Text="{Binding Name.Value}" />
             </DataTemplate>
@@ -260,26 +254,76 @@
 
             <c:GreaterThanConverter x:Key="ActiveSkillsWideMode" MinValue="400" />
             <c:GreaterThanConverter x:Key="ActiveSkillsExtraWideMode" MinValue="600" />
-        </GroupBox.Resources>
+        </Expander.Resources>
 
-        <ContentControl DataContext="{Binding CurrentPalSpecifier.TargetActiveSkills}" Content="{Binding}">
-            <ContentControl.Style>
-                <Style TargetType="ContentControl">
-                    <Setter Property="ContentTemplate" Value="{StaticResource ThinActiveSkillsList}" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth, Converter={StaticResource ActiveSkillsWideMode}}" Value="True">
-                            <Setter Property="ContentTemplate" Value="{StaticResource WideActiveSkillsList}" />
-                        </DataTrigger>
+            <Button Grid.Row="0"
+                    HorizontalAlignment="Right"
+                    Height="Auto"
+                    Margin="0,0,0,5"
+                    Content="{itl:LocalizedText Code=LC_TRAITS_PRESETS}"
+                    x:Name="ActiveSkillPresetsButton"
+                    Command="{Binding OpenActiveSkillPresetsMenuCommand}" />
 
-                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth, Converter={StaticResource ActiveSkillsExtraWideMode}}" Value="True">
-                            <Setter Property="ContentTemplate" Value="{StaticResource ExtraWideActiveSkillsList}" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </ContentControl.Style>
-        </ContentControl>
-    </GroupBox>
+            <Popup PlacementTarget="{Binding ElementName=ActiveSkillPresetsButton}"
+                   x:Name="ActiveSkillPresetsPopup"
+                   IsOpen="{Binding ActiveSkillPresetsMenuIsOpen}"
+                   StaysOpen="False"
+                   MinWidth="200"
+                   >
+                <vu:EditableListMenu DataContext="{Binding ActiveSkillPresets}"
+                                     CreateCommand="{Binding CreatePresetCommand}"
+                                     DeleteCommand="{Binding DeletePresetCommand}"
+                                     RenameCommand="{Binding RenamePresetCommand}"
+                                     OverwriteCommand="{Binding OverwritePresetCommand}"
+                                     SelectCommand="{Binding SelectPresetCommand}"
+
+                                     DeleteButtonTooltip="{itl:LocalizedText Code=LC_TRAITS_PRESETS_DELETE_BTN_DESCRIPTION}"
+                                     RenameButtonTooltip="{itl:LocalizedText Code=LC_TRAITS_PRESETS_RENAME_BTN_DESCRIPTION}"
+                                     OverwriteButtonTooltip="{itl:LocalizedText Code=LC_TRAITS_PRESETS_OVERWRITE_BTN_DESCRIPTION}"
+
+                                     CreatePopupTitle="{itl:LocalizedText Code=LC_TRAITS_PRESETS_ADD_TITLE}"
+                                     CreatePopupInputLabel="{itl:LocalizedText Code=LC_TRAITS_PRESETS_NAME}"
+
+                                     ItemsSource="{Binding Options}"
+
+                                     Background="{DynamicResource {x:Static adonisUi:Brushes.Layer1BackgroundBrush}}"
+                                     BorderBrush="{DynamicResource {x:Static adonisUi:Brushes.AccentInteractionBorderBrush}}"
+                                     BorderThickness="1"
+                                     adonisExtensions:LayerExtension.Layer="1"
+                                     >
+                    <vu:EditableListMenu.NewItemContent>
+                        <Grid>
+                            <TextBlock Margin="5" FontStyle="Italic" Text="{itl:LocalizedText Code=LC_ACTIVE_SKILLS_PRESETS_ADD}" />
+                        </Grid>
+                    </vu:EditableListMenu.NewItemContent>
+                </vu:EditableListMenu>
+            </Popup>
+
+            <ContentControl Grid.Row="1" DataContext="{Binding CurrentPalSpecifier.TargetActiveSkills}" Content="{Binding}">
+                <ContentControl.Style>
+                    <Style TargetType="ContentControl">
+                        <Setter Property="ContentTemplate" Value="{StaticResource ThinActiveSkillsList}" />
+
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth, Converter={StaticResource ActiveSkillsWideMode}}" Value="True">
+                                <Setter Property="ContentTemplate" Value="{StaticResource WideActiveSkillsList}" />
+                            </DataTrigger>
+
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth, Converter={StaticResource ActiveSkillsExtraWideMode}}" Value="True">
+                                <Setter Property="ContentTemplate" Value="{StaticResource ExtraWideActiveSkillsList}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ContentControl.Style>
+            </ContentControl>
+        </Grid>
+    </Expander>
     <GroupBox Header="{itl:LocalizedText Code=LC_COMMON_IVS}" adonisExtensions:LayerExtension.IncreaseLayer="False" Background="{x:Null}" Margin="0,5,0,0">
         <GroupBox.Resources>
             <c:GreaterThanConverter x:Key="IVWideMode" MinValue="300" />

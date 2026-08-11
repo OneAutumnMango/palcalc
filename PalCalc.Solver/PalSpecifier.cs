@@ -34,7 +34,8 @@ namespace PalCalc.Solver
             (RequiredGender == PalGender.WILDCARD || palRef.Gender == PalGender.WILDCARD || palRef.Gender == RequiredGender) &&
             (IV_HP == 0 || palRef.IVs.HP.Satisfies(IV_HP)) &&
             (IV_Attack == 0 || palRef.IVs.Attack.Satisfies(IV_Attack)) &&
-            (IV_Defense == 0 || palRef.IVs.Defense.Satisfies(IV_Defense));
+            (IV_Defense == 0 || palRef.IVs.Defense.Satisfies(IV_Defense)) &&
+            ActiveSkillInheritance.CanProvide(palRef, TargetActiveSkills);
 
         public void Normalize()
         {

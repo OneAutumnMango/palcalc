@@ -58,11 +58,13 @@ namespace PalCalc.UI.ViewModel
         private Dispatcher dispatcher;
         private AppSettings settings;
         private PassiveSkillsPresetCollectionViewModel passivePresets;
+        private ActiveSkillsPresetCollectionViewModel activeSkillPresets;
         private IRelayCommand<PalSpecifierViewModel> deletePalTargetCommand;
         private ExitEventHandler appExitHandler;
         private CancelEventHandler mainWindowClosingHandler;
         private PropertyChangedEventHandler solverControlsPropertyChangedHandler;
         private Action<PassiveSkillsPresetViewModel> presetSelectedHandler;
+        private Action<ActiveSkillsPresetViewModel> activeSkillPresetSelectedHandler;
 
         public ICommand RunSolverCommand { get; }
         public ICommand PauseSolverCommand { get; }
@@ -113,6 +115,7 @@ namespace PalCalc.UI.ViewModel
             settings = AppSettings.Current;
             settings.SolverSettings ??= new SerializableSolverSettings();
             passivePresets = new PassiveSkillsPresetCollectionViewModel(settings.PassiveSkillsPresets);
+            activeSkillPresets = new ActiveSkillsPresetCollectionViewModel(settings.ActiveSkillsPresets);
 
             PauseSolverCommand = new RelayCommand(PauseSolver);
             ResumeSolverCommand = new RelayCommand(ResumeSolver);
@@ -176,6 +179,9 @@ namespace PalCalc.UI.ViewModel
             presetSelectedHandler = PassivePresets_PresetSelected;
             passivePresets.PresetSelected += presetSelectedHandler;
 
+            activeSkillPresetSelectedHandler = ActiveSkillPresets_PresetSelected;
+            activeSkillPresets.PresetSelected += activeSkillPresetSelectedHandler;
+
             SolverQueue.SelectItemCommand = new RelayCommand<PalSpecifierViewModel>(vm => PalTargetList.SelectedTarget = PalTargetList.Targets.FirstOrDefault(t => t.LatestJob == vm.LatestJob));
             ((INotifyCollectionChanged)SolverQueue.QueuedItems).CollectionChanged += (a, b) =>
             {
@@ -213,6 +219,9 @@ namespace PalCalc.UI.ViewModel
             if (passivePresets != null && presetSelectedHandler != null)
                 passivePresets.PresetSelected -= presetSelectedHandler;
 
+            if (activeSkillPresets != null && activeSkillPresetSelectedHandler != null)
+                activeSkillPresets.PresetSelected -= activeSkillPresetSelectedHandler;
+
             if (appExitHandler != null)
                 App.Current.Exit -= appExitHandler;
 
@@ -239,6 +248,12 @@ namespace PalCalc.UI.ViewModel
         }
 
         private void PassivePresets_PresetSelected(PassiveSkillsPresetViewModel selectedPreset)
+        {
+            var spec = PalTarget?.CurrentPalSpecifier;
+            if (spec != null) selectedPreset.ApplyTo(spec);
+        }
+
+        private void ActiveSkillPresets_PresetSelected(ActiveSkillsPresetViewModel selectedPreset)
         {
             var spec = PalTarget?.CurrentPalSpecifier;
             if (spec != null) selectedPreset.ApplyTo(spec);
@@ -308,8 +323,9 @@ namespace PalCalc.UI.ViewModel
         {
             if (PalTargetList?.SelectedTarget != null)
             {
-                PalTarget = new PalTargetViewModel(OpenedSave, PalTargetList.SourcePals, PalTargetList.SelectedTarget, passivePresets);
+                PalTarget = new PalTargetViewModel(OpenedSave, PalTargetList.SourcePals, PalTargetList.SelectedTarget, passivePresets, activeSkillPresets);
                 passivePresets.ActivePalTarget = PalTarget;
+                activeSkillPresets.ActivePalTarget = PalTarget;
             }
             else
                 PalTarget = null;

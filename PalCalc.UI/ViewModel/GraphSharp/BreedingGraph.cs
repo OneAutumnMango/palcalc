@@ -49,11 +49,19 @@ namespace PalCalc.UI.ViewModel.GraphSharp
 
                 var childNeeds = children.ToDictionary(c => c, _ => new List<ActiveSkill>());
 
+                // each parent of a bred pal can only pass down a limited number of skills
+                var capped = node.PalRef is BredPalReference;
+                bool HasRoom(IBreedingTreeNode c) => !capped || childNeeds[c].Count < GameConstants.MaxInheritedActiveSkills;
+
                 foreach (var skill in needed.Where(s => !LearnsNaturally(node, s)))
                 {
+                    var candidates = children
+                        .Where(c => (LearnsNaturally(c, skill) || c.PalRef.InheritedActiveSkills.Contains(skill)) && HasRoom(c))
+                        .ToList();
+
                     var provider =
-                        children.FirstOrDefault(c => LearnsNaturally(c, skill)) ??
-                        children.FirstOrDefault(c => c.PalRef.InheritedActiveSkills.Contains(skill));
+                        candidates.FirstOrDefault(c => LearnsNaturally(c, skill)) ??
+                        candidates.FirstOrDefault();
 
                     if (provider != null) childNeeds[provider].Add(skill);
                 }

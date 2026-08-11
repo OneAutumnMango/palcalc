@@ -28,9 +28,9 @@ namespace PalCalc.UI.ViewModel
     {
         private PalSourceViewModel sourcePals;
 
-        public PalTargetViewModel() : this(null, null, PalSpecifierViewModel.New, PassiveSkillsPresetCollectionViewModel.DesignerInstance) { }
+        public PalTargetViewModel() : this(null, null, PalSpecifierViewModel.New, PassiveSkillsPresetCollectionViewModel.DesignerInstance, ActiveSkillsPresetCollectionViewModel.DesignerInstance) { }
 
-        public PalTargetViewModel(SaveGameViewModel sourceSave, PalSourceViewModel sourcePals, PalSpecifierViewModel initial, PassiveSkillsPresetCollectionViewModel presets)
+        public PalTargetViewModel(SaveGameViewModel sourceSave, PalSourceViewModel sourcePals, PalSpecifierViewModel initial, PassiveSkillsPresetCollectionViewModel presets, ActiveSkillsPresetCollectionViewModel activeSkillPresets)
         {
             this.sourcePals = sourcePals;
 
@@ -66,6 +66,11 @@ namespace PalCalc.UI.ViewModel
             OpenPresetsMenuCommand = new RelayCommand(() => PresetsMenuIsOpen = true);
 
             presets.PresetSelected += (_) => PresetsMenuIsOpen = false;
+
+            ActiveSkillPresets = activeSkillPresets;
+            OpenActiveSkillPresetsMenuCommand = new RelayCommand(() => ActiveSkillPresetsMenuIsOpen = true);
+
+            activeSkillPresets.PresetSelected += (_) => ActiveSkillPresetsMenuIsOpen = false;
 
             OpenPassivesSearchCommand = new RelayCommand(() => new PassivesSearchWindow() { Owner = App.Current.MainWindow }.Show());
         }
@@ -151,6 +156,13 @@ namespace PalCalc.UI.ViewModel
         private bool presetsMenuIsOpen = false;
 
         public IRelayCommand OpenPresetsMenuCommand { get; }
+
+        public ActiveSkillsPresetCollectionViewModel ActiveSkillPresets { get; }
+
+        [ObservableProperty]
+        private bool activeSkillPresetsMenuIsOpen = false;
+
+        public IRelayCommand OpenActiveSkillPresetsMenuCommand { get; }
 
         public IRelayCommand OpenPassivesSearchCommand { get; }
     }
