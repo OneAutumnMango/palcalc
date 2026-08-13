@@ -50,6 +50,8 @@ namespace PalCalc.Solver.PalReference
 
             IVs = ivs;
 
+            RequiredPalMask = parent1.RequiredPalMask | parent2.RequiredPalMask;
+
             EffectivePassives = passives;
             EffectivePassivesHash = passives.SetHash(p => p.InternalNameHash);
 
@@ -100,6 +102,8 @@ namespace PalCalc.Solver.PalReference
         public Pal Pal { get; private set; }
         public IPalReference Parent1 { get; private set; }
         public IPalReference Parent2 { get; private set; }
+
+        public ulong RequiredPalMask { get; }
 
         public PalGender Gender { get; private set; } = PalGender.WILDCARD;
 

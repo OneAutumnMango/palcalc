@@ -48,6 +48,8 @@ namespace PalCalc.UI.ViewModel.GraphSharp
 
         public bool IsCheckable => false;
 
+        public bool IsRequiredPal => false;
+
         private IBreedingTreeNodeViewModel consumer;
 
         public bool IsComplete => IsChecked || (consumer?.IsComplete ?? false);

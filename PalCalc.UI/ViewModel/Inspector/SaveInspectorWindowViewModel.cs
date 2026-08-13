@@ -2,9 +2,12 @@
 using PalCalc.SaveReader;
 using PalCalc.UI.Localization;
 using PalCalc.UI.Model;
+using PalCalc.UI.ViewModel.Inspector.Search.Grid;
 using PalCalc.UI.ViewModel.Mapped;
 using PalCalc.UI.ViewModel.Mapped.Saves;
 using PalCalc.UI.ViewModel.SaveSelection;
+using PalCalc.UI.ViewModel.Solver;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace PalCalc.UI.ViewModel.Inspector
 {
-    public class SaveInspectorWindowViewModel
+    public partial class SaveInspectorWindowViewModel
     {
         private static SaveInspectorWindowViewModel designerInstance = null;
         public static SaveInspectorWindowViewModel DesignerInstance => designerInstance ??= new SaveInspectorWindowViewModel(
@@ -43,6 +46,21 @@ namespace PalCalc.UI.ViewModel.Inspector
             Details = new SaveDetailsViewModel(slvm.SourceLocation, cachedSave);
 
             WindowTitle = LocalizationCodes.LC_SAVEWINDOW_TITLE.Bind(sgvm.CombinedLabel);
+        }
+
+        public SaveCustomizationsViewModel Customizations => DisplayedSave.Customizations;
+
+        [RelayCommand]
+        private void ToggleRequiredPal(object slot)
+        {
+            if (slot is not ContainerGridPalSlotViewModel palSlot) return;
+
+            var target = RequiredPalsViewModel.Active;
+            if (target == null) return;
+
+            var instanceId = palSlot.PalInstance?.ModelObject?.InstanceId;
+            target.Toggle(instanceId);
+            palSlot.IsRequired = target.IsRequired(instanceId);
         }
     }
 }

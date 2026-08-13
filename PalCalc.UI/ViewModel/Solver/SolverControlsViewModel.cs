@@ -30,7 +30,7 @@ namespace PalCalc.UI.ViewModel.Solver
 
     public partial class SolverControlsViewModel : ObservableObject
     {
-        public static SolverControlsViewModel DesignerInstance { get; } = new SolverControlsViewModel(null, null, null, null, null);
+        public static SolverControlsViewModel DesignerInstance { get; } = new SolverControlsViewModel(null, null, null, null, null, null);
 
         private PalListPresetCollectionViewModel PalListPresets => new(
             SourcePals,
@@ -42,10 +42,12 @@ namespace PalCalc.UI.ViewModel.Solver
             ICommand runSolverCommand,
             ICommand cancelSolverCommand,
             ICommand pauseSolverCommand,
-            ICommand resumeSolverCommand
+            ICommand resumeSolverCommand,
+            ICommand inspectSaveCommand
         )
         {
             SourcePals = sourcePals;
+            InspectSaveCommand = inspectSaveCommand;
 
             MaxBreedingSteps = 6;
             MaxWildPals = 1;
@@ -257,6 +259,7 @@ namespace PalCalc.UI.ViewModel.Solver
                     }
 
                     OnStatePropertiesChanged();
+                    OnPropertyChanged(nameof(RequiredPals));
                 }
             }
         }
@@ -268,12 +271,18 @@ namespace PalCalc.UI.ViewModel.Solver
 
             if (e.PropertyName == nameof(currentTarget.CurrentLatestJob))
                 CurrentJob = currentTarget.CurrentLatestJob;
+
+            if (e.PropertyName == nameof(currentTarget.CurrentPalSpecifier))
+                OnPropertyChanged(nameof(RequiredPals));
         }
 
         public ICommand RunSolverCommand { get; }
         public ICommand CancelSolverCommand { get; }
         public ICommand PauseSolverCommand { get; }
         public ICommand ResumeSolverCommand { get; }
+        public ICommand InspectSaveCommand { get; }
+
+        public RequiredPalsViewModel RequiredPals => CurrentTarget?.CurrentPalSpecifier?.RequiredPals;
 
         public bool CanRunSolver => CurrentTarget?.IsValid == true && CurrentJob?.IsActive != true;
         public bool CanCancelSolver => CurrentJob?.IsActive == true;

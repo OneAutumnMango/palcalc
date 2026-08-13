@@ -130,7 +130,8 @@ internal readonly struct EffectivePropertiesKey : IEquatable<EffectiveProperties
         PalId palId,
         PalGender gender,
         PassiveSetKey passives,
-        RelevantIVKey ivs
+        RelevantIVKey ivs,
+        ulong requiredPalMask = 0
     )
     {
         ArgumentNullException.ThrowIfNull(palId);
@@ -140,12 +141,14 @@ internal readonly struct EffectivePropertiesKey : IEquatable<EffectiveProperties
         Gender = gender;
         Passives = passives;
         IVs = ivs;
+        RequiredPalMask = requiredPalMask;
         hashCode = HashCode.Combine(
             PalDexNo,
             IsPalVariant,
             Gender,
             Passives,
-            IVs
+            IVs,
+            requiredPalMask
         );
     }
 
@@ -155,10 +158,18 @@ internal readonly struct EffectivePropertiesKey : IEquatable<EffectiveProperties
     public PassiveSetKey Passives { get; }
     public RelevantIVKey IVs { get; }
 
+    /// <summary>
+    /// Which of the target's required pals are already part of this candidate's tree.
+    /// Keeps candidates carrying a required pal from being pruned against cheaper
+    /// candidates which don't.
+    /// </summary>
+    public ulong RequiredPalMask { get; }
+
     public bool Equals(EffectivePropertiesKey other) =>
         PalDexNo == other.PalDexNo &&
         IsPalVariant == other.IsPalVariant &&
         Gender == other.Gender &&
+        RequiredPalMask == other.RequiredPalMask &&
         Passives == other.Passives &&
         IVs == other.IVs;
 
@@ -191,5 +202,18 @@ internal sealed class DefaultEffectivePropertiesKeyProvider : IEffectiveProperti
             gender: reference.Gender,
             passives: new PassiveSetKey(reference.EffectivePassives),
             ivs: new RelevantIVKey(reference.IVs)
+        );
+}
+
+internal sealed class RequiredPalsEffectivePropertiesKeyProvider(RequiredPalSet requiredPals)
+    : IEffectivePropertiesKeyProvider
+{
+    public EffectivePropertiesKey KeyOf(IPalReference reference) =>
+        new(
+            palId: reference.Pal.Id,
+            gender: reference.Gender,
+            passives: new PassiveSetKey(reference.EffectivePassives),
+            ivs: new RelevantIVKey(reference.IVs),
+            requiredPalMask: requiredPals.MaskOf(reference)
         );
 }

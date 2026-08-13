@@ -72,13 +72,18 @@ internal sealed class SolverRunContext
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(controller);
 
+        var target = EffectiveTargetOf(request);
+
         selectionPolicy ??= new DefaultCandidateSelectionPolicy(
             request.Settings.ResultPruning,
-            controller.CancellationToken
+            controller.CancellationToken,
+            target.RequiredPals.IsEmpty
+                ? null
+                : new RequiredPalsEffectivePropertiesKeyProvider(target.RequiredPals)
         );
 
         return new(
-            target: EffectiveTargetOf(request),
+            target: target,
             settings: request.Settings,
             // Mechanics is immutable. Capturing the current PalDB-owned value
             // makes replacing it affect later runs without changing this run.

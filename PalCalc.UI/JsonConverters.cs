@@ -788,7 +788,8 @@ namespace PalCalc.UI
                 TargetActiveSkills = Enumerable.Range(1, 6)
                     .Select(i => obj[$"ActiveSkill{i}"]?.ToObject<ActiveSkillViewModel>(serializer)?.ModelObject)
                     .SkipNull()
-                    .ToList()
+                    .ToList(),
+                RequiredInstanceIds = obj["RequiredInstanceIds"]?.ToObject<List<string>>() ?? []
             };
 
             List<IPalSourceTreeSelection> palSourceSelections;
@@ -869,6 +870,7 @@ namespace PalCalc.UI
                 MinIV_Attack = value.MinIv_Attack,
                 MinIV_Defense = value.MinIv_Defense,
                 RequiredGender = value.RequiredGender?.Value ?? PalGender.WILDCARD,
+                RequiredInstanceIds = value.RequiredPals.InstanceIds.ToList(),
                 CurrentResults = value.CurrentResults
             });
 

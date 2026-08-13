@@ -1186,6 +1186,18 @@ When connecting to another person's multiplayer world, Palworld does not downloa
   <data name="LC_RESET_UI_LAYOUT" xml:space="preserve">
     <value>Reset Window Layout</value>
   </data>
+  <data name="LC_REQUIRED_PARENTS" xml:space="preserve">
+    <value>Required Parents</value>
+  </data>
+  <data name="LC_REQUIRED_PARENTS_NONE" xml:space="preserve">
+    <value>None selected</value>
+  </data>
+  <data name="LC_REQUIRED_PARENTS_DESCRIPTION" xml:space="preserve">
+    <value>Pals which must appear somewhere in this target's breeding tree. Click to open the save inspector, then double-click a pal to select or deselect it.</value>
+  </data>
+  <data name="LC_REQUIRED_PARENTS_SELECT" xml:space="preserve">
+    <value>Select Required Parents</value>
+  </data>
   <data name="LC_UI_LAYOUT_RESET_NOTICE" xml:space="preserve">
     <value>Saved window and panel layouts were reset. The defaults will be used the next time Pal Calc starts.</value>
   </data>

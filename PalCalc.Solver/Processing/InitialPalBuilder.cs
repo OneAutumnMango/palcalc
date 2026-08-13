@@ -48,25 +48,34 @@ internal sealed class InitialPalBuilder(
                 Max: value
             );
 
+        var requiredPals = target.RequiredPals;
+
+        OwnedPalReference MakeReference(PalInstance p) =>
+            new OwnedPalReference(
+                instance: p,
+                effectivePassives: p.PassiveSkills.ToDedicatedPassives(target.DesiredPassives),
+                effectiveIVs: new IV_Set
+                {
+                    HP = MakeIV(target.IV_HP, p.IV_HP),
+                    Attack = MakeIV(target.IV_Attack, p.IV_Attack),
+                    Defense = MakeIV(target.IV_Defense, p.IV_Defense),
+                },
+                maxPalLevel: settings.GameSettings.MaxPalLevel,
+                useCurrentPalLevel: settings.GameSettings.UseCurrentPalLevels
+            )
+            {
+                RequiredPalMask = requiredPals.MaskFor(p.InstanceId)
+            };
+
+        // required pals skip de-duplication and gender-compositing, otherwise the
+        // specific instance the user asked for could get merged away
         var initialContent = settings.OwnedPals
             .Where(p => WithinBreedingSteps(p.Pal))
+            .Where(p => !requiredPals.Contains(p.InstanceId))
             .Where(p =>
                 p.PassiveSkills.Except(target.DesiredPassives).Count() <= settings.MaxInputIrrelevantPassives
             )
-            .Select(p =>
-                new OwnedPalReference(
-                    instance: p,
-                    effectivePassives: p.PassiveSkills.ToDedicatedPassives(target.DesiredPassives),
-                    effectiveIVs: new IV_Set
-                    {
-                        HP = MakeIV(target.IV_HP, p.IV_HP),
-                        Attack = MakeIV(target.IV_Attack, p.IV_Attack),
-                        Defense = MakeIV(target.IV_Defense, p.IV_Defense),
-                    },
-                    maxPalLevel: settings.GameSettings.MaxPalLevel,
-                    useCurrentPalLevel: settings.GameSettings.UseCurrentPalLevels
-                )
-            )
+            .Select(MakeReference)
             .GroupBy(pal => (
                 State: StateWithoutGender(pal),
                 pal.Gender
@@ -88,6 +97,13 @@ internal sealed class InitialPalBuilder(
             .Select(group => group.ToList())
             .SelectMany(CombineGenders)
             .ToList();
+
+        initialContent.AddRange(
+            settings.OwnedPals
+                .Where(p => requiredPals.Contains(p.InstanceId))
+                .Where(p => WithinBreedingSteps(p.Pal))
+                .Select(MakeReference)
+        );
 
         if (settings.MaxWildPals > 0)
             AddWildCandidates(initialContent, target, WithinBreedingSteps);

@@ -97,6 +97,8 @@ namespace PalCalc.Solver.PalReference
         public IPalReference Input { get; }
         public List<ISurgeryOperation> Operations { get; }
 
+        public ulong RequiredPalMask => Input.RequiredPalMask;
+
         public PalGender Gender { get; }
 
         public List<PassiveSkill> EffectivePassives { get; }

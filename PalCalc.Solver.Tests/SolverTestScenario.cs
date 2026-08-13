@@ -94,7 +94,8 @@ internal static class SolverTestScenario
         PalGender requiredGender = PalGender.WILDCARD,
         int ivHp = 0,
         int ivAttack = 0,
-        int ivDefense = 0
+        int ivDefense = 0,
+        IEnumerable<string>? requiredInstanceIds = null
     ) =>
         solver.Solver.Solve(
             new BreedingSolverRequest(
@@ -107,6 +108,7 @@ internal static class SolverTestScenario
                     IV_HP = ivHp,
                     IV_Attack = ivAttack,
                     IV_Defense = ivDefense,
+                    RequiredInstanceIds = requiredInstanceIds?.ToList() ?? [],
                 },
                 solver.Settings
             ),

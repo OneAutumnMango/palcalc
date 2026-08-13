@@ -4,6 +4,7 @@ using PalCalc.Model;
 using PalCalc.UI.Localization;
 using PalCalc.UI.Model;
 using PalCalc.UI.ViewModel.Mapped;
+using PalCalc.UI.ViewModel.Solver;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,6 +27,9 @@ namespace PalCalc.UI.ViewModel.Inspector.Search.Grid
         [NotifyPropertyChangedFor(nameof(CanInterract))]
         [ObservableProperty]
         private bool matches = true;
+
+        [ObservableProperty]
+        private bool isRequired;
 
         public bool CanInterract => Matches;
     }
@@ -90,7 +94,12 @@ namespace PalCalc.UI.ViewModel.Inspector.Search.Grid
                 .Select<PalInstance, IContainerGridSlotViewModel>(p =>
                 {
                     if (p == null) return new ContainerGridEmptySlotViewModel();
-                    else return new ContainerGridPalSlotViewModel() { PalInstance = new PalInstanceViewModel(p), Matches = true };
+                    else return new ContainerGridPalSlotViewModel()
+                    {
+                        PalInstance = new PalInstanceViewModel(p),
+                        Matches = true,
+                        IsRequired = RequiredPalsViewModel.IsPalRequired(p.InstanceId)
+                    };
                 })
         );
     }

@@ -783,6 +783,22 @@ namespace PalCalc.UI.Localization {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        LC_REQUIRED_PARENTS,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_REQUIRED_PARENTS_NONE,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_REQUIRED_PARENTS_DESCRIPTION,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        LC_REQUIRED_PARENTS_SELECT,
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         LC_RESET_UI_LAYOUT,
         /// <summary>
         ///   Looks up a localized string similar to AvgAttempts.

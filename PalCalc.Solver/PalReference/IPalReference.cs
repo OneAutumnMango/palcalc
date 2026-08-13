@@ -44,6 +44,11 @@ namespace PalCalc.Solver.PalReference
 
         IV_Set IVs { get; }
 
+        /// <summary>
+        /// Bit mask of the target's required pals which appear in this pal's tree. See <see cref="RequiredPalSet"/>.
+        /// </summary>
+        ulong RequiredPalMask => 0;
+
         List<PassiveSkill> ActualPassives { get; }
 
         PalGender Gender { get; }

@@ -68,6 +68,7 @@
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem" BasedOn="{StaticResource StandardListViewItemStyle}">
+                    <EventSetter Event="MouseDoubleClick" Handler="Slot_MouseDoubleClick" />
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding CanInterract}" Value="False">
                             <Setter Property="IsEnabled" Value="False" />
@@ -97,6 +98,9 @@
                                 <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent">
                                     <Border Style="{StaticResource GridSlotBackgroundStyle}" />
                                     <Border Style="{StaticResource GridSlotIconStyle}" Background="{Binding Pal.IconBrush}" />
+                                    <Border Width="50" Height="50" CornerRadius="25" BorderThickness="3" BorderBrush="Gold"
+                                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            Visibility="{Binding IsRequired, Converter={StaticResource VVC}}" />
                                     <Image Source="/Resources/DungeonSmall.png" Width="16" Height="16" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="{Binding PalInstance.ModelObject.IsOnExpedition, Converter={StaticResource VVC}}" />
                                 </Grid>
                             </DataTemplate>

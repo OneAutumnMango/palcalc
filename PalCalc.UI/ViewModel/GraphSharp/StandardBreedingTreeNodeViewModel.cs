@@ -9,6 +9,7 @@ using PalCalc.UI.Model;
 using PalCalc.UI.ViewModel;
 using PalCalc.UI.ViewModel.Mapped;
 using PalCalc.UI.ViewModel.PalDerived;
+using PalCalc.UI.ViewModel.Solver;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -52,7 +53,14 @@ namespace PalCalc.UI.ViewModel.GraphSharp
 
             IsCheckable = node.PalRef is BredPalReference or WildPalReference or SurgeryTablePalReference or SkillFruitPalReference;
             ToggleCheckedCommand = new RelayCommand(() => IsChecked = !IsChecked);
+
+            ownedInstanceId = (node.PalRef as OwnedPalReference)?.UnderlyingInstance.InstanceId;
         }
+
+        private readonly string ownedInstanceId;
+
+        // Evaluated on demand; nodes are built while loading saved results, before the active target is known
+        public bool IsRequiredPal => RequiredPalsViewModel.IsPalRequired(ownedInstanceId);
 
         [NotifyPropertyChangedFor(nameof(IsComplete))]
         [ObservableProperty]

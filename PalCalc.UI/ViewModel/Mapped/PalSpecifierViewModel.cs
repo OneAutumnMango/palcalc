@@ -24,6 +24,8 @@ namespace PalCalc.UI.ViewModel.Mapped
             IsReadOnly = false;
             Id = id;
 
+            RequiredPals = new RequiredPalsViewModel(underlyingSpec?.RequiredInstanceIds);
+
             if (underlyingSpec == null)
             {
                 TargetPal = null;
@@ -85,8 +87,11 @@ namespace PalCalc.UI.ViewModel.Mapped
                 IV_HP = MinIv_HP,
                 IV_Attack = MinIv_Attack,
                 IV_Defense = MinIv_Defense,
+                RequiredInstanceIds = RequiredPals.InstanceIds.ToList(),
             }
             : null;
+
+        public RequiredPalsViewModel RequiredPals { get; }
 
         [NotifyPropertyChangedFor(nameof(Label))]
         [NotifyPropertyChangedFor(nameof(IsValid))]
@@ -206,6 +211,7 @@ namespace PalCalc.UI.ViewModel.Mapped
                 IV_HP = MinIv_HP,
                 IV_Attack = MinIv_Attack,
                 IV_Defense = MinIv_Defense,
+                RequiredInstanceIds = RequiredPals.InstanceIds.ToList(),
             }
         ) {
             CurrentResults = CurrentResults,

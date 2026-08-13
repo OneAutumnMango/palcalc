@@ -1108,6 +1108,18 @@
   <data name="LC_RESET_UI_LAYOUT" xml:space="preserve">
     <value />
   </data>
+  <data name="LC_REQUIRED_PARENTS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LC_REQUIRED_PARENTS_NONE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LC_REQUIRED_PARENTS_DESCRIPTION" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LC_REQUIRED_PARENTS_SELECT" xml:space="preserve">
+    <value />
+  </data>
   <data name="LC_UI_LAYOUT_RESET_NOTICE" xml:space="preserve">
     <value />
   </data>

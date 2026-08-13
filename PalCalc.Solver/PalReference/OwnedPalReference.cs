@@ -65,6 +65,8 @@ namespace PalCalc.Solver.PalReference
 
         public IV_Set IVs { get; }
 
+        public ulong RequiredPalMask { get; set; }
+
         // (Make this private-settable for use by WithGuaranteedGender when gender-reversers are enabled)
         public PalGender Gender { get; private set; }
 
@@ -91,6 +93,7 @@ namespace PalCalc.Solver.PalReference
             res.Gender = gender;
             res.InheritedActiveSkills = InheritedActiveSkills;
             res.InheritableActiveSkills = InheritableActiveSkills;
+            res.RequiredPalMask = RequiredPalMask;
             return res;
         }
 

@@ -1,4 +1,5 @@
-﻿using PalCalc.UI.ViewModel.Inspector.Search;
+﻿using PalCalc.UI.ViewModel.Inspector;
+using PalCalc.UI.ViewModel.Inspector.Search;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,12 @@ namespace PalCalc.UI.View.Inspector.Search
         public ContainerGridView()
         {
             InitializeComponent();
+        }
+
+        private void Slot_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var inspector = Window.GetWindow(this)?.DataContext as SaveInspectorWindowViewModel;
+            inspector?.ToggleRequiredPalCommand.Execute((sender as FrameworkElement)?.DataContext);
         }
     }
 }

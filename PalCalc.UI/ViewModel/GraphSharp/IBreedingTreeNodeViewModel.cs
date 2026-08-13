@@ -18,6 +18,12 @@ namespace PalCalc.UI.ViewModel.GraphSharp
         bool IsCheckable { get; }
         bool IsChecked { get; set; }
         bool IsComplete { get; }
+
+        /// <summary>
+        /// Whether this node is one of the owned pals the user required to be in the tree.
+        /// </summary>
+        bool IsRequiredPal { get; }
+
         IRelayCommand ToggleCheckedCommand { get; }
 
         /// <summary>

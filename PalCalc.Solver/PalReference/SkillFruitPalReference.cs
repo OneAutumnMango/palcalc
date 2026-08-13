@@ -46,12 +46,13 @@ namespace PalCalc.Solver.PalReference
         public PalGender Gender => Input.Gender;
         public float TimeFactor => Input.TimeFactor;
 
+        public ulong RequiredPalMask => Input.RequiredPalMask;
+
         public IPalRefLocation Location => SkillFruitRefLocation.Instance;
 
         public TimeSpan BreedingEffort => Input.BreedingEffort;
         public TimeSpan SelfBreedingEffort => Input.SelfBreedingEffort;
         public int TotalCost => Input.TotalCost;
-
         public int NumTotalBreedingSteps => Input.NumTotalBreedingSteps;
         public int NumTotalEggs => Input.NumTotalEggs;
         public int NumTotalWildPals => Input.NumTotalWildPals;

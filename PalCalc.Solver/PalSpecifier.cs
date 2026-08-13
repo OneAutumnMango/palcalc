@@ -34,6 +34,22 @@ namespace PalCalc.Solver
 
         public IEnumerable<PassiveSkill> DesiredPassives => RequiredPassives.Concat(OptionalPassives);
 
+        // Owned pal instances which must show up somewhere in the resulting breeding tree
+        private List<string> requiredInstanceIds = new List<string>();
+        private RequiredPalSet requiredPals;
+
+        public List<string> RequiredInstanceIds
+        {
+            get => requiredInstanceIds;
+            set
+            {
+                requiredInstanceIds = value ?? new List<string>();
+                requiredPals = null;
+            }
+        }
+
+        public RequiredPalSet RequiredPals => requiredPals ??= new RequiredPalSet(requiredInstanceIds);
+
         public int IV_HP { get; set; }
         public int IV_Attack { get; set; }
         public int IV_Defense { get; set; }
@@ -43,6 +59,8 @@ namespace PalCalc.Solver
         public bool IsSatisfiedBy(IPalReference palRef)
         {
             if (Pal != palRef.Pal) return false;
+
+            if (!RequiredPals.IsSatisfiedBy(palRef)) return false;
 
             if (RequiredGender != PalGender.WILDCARD && palRef.Gender != PalGender.WILDCARD && palRef.Gender != RequiredGender)
                 return false;
@@ -69,6 +87,7 @@ namespace PalCalc.Solver
             RequiredPassives = RequiredPassives.Distinct().ToList();
             OptionalPassives = OptionalPassives.Except(RequiredPassives).Distinct().ToList();
             TargetActiveSkills = TargetActiveSkills.Distinct().Take(6).ToList();
+            RequiredInstanceIds = RequiredInstanceIds.Distinct().Take(RequiredPalSet.MaxRequiredPals).ToList();
         }
 
         internal PalSpecifier NormalizedCopy()
@@ -85,6 +104,7 @@ namespace PalCalc.Solver
                     .Distinct()
                     .ToList(),
                 TargetActiveSkills = TargetActiveSkills.Distinct().Take(6).ToList(),
+                RequiredInstanceIds = RequiredInstanceIds.Distinct().Take(RequiredPalSet.MaxRequiredPals).ToList(),
                 IV_HP = IV_HP,
                 IV_Attack = IV_Attack,
                 IV_Defense = IV_Defense,

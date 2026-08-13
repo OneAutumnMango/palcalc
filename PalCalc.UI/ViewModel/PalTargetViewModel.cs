@@ -27,12 +27,14 @@ namespace PalCalc.UI.ViewModel
     public partial class PalTargetViewModel : ObservableObject
     {
         private PalSourceViewModel sourcePals;
+        private SaveGameViewModel sourceSave;
 
         public PalTargetViewModel() : this(null, null, PalSpecifierViewModel.New, PassiveSkillsPresetCollectionViewModel.DesignerInstance, ActiveSkillsPresetCollectionViewModel.DesignerInstance) { }
 
         public PalTargetViewModel(SaveGameViewModel sourceSave, PalSourceViewModel sourcePals, PalSpecifierViewModel initial, PassiveSkillsPresetCollectionViewModel presets, ActiveSkillsPresetCollectionViewModel activeSkillPresets)
         {
             this.sourcePals = sourcePals;
+            this.sourceSave = sourceSave;
 
             if (initial.IsReadOnly)
             {
@@ -57,6 +59,7 @@ namespace PalCalc.UI.ViewModel
             void RefreshOnChange(object sender, PropertyChangedEventArgs ev)
             {
                 CurrentPalSpecifier?.RefreshWith(sourcePals.AvailablePals);
+                RefreshRequiredPals();
             }
 
             PropertyChangedEventManager.AddHandler(sourceSave.Customizations, RefreshOnChange, nameof(sourceSave.Customizations.CustomContainers));
@@ -129,9 +132,16 @@ namespace PalCalc.UI.ViewModel
                     if (value != null)
                     {
                         value?.RefreshWith(sourcePals.AvailablePals);
+                        RefreshRequiredPals();
                     }
                 }
             }
+        }
+
+        public void RefreshRequiredPals()
+        {
+            CurrentPalSpecifier?.RequiredPals.RefreshWith(sourceSave?.CachedValue?.OwnedPals);
+            RequiredPalsViewModel.Active = CurrentPalSpecifier?.RequiredPals;
         }
 
         private void CurrentSpec_PropertyChanged(object sender, PropertyChangedEventArgs e)

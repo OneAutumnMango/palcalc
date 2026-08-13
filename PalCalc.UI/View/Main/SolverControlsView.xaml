@@ -6,6 +6,7 @@
              xmlns:vm="clr-namespace:PalCalc.UI.ViewModel"
              xmlns:vms="clr-namespace:PalCalc.UI.ViewModel.Solver"
              xmlns:vu="clr-namespace:PalCalc.UI.View.Utils"
+             xmlns:c="clr-namespace:PalCalc.UI.ViewModel.Converters"
              xmlns:itl="clr-namespace:PalCalc.UI.Localization"
              xmlns:local="clr-namespace:PalCalc.UI.View.Main"
              xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI"
@@ -16,6 +17,8 @@
         <vu:SpacedWrapPanel.Resources>
             <GridLength x:Key="SepHeight">5</GridLength>
             <GridLength x:Key="SepWidth">10</GridLength>
+
+            <c:ValueVisibilityConverter x:Key="VVC" />
 
             <Style TargetType="{x:Type vu:IntegerTextBox}">
                 <Setter Property="Width" Value="25" />
@@ -104,6 +107,52 @@
                     IsEnabled="{Binding CanEditSettings}"
                     Content="{itl:LocalizedText Code=LC_SOLVER_SETTINGS_SURGERY_ALLOWED_PASSIVES}"
             />
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="{StaticResource SepHeight}" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="{StaticResource SepWidth}" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="{itl:LocalizedText Code=LC_REQUIRED_PARENTS}" />
+
+            <TextBlock Grid.Row="0" Grid.Column="2"
+                       Text="{itl:LocalizedText Code=LC_REQUIRED_PARENTS_NONE}"
+                       Opacity="0.6"
+                       Visibility="{Binding RequiredPals.IsEmpty, Converter={StaticResource VVC}, FallbackValue=Visible}" />
+
+            <ItemsControl Grid.Row="0" Grid.Column="2"
+                          VerticalAlignment="Center"
+                          MaxWidth="150"
+                          ItemsSource="{Binding RequiredPals.Pals}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding Pal.Icon}" Width="20" Height="20" Margin="0,0,3,0"
+                               ToolTipService.ToolTip="{Binding Pal.Name.Value}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <Button Grid.Row="2"
+                    Grid.ColumnSpan="99"
+                    Command="{Binding InspectSaveCommand}"
+                    IsEnabled="{Binding CanEditSettings}"
+                    Content="{itl:LocalizedText Code=LC_REQUIRED_PARENTS_SELECT}"
+                    ToolTipService.ToolTip="{itl:LocalizedText Code=LC_REQUIRED_PARENTS_DESCRIPTION}"
+                    ToolTipService.ShowOnDisabled="True"
+                    />
         </Grid>
 
         <Grid>

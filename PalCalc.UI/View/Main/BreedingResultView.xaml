@@ -316,6 +316,10 @@
                                     <Setter TargetName="UncheckedIcon" Property="Visibility" Value="Collapsed" />
                                     <Setter TargetName="CheckedIcon" Property="Visibility" Value="Visible" />
                                 </DataTrigger>
+                                <DataTrigger Binding="{Binding IsRequiredPal}" Value="True">
+                                    <Setter TargetName="NodeBorder" Property="BorderBrush" Value="Gold" />
+                                    <Setter TargetName="NodeBorder" Property="BorderThickness" Value="3" />
+                                </DataTrigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>

@@ -160,7 +160,8 @@ namespace PalCalc.UI.ViewModel
                 runSolverCommand: RunSolverCommand,
                 cancelSolverCommand: CancelSolverCommand,
                 pauseSolverCommand: PauseSolverCommand,
-                resumeSolverCommand: ResumeSolverCommand
+                resumeSolverCommand: ResumeSolverCommand,
+                inspectSaveCommand: SaveOperations.InspectSaveCommand
             );
             SolverControls.CopyFrom(settings.SolverSettings);
             solverControlsPropertyChangedHandler = SolverControls_PropertyChanged;
@@ -235,6 +236,7 @@ namespace PalCalc.UI.ViewModel
         {
             if (save != OpenedSave?.Value || cachedSave == null) return;
             PalTargetList.UpdateCachedData(cachedSave, GameSettingsViewModel.Load(save).ModelObject);
+            PalTarget?.RefreshRequiredPals();
         }
 
         private void SolverControls_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -408,8 +410,9 @@ namespace PalCalc.UI.ViewModel
 
             var originalSolverSettings = SolverControls.AsModel;
             var originalGameSettings = SelectedGameSettings.ModelObject;
+            var solverSpec = currentSpec.ModelObject;
             var solverRequest = new BreedingSolverRequest(
-                currentSpec.ModelObject,
+                solverSpec,
                 SolverControls.ConfiguredSolverSettings(
                     originalGameSettings,
                     PalTargetList.SourcePals.AvailablePals.ToList()
