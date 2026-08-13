@@ -58,7 +58,15 @@ namespace PalCalc.SaveReader.FArchive
         public Double ReadDouble() => reader.ReadDouble();
         public Byte ReadByte() => reader.ReadByte();
 
-        public byte[] ReadBytes(int length) => reader.ReadBytes(length);
+        public byte[] ReadBytes(int length)
+        {
+            var bytes = reader.ReadBytes(length);
+            if (bytes.Length < length)
+            {
+                throw new InvalidDataException($"Unexpected end of stream: tried to read {length} bytes but only {bytes.Length} available");
+            }
+            return bytes;
+        }
 
         public void Skip(int count) => reader.ReadBytes(count);
 
@@ -131,15 +139,55 @@ namespace PalCalc.SaveReader.FArchive
 
             while (!ShouldExit(visitors))
             {
-                var name = ReadString();
+                long namePosition = reader.BaseStream.Position;
+                string name;
+                
+                try
+                {
+                    name = ReadString();
+                }
+                catch (Exception ex)
+                {
+                    logger.Warning(ex, "Failed to read property name at path {path}. Stream may be corrupt or format unsupported. Stopping property enumeration.", path);
+                    break;
+                }
+                
                 if (name == "None") break;
 
                 var typeName = ReadString();
                 var size = ReadUInt64();
-                var value = ReadProperty(typeName, size, $"{path}.{name}", "", visitors);
+                
+                // Track position to detect read errors
+                var positionBefore = reader.BaseStream.Position;
+                
+                try
+                {
+                    var value = ReadProperty(typeName, size, $"{path}.{name}", "", visitors);
 
-                if (result != null)
-                    result.Add(name, value);
+                    if (result != null)
+                        result.Add(name, value);
+                }
+                catch (Exception ex)
+                {
+                    // If reading fails, try to skip to next property using size parameter
+                    logger.Warning(
+                        ex,
+                        "Failed to read property {path}.{name} (type {typeName}, size {size}). Skipping to next property.",
+                        path, name, typeName, size
+                    );
+                    
+                    try
+                    {
+                        // Skip remaining bytes to stay in sync
+                        reader.BaseStream.Position = positionBefore + (long)size;
+                    }
+                    catch
+                    {
+                        // If we can't even seek, the stream is too corrupted
+                        logger.Error("Unable to seek past corrupted property. Stopping property enumeration.");
+                        break;
+                    }
+                }
             }
 
             return result;
@@ -768,7 +816,18 @@ namespace PalCalc.SaveReader.FArchive
                         }
                     }
 
-                default: throw new Exception("Unrecognized type name: " + typeName);
+                default:
+                    {
+                        // Unknown property type - skip it using the size parameter
+                        logger.Warning(
+                            "Unrecognized property type '{typeName}' at path '{path}' with size {size}. Skipping.",
+                            typeName, path, size
+                        );
+                        
+                        // Read and discard the bytes
+                        ReadBytes((int)size);
+                        return null;
+                    }
             }
         }
 
@@ -780,10 +839,7 @@ namespace PalCalc.SaveReader.FArchive
             // haven't seen a string larger than 100 chars yet, if we see it there's likely a bug
             if (Math.Abs(size) > 1000)
             {
-                logger.Warning("String size of {size} is abnormal, likely a parsing error which will cause a crash", size);
-#if DEBUG
-                Debugger.Break();
-#endif
+                throw new InvalidDataException($"String size of {size} is abnormal (> 1000), indicating corrupted data or unsupported format at position {reader.BaseStream.Position - 4}");
             }
 
             Encoding encoding;
@@ -803,6 +859,12 @@ namespace PalCalc.SaveReader.FArchive
                 encoding = Encoding.ASCII;
 
                 size -= 1;
+            }
+
+            // Safety check: ensure we don't read beyond the buffer
+            if (size > bytes.Length)
+            {
+                throw new InvalidDataException($"String size mismatch: expected {size} bytes after null terminator, but only {bytes.Length} bytes available");
             }
 
             return encoding.GetString(bytes, 0, size);

@@ -56,7 +56,7 @@ namespace PalCalc.UI.ViewModel.GraphSharp
                 foreach (var skill in needed.Where(s => !LearnsNaturally(node, s)))
                 {
                     var candidates = children
-                        .Where(c => (LearnsNaturally(c, skill) || c.PalRef.InheritedActiveSkills.Contains(skill)) && HasRoom(c))
+                        .Where(c => (LearnsNaturally(c, skill) || c.PalRef.InheritedActiveSkills.Contains(skill) || c.PalRef.ActualActiveSkills.Contains(skill)) && HasRoom(c))
                         .ToList();
 
                     var provider =
