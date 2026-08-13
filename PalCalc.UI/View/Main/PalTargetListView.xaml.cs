@@ -43,10 +43,10 @@ namespace PalCalc.UI.View.Main
             if (sender is ListBoxItem item) item.IsSelected = true;
         }
 
-        private static PalSpecifierViewModel SpecFor(object sender) =>
-            ((sender as MenuItem)?.Parent as ContextMenu)?.PlacementTarget is FrameworkElement target
-                ? target.DataContext as PalSpecifierViewModel
-                : null;
+        // note: WPF doesn't set ContextMenu.PlacementTarget for menus opened via the ContextMenu property
+        private PalSpecifierViewModel SpecFor(object sender) =>
+            (sender as FrameworkElement)?.DataContext as PalSpecifierViewModel
+                ?? SelectedItem as PalSpecifierViewModel;
 
         private void CopyConfig_Click(object sender, RoutedEventArgs e)
         {

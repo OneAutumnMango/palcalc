@@ -18,6 +18,16 @@
          dd:DragDrop.DropHandler="{Binding}"
          Style="{StaticResource {x:Type ListBox}}"
          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+    <ListBox.Resources>
+        <!-- must live outside the ItemContainerStyle, else the Click handlers below never get wired up -->
+        <ContextMenu x:Key="TargetContextMenu" x:Shared="False">
+            <MenuItem Header="{itl:LocalizedText Code=LC_TARGET_COPY_CONFIG}"
+                      IsEnabled="{Binding IsValid}"
+                      Click="CopyConfig_Click" />
+            <MenuItem Header="{itl:LocalizedText Code=LC_TARGET_PASTE_CONFIG}"
+                      Click="PasteConfig_Click" />
+        </ContextMenu>
+    </ListBox.Resources>
     <ListBox.ItemTemplate>
         <DataTemplate DataType="mvm:PalSpecifierViewModel">
             <local:PalSpecifierView DataContext="{Binding}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" />
@@ -32,17 +42,7 @@
             </Style.Triggers>
             <Setter Property="HorizontalContentAlignment" Value="Stretch" />
             <EventSetter Event="PreviewMouseRightButtonDown" Handler="ListBoxItem_PreviewMouseRightButtonDown" />
-            <Setter Property="ContextMenu">
-                <Setter.Value>
-                    <ContextMenu>
-                        <MenuItem Header="{itl:LocalizedText Code=LC_TARGET_COPY_CONFIG}"
-                                  IsEnabled="{Binding IsValid}"
-                                  Click="CopyConfig_Click" />
-                        <MenuItem Header="{itl:LocalizedText Code=LC_TARGET_PASTE_CONFIG}"
-                                  Click="PasteConfig_Click" />
-                    </ContextMenu>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="ContextMenu" Value="{StaticResource TargetContextMenu}" />
         </Style>
     </ListBox.ItemContainerStyle>
 </ListBox>
