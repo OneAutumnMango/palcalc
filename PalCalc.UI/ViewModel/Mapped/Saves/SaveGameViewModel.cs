@@ -4,6 +4,7 @@ using PalCalc.Model;
 using PalCalc.SaveReader;
 using PalCalc.UI.Localization;
 using PalCalc.UI.Model;
+using PalCalc.UI.View.Inspector;
 using PalCalc.UI.ViewModel.Mapped;
 using PalCalc.UI.ViewModel.Mapped.Saves;
 using PalCalc.UI.ViewModel.Mapped.Saves.Detection;
@@ -33,6 +34,7 @@ namespace PalCalc.UI.ViewModel.SaveSelection
             ReloadSaveCommand = new RelayCommand(() =>
             {
                 Storage.ReloadSave(parent.SourceLocation, save, PalDB.LoadEmbedded(), GameSettingsViewModel.Load(save).ModelObject);
+                SaveInspectorWindowManager.ClearViewModel(save);
             });
 
             SubscribeToChanges(save);

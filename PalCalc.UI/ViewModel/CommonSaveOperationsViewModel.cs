@@ -191,17 +191,23 @@ namespace PalCalc.UI.ViewModel
             var cachedSave = selectedSave.CachedValue;
             if (cachedSave == null) return;
 
-            var loadingModal = new LoadingSaveFileModal();
-            loadingModal.Owner = App.Current.MainWindow;
-            loadingModal.DataContext = LocalizationCodes.LC_SAVE_INSPECTOR_LOADING.Bind();
+            var vm = SaveInspectorWindowManager.GetOrCreateViewModel(
+                selectedSave.Value,
+                () =>
+                {
+                    var loadingModal = new LoadingSaveFileModal();
+                    loadingModal.Owner = App.Current.MainWindow;
+                    loadingModal.DataContext = LocalizationCodes.LC_SAVE_INSPECTOR_LOADING.Bind();
 
-            var vm = loadingModal.ShowDialogDuring(
-                () => new SaveInspectorWindowViewModel(
-                    selectedLocation,
-                    selectedSave,
-                    cachedSave,
-                    GameSettingsViewModel.Load(selectedSave.Value).ModelObject
-                )
+                    return loadingModal.ShowDialogDuring(
+                        () => new SaveInspectorWindowViewModel(
+                            selectedLocation,
+                            selectedSave,
+                            cachedSave,
+                            GameSettingsViewModel.Load(selectedSave.Value).ModelObject
+                        )
+                    );
+                }
             );
 
             var inspector = new SaveInspectorWindow() { DataContext = vm, Owner = App.Current.MainWindow };

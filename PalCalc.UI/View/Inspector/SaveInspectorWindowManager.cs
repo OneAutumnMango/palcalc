@@ -1,5 +1,6 @@
 using PalCalc.SaveReader;
 using PalCalc.UI.Model;
+using PalCalc.UI.ViewModel.Inspector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace PalCalc.UI.View.Inspector
         // TODO - Fold modeless-window ownership into the save/session service during the broader refactor.
         private static readonly object windowsLock = new();
         private static readonly Dictionary<SaveIdentity, List<WeakReference<SaveInspectorWindow>>> windows = new();
+        private static readonly Dictionary<SaveIdentity, SaveInspectorWindowViewModel> cachedViewModels = new();
 
         public static void Register(ISaveGame save, SaveInspectorWindow window)
         {
@@ -41,6 +43,7 @@ namespace PalCalc.UI.View.Inspector
                     .Where(window => window != null)
                     .ToList();
                 windows.Remove(identity);
+                cachedViewModels.Remove(identity);
             }
 
             foreach (var window in current)
@@ -49,6 +52,31 @@ namespace PalCalc.UI.View.Inspector
                     window.Close();
                 else
                     window.Dispatcher.BeginInvoke(window.Close);
+            }
+        }
+
+        public static SaveInspectorWindowViewModel GetOrCreateViewModel(
+            ISaveGame save,
+            Func<SaveInspectorWindowViewModel> factory)
+        {
+            var identity = SaveIdentity.From(save);
+            lock (windowsLock)
+            {
+                if (cachedViewModels.TryGetValue(identity, out var cached))
+                    return cached;
+
+                var vm = factory();
+                cachedViewModels[identity] = vm;
+                return vm;
+            }
+        }
+
+        public static void ClearViewModel(ISaveGame save)
+        {
+            var identity = SaveIdentity.From(save);
+            lock (windowsLock)
+            {
+                cachedViewModels.Remove(identity);
             }
         }
 
