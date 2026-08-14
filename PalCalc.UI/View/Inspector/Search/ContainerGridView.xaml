@@ -95,7 +95,15 @@
                                            />
                             </DataTemplate>
                             <DataTemplate DataType="{x:Type sgvm:ContainerGridPalSlotViewModel}">
-                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent">
+                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent"
+                                      PreviewMouseDown="Slot_PreviewMouseDown">
+                                    <Grid.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Remove as Required Parent" 
+                                                      Click="RemoveRequiredPal_Click"
+                                                      Visibility="{Binding IsRequired, Converter={StaticResource VVC}}" />
+                                        </ContextMenu>
+                                    </Grid.ContextMenu>
                                     <Border Style="{StaticResource GridSlotBackgroundStyle}" />
                                     <Border Style="{StaticResource GridSlotIconStyle}" Background="{Binding Pal.IconBrush}" />
                                     <Border Width="50" Height="50" CornerRadius="25" BorderThickness="3" BorderBrush="Gold"

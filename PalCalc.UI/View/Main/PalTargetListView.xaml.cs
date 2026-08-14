@@ -51,7 +51,17 @@ namespace PalCalc.UI.View.Main
         private void CopyConfig_Click(object sender, RoutedEventArgs e)
         {
             var json = (DataContext as PalTargetListViewModel)?.ExportConfigJson(SpecFor(sender));
-            if (json != null) Clipboard.SetText(json);
+            if (json != null)
+            {
+                try
+                {
+                    Clipboard.SetText(json);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to copy to clipboard: {ex.Message}", "Copy Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
         private void PasteConfig_Click(object sender, RoutedEventArgs e)

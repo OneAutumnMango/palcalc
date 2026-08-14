@@ -30,15 +30,21 @@ namespace PalCalc.Solver.PalReference
 
             Gender = instance.Gender;
 
-            // Initialize inherited active skills based on what this pal species can learn
+            // Initialize inherited active skills: combine natural skills (what it can learn by leveling)
+            // with actual skills (what it already has from breeding/fruits)
             MaxPalLevel = maxPalLevel;
             UseCurrentPalLevel = useCurrentPalLevel;
 
             var skillLevel = useCurrentPalLevel ? Math.Min(instance.Level, maxPalLevel) : maxPalLevel;
-            InheritedActiveSkills = ActiveSkillInheritance.NaturalSkillsOf(instance.Pal, skillLevel);
-            InheritableActiveSkills = ActiveSkillInheritance.NaturalSkillMaskOf(instance.Pal, skillLevel);
-
+            
             ActualActiveSkills = instance.ActiveSkills ?? [];
+            
+            // Combine natural skills with actual skills - the parent can pass down both
+            var naturalSkills = ActiveSkillInheritance.NaturalSkillsOf(instance.Pal, skillLevel);
+            InheritedActiveSkills = naturalSkills.Union(ActualActiveSkills).ToList();
+            
+            var naturalSkillMask = ActiveSkillInheritance.NaturalSkillMaskOf(instance.Pal, skillLevel);
+            InheritableActiveSkills = naturalSkillMask | ActiveSkillSet.Of(ActualActiveSkills);
         }
 
         public PalInstance UnderlyingInstance => instance;

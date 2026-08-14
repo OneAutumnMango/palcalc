@@ -71,7 +71,14 @@ namespace PalCalc.UI.View.Main
 
         private static void CopyToClipboard(string content)
         {
-            if (!string.IsNullOrEmpty(content)) Clipboard.SetText(content);
+            try
+            {
+                if (!string.IsNullOrEmpty(content)) Clipboard.SetText(content);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to copy to clipboard: {ex.Message}", "Copy Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
